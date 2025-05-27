@@ -1,0 +1,500 @@
+%\documentclass[prd,twocolumn,aps,psfig,showpacs,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers,times]{revtex4}
+%\documentclass[prd,twocolumn,aps,psfig,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers,times]{revtex4-2}
+\documentclass[prd,aps,psfig,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers,times]{revtex4-2}\setlength{\topmargin}{-14mm}
+\usepackage{graphicx,bm,color,amsmath,amssymb, mathtools,subcaption}
+\graphicspath{{./fig/}}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = red, %Colour of internal links
+  citecolor    = blue %Colour of citations
+}
+
+\def\red{\textcolor{red}}
+\def\blue{\textcolor{blue}}
+
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%             Customized Commands
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%  mathematical abbreviations
+%
+%
+%
+\newcommand{\BoldVec}[1]{\mathchoice%
+  {\mbox{\boldmath $\displaystyle     #1$}}%
+  {\mbox{\boldmath $\textstyle        #1$}}%
+  {\mbox{\boldmath $\scriptstyle      #1$}}%
+  {\mbox{\boldmath $\scriptscriptstyle#1$}}%
+}
+%\newcommand{\BoldVec}[1]{\bm{#1}}}
+%
+% math debs
+\newcommand{\EQ}{\begin{equation}}
+\newcommand{\EN}{\end{equation}}
+\newcommand{\EQA}{\begin{eqnarray}}
+\newcommand{\ENA}{\end{eqnarray}}
+\newcommand{\eq}[1]{(\ref{#1})}
+\newcommand{\EEq}[1]{Equation~(\ref{#1})}
+\newcommand{\Eq}[1]{Eq.~(\ref{#1})}
+\newcommand{\Eqs}[2]{Eqs~(\ref{#1}) and~(\ref{#2})}
+\newcommand{\EEqs}[2]{Equations~(\ref{#1}) and~(\ref{#2})}
+\newcommand{\eqs}[2]{(\ref{#1}) and~(\ref{#2})}
+\newcommand{\Eqss}[2]{Eqs~(\ref{#1})--(\ref{#2})}
+%\newcommand{\Sec}[1]{\S\,\ref{#1}}
+%\newcommand{\Secs}[2]{\S\S\,\ref{#1} and~\ref{#2}}
+\newcommand{\Sec}[1]{Sec.~\ref{#1}}
+\newcommand{\Secs}[2]{Secs.~\ref{#1} and~\ref{#2}}
+\newcommand{\App}[1]{Appendix~\ref{#1}}
+\newcommand{\Fig}[1]{Fig.~\ref{#1}}
+\newcommand{\FFig}[1]{Figure~\ref{#1}}
+\newcommand{\Tab}[1]{Table~\ref{#1}}
+\newcommand{\Figs}[2]{Figs.~\ref{#1} and \ref{#2}}
+\newcommand{\Tabs}[2]{Tables~\ref{#1} and \ref{#2}}
+%\newcommand{\bra}[1]{\langle #1\rangle}
+\newcommand{\bbra}[1]{\left\langle #1\right\rangle}
+\newcommand{\mean}[1]{\overline #1}
+\newcommand{\meanB}{\overline{B}}
+\newcommand{\meanC}{\overline{C}}
+\newcommand{\meanU}{\overline{U}}
+\newcommand{\meanW}{\overline{W}}
+\newcommand{\meanPhi}{\overline{\Phi}}
+\newcommand{\meanF}{\overline{\cal F}}
+\newcommand{\meanR}{\overline{\cal R}}
+\newcommand{\meanAA}{\overline{\bm{A}}}
+\newcommand{\meanBB}{\overline{\bm{B}}}
+\newcommand{\meanEE}{\overline{\bm{E}}}
+\newcommand{\meanUU}{\overline{\bm{U}}}
+\newcommand{\meanWW}{\overline{\bm{W}}}
+\newcommand{\meanJJ}{\overline{\mbox{\boldmath $J$}}}
+\newcommand{\meanuu}{\overline{\mbox{\boldmath $u$}}}
+\newcommand{\meanGG}{\overline{\mbox{\boldmath $G$}}}
+\newcommand{\meanAB}{\overline{\mbox{\boldmath $A\cdot B$}}}
+\newcommand{\meanAoBo}{\overline{\mbox{\boldmath $A_0\cdot B_0$}}}
+\newcommand{\meanApoBpo}{\overline{\mbox{\boldmath $A'_0\cdot B'_0$}}}
+\newcommand{\meanApBp}{\overline{\mbox{\boldmath $A'\cdot B'$}}}
+\newcommand{\meanuxB}{\overline{\mbox{\boldmath $\delta u\times \delta B$}}}
+\newcommand{\meanemfs}{\overline{\cal E} {}}
+\newcommand{\meanemf}{\overline{\mbox{\boldmath ${\cal E}$}} {}} %redundant
+\newcommand{\meanAAAA}{\overline{\mbox{\boldmath ${\mathsf A}$}} {}}
+\newcommand{\meanSSSS}{\overline{\mbox{\boldmath ${\mathsf S}$}} {}}
+\newcommand{\meanAAA}{\overline{\mathsf{A}}}
+\newcommand{\meanSSS}{\overline{\mathsf{S}}}
+\newcommand{\meanCC}{\overline{\mbox{\boldmath ${\cal C}$}} {}}
+\newcommand{\meanFF}{\overline{\mbox{\boldmath ${\cal F}$}} {}}
+\newcommand{\meanRR}{\overline{\mbox{\boldmath ${\cal R}$}} {}}
+\newcommand{\calFF}{\overline{\mbox{\boldmath ${\cal F}$}} {}}
+\newcommand{\meanEMF}{\overline{\mbox{\boldmath ${\cal E}$}} {}}
+\newcommand{\tildeFFFF}{\tilde{\mbox{\boldmath ${\cal F}$}}{}}{}
+\newcommand{\hatFFFF}{\hat{\mbox{\boldmath ${\cal F}$}}{}}{}
+\newcommand{\meanFFFF}{\overline{\mbox{\boldmath ${\cal F}$}}{}}{}
+\newcommand{\meanFFF}{\overline{\cal F}}
+\newcommand{\hatOO}{\hat{\bm{\Omega}}}
+\newcommand{\hatAA}{\hat{\bm{A}}}
+\newcommand{\hatBB}{\hat{\bm{B}}}
+\newcommand{\tildeh}{\tilde{h}}
+\newcommand{\tildeT}{\tilde{T}}
+\newcommand{\tildehhh}{\tilde{\sf h}}
+\newcommand{\tildeTTT}{\tilde{\sf T}}
+%
+% tilde
+%
+\newcommand{\eee}{{\sf e}}
+\newcommand{\hhh}{{\sf h}}
+\newcommand{\TTT}{{\sf T}}
+\newcommand{\tildexx}{\tilde{\bm{x}}}
+\newcommand{\tildeBB}{\tilde{\bm{B}}}
+\newcommand{\tildeJJ}{\tilde{\bm{J}}}
+\newcommand{\tildeA}{\tilde{A}}
+\newcommand{\tildeB}{\tilde{B}}
+\newcommand{\tildeJ}{\tilde{J}}
+\newcommand{\tildeemf}{\tilde{\cal E}}
+\newcommand{\teps}{\tilde{\epsilon} {}}
+\newcommand{\tkapz}{\tilde{\kappa_0}}
+\newcommand{\Oh}{\hat{\Omega}}
+\newcommand{\zh}{\hat{z}}
+\newcommand{\PC}{{\sc Pencil Code}~}
+\newcommand{\PCS}{{\sc Pencil Code}}
+%
+%  unit vectors
+%
+\newcommand{\nullvector}{{\bf0}}
+\newcommand{\nnn}{\hat{\mbox{\boldmath $n$}} {}}
+\newcommand{\vvv}{\hat{\mbox{\boldmath $v$}} {}}
+\newcommand{\rr}{\hat{\mbox{\boldmath $r$}} {}}
+\newcommand{\xxx}{\hat{\mbox{\boldmath $x$}} {}}
+\newcommand{\yyy}{\hat{\mbox{\boldmath $y$}} {}}
+\newcommand{\zz}{\hat{\mbox{\boldmath $z$}} {}}
+\newcommand{\pp}{\hat{\mbox{\boldmath $\phi$}} {}}
+\newcommand{\ttt}{\hat{\mbox{\boldmath $\theta$}} {}}
+\newcommand{\OOO}{\hat{\mbox{\boldmath $\Omega$}} {}}
+\newcommand{\ooo}{\hat{\mbox{\boldmath $\omega$}} {}}
+\newcommand{\BBBB}{\hat{\mbox{\boldmath $B$}} {}}
+\newcommand{\kunit}{\hat{\mbox{$k$}} {}}
+\newcommand{\nunit}{\hat{\mbox{$n$}} {}}
+%
+%  hatted quantities
+%
+\newcommand{\hatU}{\hat{U}}
+\newcommand{\hatUU}{\hat{\bm{U}}}
+%
+%  vectors
+%
+\newcommand{\gggg}{\BoldVec{g} {}}
+\newcommand{\ddd}{\BoldVec{d} {}}
+\newcommand{\rrr}{\BoldVec{r} {}}
+\newcommand{\xx}{\BoldVec{x}{}}
+\newcommand{\yy}{\BoldVec{y} {}}
+\newcommand{\zzz}{\BoldVec{z} {}}
+\newcommand{\uu}{\BoldVec{u} {}}
+\newcommand{\vv}{\BoldVec{v} {}}
+\newcommand{\ww}{\BoldVec{w} {}}
+\newcommand{\mm}{\BoldVec{m} {}}
+\newcommand{\PP}{\BoldVec{P} {}}
+\newcommand{\QQ}{\BoldVec{Q} {}}
+\newcommand{\RR}{\BoldVec{R} {}}
+\newcommand{\UU}{\BoldVec{U} {}}
+\newcommand{\bb}{\BoldVec{b} {}}
+\newcommand{\qq}{\BoldVec{q} {}}
+\newcommand{\BB}{\BoldVec{B} {}}
+\newcommand{\HH}{\BoldVec{H} {}}
+\newcommand{\II}{\BoldVec{I} {}}
+\newcommand{\AAA}{\BoldVec{A} {}}
+\newcommand{\aaa}{\BoldVec{a} {}}
+\newcommand{\aaaa}{\BoldVec{a} {}} %(convert aaa -> aaaa, compatibility problem)
+%\newcommand{\eee}{\BoldVec{e} {}}
+\newcommand{\jj}{\BoldVec{j} {}}
+\newcommand{\JJ}{\BoldVec{J} {}}
+\newcommand{\nn}{\BoldVec{n} {}}
+\newcommand{\ee}{\BoldVec{e} {}}
+\newcommand{\ff}{\BoldVec{f} {}}
+\newcommand{\hh}{\BoldVec{h} {}}
+\newcommand{\EE}{\BoldVec{E} {}}
+\newcommand{\FF}{\BoldVec{F} {}}
+\newcommand{\TT}{\BoldVec{T} {}}
+\newcommand{\CC}{\BoldVec{C} {}}
+\newcommand{\KK}{\BoldVec{K} {}}
+\newcommand{\MM}{\BoldVec{M} {}}
+\newcommand{\GG}{\BoldVec{G} {}}
+\newcommand{\kk}{\BoldVec{k} {}}
+\newcommand{\SSS}{\BoldVec{S} {}}
+\newcommand{\grav}{\BoldVec{g} {}}
+\newcommand{\nab}{\BoldVec{\nabla} {}}
+\newcommand{\OO}{\BoldVec{\Omega} {}}
+\newcommand{\oo}{\BoldVec{\omega} {}}
+\newcommand{\LL}{\BoldVec{\Lambda} {}}
+\newcommand{\llambda}{\BoldVec{\lambda} {}}
+\newcommand{\pomega}{\BoldVec{\varpi} {}}
+%
+%  correlation tensors
+%
+\newcommand{\RRRR}{\bm{\mathsf{R}}}
+\newcommand{\SSSS}{\bm{\mathsf{S}}}
+\newcommand{\LLLL}{\mbox{\boldmath ${\sf L}$} {}}
+\newcommand{\MMMM}{\bm{\mathsf{M}}}
+\newcommand{\BBB}{\mbox{\boldmath ${\cal B}$} {}}
+\newcommand{\emf}{\mbox{\boldmath ${\cal E}$} {}}
+\newcommand{\FFF}{\mbox{\boldmath ${\cal F}$} {}}
+\newcommand{\GGG}{\mbox{\boldmath ${\cal G}$} {}}
+\newcommand{\HHH}{\mbox{\boldmath ${\cal H}$} {}}
+\newcommand{\QQQ}{\mbox{\boldmath ${\cal Q}$} {}}
+%
+%  operators  (roman)
+%
+\newcommand{\ii}{{\rm i}}
+\newcommand{\grad}{{\rm grad} \, {}}
+\newcommand{\curl}{{\rm curl} \, {}}
+\newcommand{\dive}{{\rm div}  \, {}}
+\newcommand{\Dive}{{\rm Div}  \, {}}
+\newcommand{\diag}{{\rm diag}  \, {}}
+\newcommand{\DD}{{\rm D} {}}
+\newcommand{\dd}{{\rm d} {}}
+\newcommand{\const}{{\rm const}  {}}
+\newcommand{\crit}{{\rm crit}  {}}
+\def\degr{\hbox{$^\circ$}}
+\def\la{\mathrel{\mathchoice {\vcenter{\offinterlineskip\halign{\hfil
+$\displaystyle##$\hfil\cr<\cr\sim\cr}}}
+{\vcenter{\offinterlineskip\halign{\hfil$\textstyle##$\hfil\cr<\cr\sim\cr}}}
+{\vcenter{\offinterlineskip\halign{\hfil$\scriptstyle##$\hfil\cr<\cr\sim\cr}}}
+{\vcenter{\offinterlineskip\halign{\hfil$\scriptscriptstyle##$\hfil\cr<\cr\sim\cr}}}}}
+\def\ga{\mathrel{\mathchoice {\vcenter{\offinterlineskip\halign{\hfil
+$\displaystyle##$\hfil\cr>\cr\sim\cr}}}
+{\vcenter{\offinterlineskip\halign{\hfil$\textstyle##$\hfil\cr>\cr\sim\cr}}}
+{\vcenter{\offinterlineskip\halign{\hfil$\scriptstyle##$\hfil\cr>\cr\sim\cr}}}
+{\vcenter{\offinterlineskip\halign{\hfil$\scriptscriptstyle##$\hfil\cr>\cr\sim\cr}}}}}
+%
+%  numbers
+%
+\def\Ta{\mbox{\rm Ta}}
+\def\Ra{\mbox{\rm Ra}}
+\def\Ma{\mbox{\rm Ma}}
+\def\Sh{\mbox{\rm Sh}}
+\def\Roo{\mbox{\rm Ro}^{-1}}
+\def\Pra{\mbox{\rm Pr}}
+\def\Pran{\mbox{\rm Pr}}
+\def\Pm{\mbox{\rm Pr}_{\rm M}}
+\def\Rm{\mbox{\rm Re}_{\rm M}}
+\def\Rey{\mbox{\rm Re}}
+\def\Imag{\mbox{\rm Im}}
+\def\Pe{\mbox{\rm Pe}}
+\def\epsK{\epsilon_{\rm K}}
+\def\epsM{\epsilon_{\rm M}}
+\def\EEi{{\cal E}_i}
+\def\EEK{{\cal E}_{\rm K}}
+\def\EEM{{\cal E}_{\rm M}}
+\def\EEKM{{\cal E}_{\rm K/M}}
+\def\EEGW{{\cal E}_{\rm GW}}
+\def\OmK{{\Omega}_{\rm K}}
+\def\OmM{{\Omega}_{\rm M}}
+\def\OmGW{{\Omega}_{\rm GW}}
+\def\hrms{{h}_{\rm rms}}
+\def\EEtot{{\cal E}_{\rm tot}}
+\def\EErad{{\cal E}_{\rm rad}}
+\def\EElam{{\cal E}_\lambda}
+\def\EEcrit{{\cal E}_{\rm crit}}
+\def\HHGW{{\cal H}_{\rm GW}}
+\def\HHK{{\cal H}_{\rm K}}
+\def\HHM{{\cal H}_{\rm M}}
+\def\EGW{E_{\rm GW}}
+\def\HGW{H_{\rm GW}}
+\def\EK{E_{\rm K}}
+\def\EM{E_{\rm M}}
+\def\HM{H_{\rm M}}
+\def\hc{h_{\rm c}}
+\def\cs{c_{\rm s}}
+\def\xiM{\xi_{\rm M}}
+\def\xiK{\xi_{\rm K}}
+\def\kf{k_{\rm f}}
+%\def\kf{k_\ast}
+\def\vA{v_{\rm A}}
+\def\urms{u_{\rm rms}}
+\def\Urms{U_{\rm rms}}
+\def\Brms{B_{\rm rms}}
+\def\kappaOO{\kappa_{\Omega\Omega}}
+\def\kappaO{\kappa_{\Omega}}
+\def\kappat{\kappa_{\rm t}}
+\def\kappatz{\kappa_{\rm t0}}
+\def\nut{\nu_{\rm t}}
+\def\etatz{\eta_{\rm t0}}
+\def\etat{\eta_{\rm t}}
+\def\etaT{\eta_{\rm T}}
+\def\Beq{B_{\rm eq}}
+\def\tmax{t_{\max}}
+%
+\newcommand{\ea}{{\em et al. }}
+\newcommand{\eaa}{{\em et al. }}
+\def\half{{\textstyle{1\over2}}}
+\def\threehalf{{\textstyle{3\over2}}}
+\def\onethird{{\textstyle{1\over3}}}
+\def\twothird{{\textstyle{2\over3}}}
+\def\fourthird{{\textstyle{4\over3}}}
+\def\quarter{{\textstyle{1\over4}}}
+%
+\newcommand{\W}{\,{\rm W}}
+\newcommand{\V}{\,{\rm V}}
+\newcommand{\kV}{\,{\rm kV}}
+\newcommand{\MeV}{\,{\rm MeV}}
+\newcommand{\GeV}{\,{\rm GeV}}
+\newcommand{\T}{\,{\rm T}}
+\newcommand{\uG}{\,\mu{\rm G}}
+\newcommand{\G}{\,{\rm G}}
+\newcommand{\Hz}{\,{\rm Hz}}
+\newcommand{\mHz}{\,{\rm mHz}}
+\newcommand{\nHz}{\,{\rm nHz}}
+\newcommand{\uHz}{\,\mu{\rm Hz}}
+\newcommand{\kHz}{\,{\rm kHz}}
+\newcommand{\kG}{\,{\rm kG}}
+\newcommand{\K}{\,{\rm K}}
+\newcommand{\g}{\,{\rm g}}
+\newcommand{\s}{\,{\rm s}}
+\newcommand{\ms}{\,{\rm ms}}
+\newcommand{\cm}{\,{\rm cm}}
+\newcommand{\m}{\,{\rm m}}
+\newcommand{\km}{\,{\rm km}}
+\newcommand{\kms}{\,{\rm km/s}}
+\newcommand{\kg}{\,{\rm kg}}
+\newcommand{\Mm}{\,{\rm Mm}}
+\newcommand{\pc}{\,{\rm pc}}
+\newcommand{\kpc}{\,{\rm kpc}}
+\newcommand{\Mpc}{\,{\rm Mpc}}
+\newcommand{\yr}{\,{\rm yr}}
+\newcommand{\Myr}{\,{\rm Myr}}
+\newcommand{\Gyr}{\,{\rm Gyr}}
+\newcommand{\erg}{\,{\rm erg}}
+\newcommand{\mol}{\,{\rm mol}}
+\newcommand{\dyn}{\,{\rm dyn}}
+\newcommand{\J}{\,{\rm J}}
+\newcommand{\RM}{\,{\rm RM}}
+\newcommand{\AU}{\,{\rm AU}}
+\newcommand{\A}{\,{\rm A}}
+%
+\def\hX{h_\times}
+\def\hT{h_+}
+\def\thT{\tilde{h}_+}
+\def\thX{\tilde{h}_\times}
+\def\dhT{\dot{h}_+}
+\def\dhX{\dot{h}_\times}
+\def\dhhT{\dot{\hat{h}}_+}
+\def\dhhX{\dot{\hat{h}}_\times}
+\def\dhhTX{\dot{\hat{h}}_{+/\times}}
+\def\dthT{\dot{\tilde{h}}_+}
+\def\dthX{\dot{\tilde{h}}_\times}
+\def\dthTX{\dot{\tilde{h}}_{+/\times}}
+%
+%  journals
+%
+\newcommand{\arXiv}[3]{, ``#3,'' arXiv:#2 (#1).}
+\newcommand{\yjcap}[3]{, J.\ Cosmol.\ Astropart.\ Phys. {\bf #2} (#1) #3.}
+\newcommand{\yjas}[3]{, J. Atmosph. Sci. {\bf #2}, #3 (#1).}
+\newcommand{\yan}[3]{, Astron. Nachr. {\bf #2}, #3 (#1).}
+\newcommand{\yact}[3]{, Acta Astron. {\bf #2}, #3 (#1).}
+\newcommand{\yana}[3]{, Astron. Astrophys. {\bf #2}, #3 (#1).}
+\newcommand{\yanas}[3]{, Astron. Astrophys. Suppl. {\bf #2}, #3 (#1).}
+\newcommand{\yanal}[3]{, Astron. Astrophys. Lett. {\bf #2}, #3 (#1).}
+\newcommand{\yass}[3]{, Astrophys. Spa. Sci. {\bf #2}, #3 (#1).}
+\newcommand{\ysci}[3]{, Science {\bf #2}, #3 (#1).}
+\newcommand{\ysph}[3]{, Solar Phys. {\bf #2}, #3 (#1).}
+\newcommand{\yjetp}[3]{, Sov. Phys. JETP {\bf #2}, #3 (#1).}
+\newcommand{\yspd}[3]{, Sov. Phys. Dokl. {\bf #2}, #3 (#1).}
+\newcommand{\ysov}[3]{, Sov. Astron. {\bf #2}, #3 (#1).}
+\newcommand{\ysovl}[3]{, Sov. Astron. Lett. {\bf #2}, #3 (#1).}
+\newcommand{\ymn}[3]{, Mon.\ Not.\ R.\ Astron.\ Soc.\ {\bf #2}, #3 (#1).}
+\newcommand{\ymhd}[3]{, Magnetohydrohydrodyn. {\bf #2}, #3 (#1).}
+\newcommand{\yqjras}[3]{, Quart. J. Roy. Astron. Soc. {\bf #2}, #3 (#1).}
+\newcommand{\ynat}[3]{, Nature {\bf #2}, #3 (#1).}
+\newcommand{\yjfm}[4]{, ``#4,'' J. Fluid Mech. {\bf #2}, #3 (#1).}
+\newcommand{\pjfm}[1]{, J. Fluid Mech., in press (#1).}
+\newcommand{\sjfm}[1]{, J. Fluid Mech., submitted (#1).}
+\newcommand{\ypr}[3]{, Phys.\ Rev.\ {\bf #2}, #3 (#1).}
+\newcommand{\yprd}[4]{, ``#4,'' Phys.\ Rev.\ D {\bf #2}, #3 (#1).}
+\newcommand{\ypre}[3]{, Phys.\ Rev.\ E {\bf #2}, #3 (#1).}
+\newcommand{\yprf}[4]{, ``#4,'' Phys.\ Rev.\ Fluids {\bf #2}, #3 (#1).}
+\newcommand{\yprl}[4]{, ``#4,'' Phys.\ Rev.\ Lett.\ {\bf #2}, #3 (#1).}
+\newcommand{\yphl}[3]{, Phys.\ Lett.\ {\bf #2}, #3 (#1).}
+\newcommand{\pprl}[1]{, Phys. Rev. Lett., in press (#1).}
+\newcommand{\yepl}[3]{, Europhys. Lett. {\bf #2}, #3 (#1).}
+\newcommand{\pcsf}[2]{, Chaos, Solitons \& Fractals, in press (#1).}
+\newcommand{\ycsf}[3]{, Chaos, Solitons \& Fractals{\bf #2}, #3 (#1).}
+\newcommand{\yprs}[3]{, Proc. Roy. Soc. Lond. {\bf #2}, #3 (#1).}
+\newcommand{\yptrs}[3]{, Phil. Trans. Roy. Soc. {\bf #2}, #3 (#1).}
+\newcommand{\yptrsa}[4]{, ``#4,'' Phil. Trans. Roy. Soc. Lond. A, {\bf #2}, #3 (#1).}
+\newcommand{\yjcp}[3]{, J. Comp. Phys. {\bf #2}, #3 (#1).}
+\newcommand{\yjgr}[3]{, J. Geophys. Res. {\bf #2}, #3 (#1).}
+\newcommand{\ygrl}[3]{, Geophys. Res. Lett. {\bf #2}, #3 (#1).}
+\newcommand{\yobs}[3]{, Observatory {\bf #2}, #3 (#1).}
+\newcommand{\yaj}[3]{, Astronom. J. {\bf #2}, #3 (#1).}
+\newcommand{\sapj}[3]{, ``#3,'' Astrophys. J., submitted, arXiv:#2  (#1).}
+\newcommand{\papj}[3]{, ``#3,'' Astrophys. J., in press, arXiv:#2  (#1).}
+\newcommand{\yapj}[4]{, ``#4,'' Astrophys. J. {\bf #2}, #3 (#1).}
+\newcommand{\yapjs}[3]{, Astrophys. J. Suppl. {\bf #2}, #3 (#1).}
+\newcommand{\yapjl}[3]{, Astrophys. J. {\bf #2}, #3 (#1).}
+\newcommand{\ycqg}[3]{, Class. Quant. Grav. {\bf #2}, #3 (#1).}
+\newcommand{\ypp}[3]{, Phys. Plasmas {\bf #2}, #3 (#1).}
+\newcommand{\yppcf}[3]{, Plasmas Phys. Contr. Fusion {\bf #2}, #3 (#1).}
+\newcommand{\ppp}[1]{, Phys. Plasmas, in press (#1).}
+\newcommand{\ypasj}[3]{, Publ. Astron. Soc. Japan {\bf #2}, #3 (#1).}
+\newcommand{\ypac}[3]{, Publ. Astron. Soc. Pacific {\bf #2}, #3 (#1).}
+\newcommand{\yaraa}[3]{, Ann. Rev. Astron. Astrophys. {\bf #2}, #3 (#1).}
+\newcommand{\yanar}[3]{, Astron. Astrophys. Rev. {\bf #2}, #3 (#1).}
+\newcommand{\yanp}[3]{, Ann. Phys. {\bf #2}, #3 (#1).}
+\newcommand{\yanf}[3]{, Ann. Rev. Fluid Dyn. {\bf #2}, #3 (#1).}
+\newcommand{\ypf}[4]{, ``#4,'' Phys. Fluids {\bf #2}, #3 (#1).}
+\newcommand{\yphy}[3]{, Physica {\bf #2}, #3 (#1).}
+\newcommand{\ygafd}[4]{, ``#4,'' Geophys. Astrophys. Fluid Dyn. {\bf #2}, #3 (#1).}
+\newcommand{\yrpp}[3]{, Rep. Prog. Phys. {\bf #2}, #3 (#1).}
+\newcommand{\yptp}[3]{, Progr. Theor. Phys. {\bf #2}, #3 (#1).}
+\newcommand{\yjour}[5]{, ``#5,'' #2 {\bf #3}, #4 (#1).}
+\newcommand{\pjour}[3]{, #2, in press (#1).}
+\newcommand{\sjour}[3]{, #2, submitted (#1).}
+\newcommand{\yprep}[2]{, #2, preprint (#1).}
+\newcommand{\pproc}[3]{, (ed. #3), #2 (#1) (to appear).}
+\newcommand{\yproc}[4]{, (ed. #4), pp. #2. #3 (#1).}
+\newcommand{\ybook}[3]{, {\em #2}. #3 (#1).}
+\newcommand{\neff}{N_{\rm eff}}
+\newcommand{\dneff}{\Delta N_{\rm eff}}
+\newcommand{\neffv}{N_{\rm eff}^{(\nu)}}
+
+\newcommand{\inv}{\rm inv}
+
+\usepackage{braket}
+
+\begin{document}
+
+\title{Graviton Mass Limits from Gravitational Waves Detection Data and Future  Prospects}
+
+\date{\today}
+%TK for now the authors are in alphabeetical order
+
+\author{Chris~Choi}
+\email{minyeonc@andrew.cmu.edu}
+\affiliation{McWilliams Center for Cosmology and Department of Physics, Carnegie Mellon University, Pittsburgh, PA 15213, USA}
+
+\author{Tina~Kahniashvili}
+\email{tinatin@andrew.cmu.edu}
+\affiliation{McWilliams Center for Cosmology and Department of Physics, Carnegie Mellon University, Pittsburgh, PA 15213, USA}
+\affiliation{School of Natural Sciences and Medicine, Ilia State University, 0194 Tbilisi, Georgia}
+\affiliation{Abastumani Astrophysical Observatory, Tbilisi, GE-0179, Georgia}
+
+
+\begin{abstract}
+In massive gravity, we expect a modification to the dispersion relation for gravitational waves and the angular correlation in pulsar timing arrays (PTAs) due to the five polarization modes that arise. We consider the lower bound for graviton mass constraints from the dispersion relation for future PTA observations and scrutinze the possibility of detection via the effective overlap reduction function. We find that the predicted overlap reduction function for such a graviton mass lies within the standard deviation of the observed angular correlation in the best case scenario, and in fact better fits the current data according to some PTA observations. Future PTA observation campaigns therefore are able to detect these additional modes of polarization and can be effectively used to constrain the graviton mass. 
+
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+In the framework of the standard model of cosmology (e.g. concordance model) 
+and particles physics, the observed accelerated expansion of the Universe today 
+is driven by the substance of unknown nature with a negative pressure (by its module equal 
+to its energy density), so called cosmological constant. The rquirement of the existence of 
+cosmological constant (or any dynamical dark energy) follows from the Einstein equations, that assume 
+general relativy (GR) as a true theory of gravity, and massless of the graviton, the helicity-2 particles associated with gravitationa radiation. 
+Despite success of the concordance model there are several unanswered questions, 
+including the ierarchy problem, 
+smallness of gravity compared to the weak interactions,  
+failure to formulate united theory of four interactions, and others.  These puzzles motivate to consider as an alternative  the possibility that GR is not suitable to describe physical processes at cosmological scales. Many cosmological observables are sensitive to modifications of GR that  makes possible to test GR through current and future planned observations. These tests include the growth of structure in the late time universe, as measured in galaxy surveys; the rate of acceleration of the universe, that can be measured with standard candles and standard rulers; the number density of nonlinear structures, such as clusters that are very sensitive to the strength of gravitational interactions; the temperature and  polarization anisotropies of the cosmic microwave background (CMB),  and many others. 
+%\cite{Jain:2007yk,Jain:2010ka,Jain:2013wgs,Xu:2014uba,Baker:2014zba,Koyama:2015vza,Berti:2015itd,Joyce:2016vqv}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+One of the most active areas of research in gravity theory stems from the assumptions to give the graviton a non-zero 
+mass, $m_g$ ({\it massive gravity}. Actualy the idea of non-zero mass of graviton has long-standing history starting by the formulation of MG at linear level by Fierz and Pauli \cite{Fierz:1939ix} in 1930s. In difference from GR (in which gravitational waves have only two degrees of freedom (helicity $\pm 2$, tensor modes), in massive gravity theories additional three degrees of freedom appears, namely, helicity-$0$ (scalar) and helicity $\pm 1$ (vector) modes, and as a result massive gravity theory becomes  a subject of the van Dam-Veltman-Zakharov (vDVZ) discontinuity
+\cite{vanDam:1970vg,Zakharov:1970cc}. Namely five modes of massive gravity model do not convert to GR's two modes, and thus in the massless limit, $m_g \rightarrow 0$, massive gravity does not reproduce GR. Accounting for strong gravitational potential non-linear effects, the Vainshtein mechanism \cite{Vainshtein:1972sx} insures screening of additional, scalar and vector modes, and correspondingl makes massive gravity model free from vDVZ discountity. In other words, GR is recovered in a strong gravitational fields allowing to verify GR in terrestial and solar system  tests, while massive gravity effects will appear only at cosmological scales possibly leading to accelerated expansion. However the non-linear extension found to be unsatisfactory due to the presence of unhealty, sixth degree of freedom mode \cite{Boulware:1972yco}. Till 2010 it was admitted that all Lorentz-invariant massive gravity theories are characterized by the healthy, ghost mode presence and thus are not legite. 
+
+More recently, a groundbreaking progress was made through formulation of ghost-free massive gravity deRham-Gabadadze-Tolley (dRGT) theory \cite{deRham:2010ik,deRham:2010kj}, and its bigravity  generalization \cite{Hassan:2011zd}. Since then different modifications of dRGT and bigravity were proposed, see for  reviews \cite{Hinterbichler:2011tt,deRham:2014zqa,Koyama:2015vza,deRham:2016nuf,Hinterbichler:2016try} leading to investigations into the consequences of massive gravity (massive cosmologies),
+%\cite{D'Amico:2011jj,Gratia:2012wt,Gumrukcuoglu:2012aa,Maeda:2013bha,Akrami:2013pna,Zhang:2013noa,Lambiase:2012fv,Koyama:2011wx,Tasinato:2012ze,Solomon:2014iwa, Akrami:2013ffa,Konnig:2014xva,Gumrukcuoglu:2016hic}, (also see \cite{} for a recent review, and references therein)
+%TK REFERENCES COMPLETE AND UPDATE
+including the stability of solutions (at background and perturbations levels), stars and black holes (BHs) formation, and gravitational wave (GW) generation and propagation 
+%\cite{Gabadadze:2008ha,deRham:2010tw,Bernard:2014bfa,Comelli:2012db,Wyman:2012iw,Sjors:2011iv,Fasiello:2012rw,DeFelice:2013awa,Gumrukcuoglu:2013nza,DeFelice:2013bxa,Katsuragawa:2015lbl,DeFelice:2015moy,Babichev:2015xha,Li:2016fbf,Sakstein:2017bws}.
+{ While the theoretical foundation of massive gravity is beyond the scope of current paper we aim to place model-independent upper bounds on the graviton mass through gravitational waves observation data and cross correlate them with limits obtained through different cosmological observations.}
+%\cite{Gabadadze:2008ha,deRham:2010tw,Bernard:2014bfa,Comelli:2012db,Wyman:2012iw, Sjors:2011iv,Fasiello:2012rw,DeFelice:2013awa, Gumrukcuoglu:2013nza,DeFelice:2013bxa,Katsuragawa:2015lbl DeFelice:2015moy,Babichev:2015xha,Li:2016fbf,Sakstein:2017bws}.
+%TK REFERENCES
+
+The following effects of massive gravity on gravitational waves can phenomenologically be used to constrain the graviton mass (see Ref. \cite{deRham:2016nuf} for a review):
+(i) The presence of a non-zero graviton mass results in a Yukawa type exponential suppression of the gravitational potential ($\Phi \propto e^{-m_gR}/R$), and correspondingly in suppressing the gravitational waves at wavelength larger than the Compton length scale of the graviton ($R_g \simeq m_g^{-1}$).\footnote{Here and below unless specified we use natural units, $c = $$\ \hbar = $$\ k_B = $$\ 1$.} .(ii) Modification of the gravitational wave dispersion relation, as $\omega^2 = k^2 +m_g^2$ (with $\omega$ and $k$ angular frequency and $k$ wavenumber of gravitational waves respectively), i.e. the difference of the gravitational wave propagation speed ($c_g$) from the speed of light ($c$).
+(iii) The additional degrees of polarization (helicity-$0$ and helicity-$\pm 1$). The main consequence of helicity-$0$ polarization for the graviton is a coupling of the helicity-0  mode to matter (the so-called {\it fifth force}) \cite{deRham:2014naa}.\footnote{\small{However, in dense environments,
+the Vainshtein mechanism \cite{Vainshtein:1972sx} insures the screening of the helicity-0 (and helicity-$\pm 1$) mode \cite{deRham:2012fw,
+Bloomfield:2014zfa,Falck:2015rsa,Falck:2014jwa,Kase:2015zva,Koyama:2015oma}, while leaving the helicity-$\pm 2$ modes the same as in GR.}}
+
+In this paper we investigate the graviton mass limits obtained through their direct detection at high frequency ranges by the Laser Interferometer Gravitational-Wave Observatory (LIGO) and VIRGO 
+collaborations \cite{LIGOScientific:2016aoc,LIGOScientific:2016sjg}, and at low frequency ranges by the North American Nanohertz Observatory for Gravitational Waves (NANOGrav) collaboration \cite{Agazie:2023}, that has been confirmed by other pulsar timing arrays (PTAs) such as 
+European PTA (EPTA) \cite{Antoniadis:2023lym,Antoniadis:2023ott}, 
+the Chinese PTA (CPTA) \cite{Xu:2023wog}, and the Parkes Pulsar Timing Array (PPTA) \cite{Zic:2023gta,Reardon:2023gzh}. 
+
+
+
+
+The length scale determined by the graviton mass through the Yukawa suppression can naively be treated as a ``gravitational causal horizon'' and we can expect the correlations of gravitational perturbations to be suppressed outside this ``gravitational causal horizon''
+
+\bibliographystyle{apsrev4-2_edited}
+\bibliography{refs}
+
+\clearpage
+\end{document}
+Recent detection of stochastic gravitational wave background via 15-year observation 
+have further ignited interest in the gravitational wave astronomy, and its application to constrain fundamental physics, and correspondingly to better understand the nature of gravity. 
+The detected PTA signal can be understood, along with the possibility of the astrophysical sources  (such as supermassive black holes) induced gravitational waves, as a signal possibly from the early universe \cite{Figueroa:2023zhu}. Actually 
+relic gravitational waves promise a new window into the highest-energy events in the evolution of the universe: indeed gravitational radiation propagates {\it almost} (see below) freely throughout cosmic history, and primordial gravitational waves reflect a precise picture of the universe at their time of production in the first fractions of a second after the Big Bang.  
+Detecting these gravitational waves today would open the possibility of testing physical processes at extreme energy scales far beyond what is reached by particle physics experiments and astrophysical observations \cite{Chongchitnan:2006pe}. 
