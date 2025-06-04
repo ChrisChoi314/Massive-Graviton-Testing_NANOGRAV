@@ -424,7 +424,7 @@ $\displaystyle##$\hfil\cr>\cr\sim\cr}}}
 
 \begin{document}
 
-\title{Graviton Mass Limits from Gravitational Waves Detection Data and Future  Prospects}
+\title{Graviton Mass Limits from Gravitational Waves Detection Data and Future Prospects}
 
 \date{\today}
 %TK for now the authors are in alphabetical order
@@ -441,35 +441,37 @@ $\displaystyle##$\hfil\cr>\cr\sim\cr}}}
 
 
 \begin{abstract}
-%TK needs to be started with more general form, what is massive gravity? why massive gravi
-In massive gravity, we expect a modification to the dispersion relation for gravitational waves and the angular correlation in pulsar timing arrays (PTAs) due to the five polarization modes that arise. We consider the lower bound for graviton-mass constraints from the dispersion relation for future PTA observations and scrutinize the possibility of detection via the effective overlap reduction function. We find that the predicted overlap reduction function for such a graviton mass lies within the standard deviation of the observed angular correlation in the best-case scenario, and in fact better fits the current data according to some PTA observations. Future PTA observation campaigns therefore are able to detect these additional modes of polarization and can be effectively used to constrain the graviton mass. 
+%TK needs to be started with more general form, what is massive gravity? why massive gravity
+In general relativity, we expect two polarizations for gravitational waves, corresponding to the tensor plus and cross modes. In massive gravity, three additional modes of polarization arise, corresponding to two vector modes and one scalar mode. We also expect a modification to the dispersion relation for gravitational waves and the angular correlation in pulsar timing arrays due to these five polarization modes. The recent detection of the stochastic gravitational wave background by pulsar timing arrays provides a unique opportunity to explore the possibility of additional polarization modes and thereby constrain massive gravity. We consider the lower bound for graviton-mass constraints from the dispersion relation for future PTA observations and scrutinize the possibility of detection via the effective overlap reduction function. We find that the predicted overlap reduction function for such a graviton mass lies within the standard deviation of the observed angular correlation in the best-case scenario, and in fact better fits the current data according to some PTA observations. Future PTA observation campaigns are therefore able to detect these additional modes of polarization and can be effectively used to constrain the graviton mass. 
 
 \end{abstract}
 
 \maketitle
 
 \section{Introduction}
-The standard cosmological concordance model assumes that general relativity (GR) is the cor-
-rect theory of gravity on cosmological length and time scales, and the acceleration of the universe
-is due to a cosmological constant ($\Lambda $ that has a time-independent energy density and becomes dominant at late times. 
+The standard cosmological concordance model assumes that general relativity (GR) is the correct theory of gravity on cosmological length and time scales, and that the acceleration of the universe
+is due to a cosmological constant ($\Lambda$) that has a time-independent energy density and becomes dominant at late times \cite{Copeland:2006wr, Peebles:2002gy}. 
 %TK Reference, any recent review
+%CC wondering if these papers are recent enough, im guessing probably not
 An alternative approach to the late-time accelerated expansion of the universe is
-to consider the possibility that the true theory of gravity differs from the GR on large scales. 
+to consider the possibility that the true theory of gravity differs from GR on large scales \cite{Clifton:2011jh, Nojiri:2017ncd, Joyce:2014kja, Planck:2015bue}. 
 %TK reference - modified gravity 
 %TK commented - rewritten = 
-%In the framework of the standard model of cosmology (e.g. concordance model)  and particle physics, the observed accelerated expansion of the Universe today  is driven by the substance of unknown nature with a negative pressure (by its modulus equal  to its energy density), the so-called cosmological constant. The requirement of the existence of  the cosmological constant (or any dynamical dark energy) follows from the Einstein equations, which assume  general relativity (GR) as the true theory of gravity, and massless of the graviton, the helicity-2 particles associated with gravitational radiation. 
-%Despite the success of the concordance model, there are several unanswered questions,  including the hierarchy problem,  smallness of gravity compared to the other forces in the standard model,   failure to formulate a unified theory of quantum gravity, among many others.  These puzzles suggest that GR is not suitable for describing physical processes at cosmological scales. Many cosmological observables are sensitive to modifications of GR which makes it possible to test GR through current and future planned observations. These tests include the growth of structure in the late time universe, as measured in galaxy surveys; the rate of acceleration of the universe, that can be measured with standard candles and standard rulers; the number density of nonlinear structures, such as clusters that are very sensitive to the strength of gravitational interactions; the temperature and polarization anisotropies of the cosmic microwave background (CMB), and many others. 
+%In the framework of the standard model of cosmology (e.g. concordance model)  and particle physics, the observed accelerated expansion of the Universe today is driven by the substance of unknown nature with a negative pressure (by its modulus equal  to its energy density), the so-called cosmological constant. The requirement of the existence of  the cosmological constant (or any dynamical dark energy) follows from the Einstein equations, which assume  general relativity (GR) as the true theory of gravity, and massless of the graviton, the helicity-2 particles associated with gravitational radiation. 
+%Despite the success of the concordance model, there are several unanswered questions, including the hierarchy problem, smallness of gravity compared to the other forces in the standard model, failure to formulate a unified theory of quantum gravity, among many others.  These puzzles suggest that GR is not suitable for describing physical processes at cosmological scales. Many cosmological observables are sensitive to modifications of GR which makes it possible to test GR through current and future planned observations. These tests include the growth of structure in the late time universe, as measured in galaxy surveys; the rate of acceleration of the universe, that can be measured with standard candles and standard rulers; the number density of nonlinear structures, such as clusters that are very sensitive to the strength of gravitational interactions; the temperature and polarization anisotropies of the cosmic microwave background (CMB), and many others. 
 %\cite{Jain:2007yk,Jain:2010ka,Jain:2013wgs,Xu:2014uba,Baker:2014zba,Koyama:2015vza,Berti:2015itd,Joyce:2016vqv}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In addition to providing a theoretical framework that could explain the observed accelerated expansion, modified theories of gravity have a number of other attractive features, such as the possibility to unify late-time acceleration with early inflationary expansion \cite{Hinterbichler:2011tt,Clifton:2011jh,Nojiri:2010wj,Joyce:2014kja}. If we want to have a unified theory of all interactions, it is quite likely that GR will have to be modified anyway.
+In addition to providing a theoretical framework that could explain the observed accelerated expansion, modified theories of gravity have a number of other attractive features, such as the possibility to unify late-time acceleration with early inflationary expansion \cite{Hinterbichler:2011tt,Clifton:2011jh,Nojiri:2010wj,Joyce:2014kja}.
+%and to explain dark matter as a massive spin-2 particle \cite{Blas:2024jyh}. 
+If we want to have a unified theory of all interactions, it is quite likely that GR will have to be modified anyway.
 %TK Reference
 %%%%
-One of the most active areas of research in gravity theory stems from the assumption that the graviton has a non-zero mass $m_g$, in a theory known as massive gravity. The idea of a nonzero mass of gravitons (particles responsible for gravitational interactions) has a long history, starting from the formulation of MG at the linear level by Fierz and Pauli \cite{Fierz:1939ix} in the 1930s. In contrast to GR (in which gravitational waves have only two degrees of freedom (helicity $\pm 2$, tensor modes), in massive gravity theories additional three degrees of freedom appear, namely, helicity-$0$ (scalar) and helicity $\pm 1$ (vector) modes, and as a result massive gravity theory becomes a subject of the van Dam-Veltman-Zakharov (vDVZ) discontinuity \cite{vanDam:1970vg,Zakharov:1970cc}. That is, the five modes of generic massive gravity do not convert to the two modes of GR, and thus in the massless limit as $m_g \rightarrow 0$, massive gravity does not reduce to GR. Taking into account the non-linear effects of the strong gravitational potential, the Vainshtein mechanism \cite{Vainshtein:1972sx} ensures the screening of additional scalar and vector modes, and correspondingly makes massive gravity free from the vDVZ discontinuity.\footnote{GR is recovered in a strong gravitational field, allowing us to verify GR in terrestrial and solar system level tests 
+One of the most active areas of research in gravity theory stems from the assumption that the graviton has a non-zero mass $m_g$, in a theory known as massive gravity. The idea of a nonzero mass of gravitons (particles responsible for gravitational interactions) has a long history, starting from the formulation of MG at the linear level by Fierz and Pauli \cite{Fierz:1939ix} in the 1930s. In contrast to GR, where gravitational waves have only two degrees of freedom (helicity $\pm 2$, tensor modes), massive gravity theories have an additional three degrees of freedom, namely, the helicity-$0$ (scalar) and helicity $\pm 1$ (vector) modes. As a result, massive gravity theory is subject to the van Dam-Veltman-Zakharov (vDVZ) discontinuity \cite{vanDam:1970vg,Zakharov:1970cc}. That is, in the massless limit as $m_g \rightarrow 0$, the five modes of massive gravity do not reduce to the two modes that we expect in GR. Taking into account the non-linear effects of the strong gravitational potential, the Vainshtein mechanism \cite{Vainshtein:1972sx} ensures the screening of additional scalar and vector modes, and correspondingly frees massive gravity from the vDVZ discontinuity\footnote{GR is recovered in a strong gravitational field, allowing us to verify GR in terrestrial and solar system level tests 
 %TK reference
 }. The effects of massive gravity thus appear only at
 cosmological scales, possibly leading to an accelerated expansion.
 %TK reference
-However, extensions in the nonlinear regime have been found to be unsatisfactory due to the presence of an unhealthy sixth mode \cite{Boulware:1972yco}.\footnote{Until 2010, it was thought that all Lorentz-invariant massive gravity theories were characterized by the unhealthy presence of the ghost-mode, and thus were not legit. }
+However, extensions in the nonlinear regime have been found to be unsatisfactory due to the presence of an unhealthy sixth mode \cite{Boulware:1972yco}.\footnote{Until 2010, it was thought that all Lorentz-invariant massive gravity theories were characterized by the unhealthy presence of the ghost-mode, and thus were not valid. }
 More recently, groundbreaking progress was made through the formulation of ghost-free massive gravity in the deRham-Gabadadze-Tolley (dRGT) theory \cite{deRham:2010ik,deRham:2010kj}, and its bigravity generalization \cite{Hassan:2011zd}. Since then, different modifications to dRGT and bigravity have been proposed \cite{Hinterbichler:2011tt,deRham:2014zqa,Koyama:2015vza,deRham:2016nuf,Hinterbichler:2016try}, leading to investigations into the consequences of massive gravity (massive cosmologies) 
 %TK References - insert in bibtex
 %\cite{D'Amico:2011jj,Gratia:2012wt,Gumrukcuoglu:2012aa,Maeda:2013bha,Akrami:2013pna,Zhang:2013n a,Lambiase:2012fv,Koyama:2011wx,Tasinato:2012ze,Solomon:2014iwa, Akrami:2013ffa,Konnig:2014xva,Gumrukcuoglu:2016hic}, 
@@ -487,15 +489,15 @@ gravitational wave (GW) generation and propagation.
 The following effects of massive gravity on gravitational waves can phenomenologically be used to constrain the graviton mass (see Ref.\ \cite{deRham:2016nuf} for a review):
 (i) the presence of a non-zero graviton mass results in a Yukawa-type exponential suppression of the gravitational potential ($\Phi \propto e^{-m_gR}/R$), and correspondingly in suppressing the gravitational waves at wavelength larger than the Compton length scale of the graviton ($R_g \simeq m_g^{-1}$),\footnote{The length scale determined by the graviton mass through the Yukawa suppression can naively be treated as a ``gravitational causal horizon'' and we can expect the correlations of gravitational perturbations to be suppressed outside this ``gravitational causal horizon''.}
 (ii) modification of the gravitational wave dispersion relation, as $\omega^2 = k^2 +m_g^2$ (with $\omega$ and $k$ angular frequency and $k$ wavenumber of gravitational waves respectively), i.e. the difference of the gravitational wave propagation speed ($c_g$) from the speed of light ($c$), and
-(iii) the additional degrees of polarization (helicity-$0$ and helicity-$\pm 1$). The main consequence of helicity-$0$ polarization for the graviton is a coupling of the helicity-0  mode to matter (the so-called {\it fifth force}) \cite{deRham:2014naa}.\footnote{{However, in dense environments, the Vainshtein mechanism \cite{Vainshtein:1972sx} ensures the screening of the helicity-0 (and helicity-$\pm 1$) mode \cite{deRham:2012fw,
+(iii) the additional degrees of polarization (helicity-$0$ and helicity-$\pm 1$). The main consequence of helicity-$0$ polarization for the graviton is a coupling of the helicity-0 mode to matter (the so-called {\it fifth force}) \cite{deRham:2014naa}.\footnote{{However, in dense environments, the Vainshtein mechanism \cite{Vainshtein:1972sx} ensures the screening of the helicity-0 (and helicity-$\pm 1$) mode \cite{deRham:2012fw,
 Bloomfield:2014zfa,Falck:2015rsa,Falck:2014jwa,Kase:2015zva,Koyama:2015oma}, while leaving the helicity-$\pm 2$ modes the same as in GR.}}
 %TK Rewrite what we do and how
 %In this paper, we address the graviton mass limits obtained through their direct detection at high frequencies by the Laser Interferometer Gravitational-Wave Observatory (LIGO) and VIRGO collaborations \cite{LIGOScientific:2016aoc,LIGOScientific:2016sjg}, and at low frequency ranges by the North American Nanohertz Observatory for Gravitational Waves (NANOGrav) collaboration \cite{Agazie:2023}, that has been confirmed by other pulsar timing arrays (PTAs) such as  European PTA (EPTA) \cite{Antoniadis:2023lym,Antoniadis:2023ott}, the Chinese PTA (CPTA) \cite{Xu:2023wog}, and the Parkes Pulsar Timing Array (PPTA) \cite{Zic:2023gta,Reardon:2023gzh}. 
 
-The paper is arranged as follows: in Sec.\ \ref{sec:setup}, we introduce the model and the assumptions we make. In Sec.\ \ref{sec:energy}, we derive the energy density and discuss its behavior. In Sec.\ \ref{sec:results}, we compare the model to the signals detected by NANOGrav. In Sec.\ \ref{sec:discussion}, we discuss the implications of our findings and discuss future work. Throughout this paper, we use  (+,--,--,--) for the Minkowski metric $\eta_{\mu\nu}$, and we use natural units and set $c = $$\ \hbar = $$\ k_B = $$\ 1$. 
+The paper is arranged as follows: in Sec.\ \ref{sec:setup}, we introduce the modified dispresion relation and its consequences. In Sec.\ \ref{sec:overlap}, we derive the modified overlap reduction and discuss frequency-dependence complications. In Sec.\ \ref{sec:results}, we compare the numerical results to the data from NANOGrav 15yr and CPTA. In Sec.\ \ref{sec:discussion}, we discuss the implications of our findings and the potential for further investigations. Throughout this paper, we use  (+,--,--,--) for the Minkowski metric $\eta_{\mu\nu}$, and we use natural units, setting $c = $$\ \hbar = $$\ k_B = $$\ 1$. 
 
 
-\section{PTA Mass Limits}\label{sec:pta_limits}
+\section{Setup}\label{sec:setup}
 We start with the dispersion relation for a massive graviton, which is given by
 \begin{equation}\label{eq:dispersion}
     \omega^2 = k^2 + m_g^2 \ .
@@ -539,18 +541,27 @@ Our effective overlap reduction function is given by \cite{Liang:2021bct}
 
 We suppress the frequency dependence of $\Omega_T, \Omega_V, \Omega_S$, since we want to focus on the modifications to the ORF, although there is a possibility that the ORFs we observe that \cite{Xu:2023wog}. 
 \section{Results}\label{sec:results}
-We see that the figure below: 
+We see that the figure below
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{fig0.pdf}
-    \caption{Overlap reduction functions for the tensor, vector, and scalar modes.}
+    \includegraphics[width=0.5\textwidth]{fig0.pdf}
+    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\theta$ between a pair of pulsars, in red. This is plotted at the lower bound of the frequency, $f_0$, and we set $\frac{|k|}{k_0} = 0.1$. The angular-separation–binned inter-pulsar correlations for the CPTA dataset for $f_0$ are plotted in blue. The bins are chosen to match the results of Ref.\ \cite{Xu:2023wog}, since their data are not public.}
     \label{fig:orf}
 \end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{fig1.pdf}
+    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\theta$ between a pair of pulsars, in red. This is plotted at the upper bound of the frequency, $\sim 30f_0$, and we set $\frac{|k|}{k_0} = 0.5$. The angular-separation–binned inter-pulsar correlations for the NANOGrav 15 yr dataset are plotted in blue. Note that this is only for visual confirmation; the analysis uses the full unbinned statistics. We note that we do not use the frequentist optimal statistic that Ref.\ \cite{Agazie:2023} employs, since it is crucial that the estimator is unbiased, rather than biased towards the Hellings-Downs.} 
+    \label{fig:orf}
+\end{figure}
+
 \section{Discussion}\label{sec:discussion}
 
 
 \vspace{3mm}
-The NANOGrav 15-year data used in this paper are available at NANOGrav. Source code to reproduce all of the figures in this paper is available in our GitHub repository.
+The NANOGrav 15-year data used in this paper are publicly available at NANOGrav. Source code to reproduce all of the figures in this paper is available in our GitHub repository.
 
 \begin{center}
     \textbf{ACKNOWLEDGMENTS}    
