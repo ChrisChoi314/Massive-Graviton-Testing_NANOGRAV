@@ -464,7 +464,7 @@ to consider the possibility that the true theory of gravity differs from GR on l
 %\cite{Jain:2007yk,Jain:2010ka,Jain:2013wgs,Xu:2014uba,Baker:2014zba,Koyama:2015vza,Berti:2015itd,Joyce:2016vqv}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In addition to providing a theoretical framework that could explain the observed accelerated expansion, modified theories of gravity have a number of other attractive features, such as the possibility to unify late-time acceleration with early inflationary expansion \cite{Hinterbichler:2011tt,Clifton:2011jh,Nojiri:2010wj,Joyce:2014kja}.
-%and to explain dark matter as a massive spin-2 particle \cite{Blas:2024jyh}. 
+and to explain dark matter \cite{Blas:2024jyh, Aoki:2016zgp}. 
 If we want to have a unified theory of all interactions, it is quite likely that GR will have to be modified anyway.
 %TK Reference
 %%%%
@@ -508,7 +508,7 @@ where we have written it in two parts to explicitly show the mass dependence. He
 \begin{equation} \label{eqn:action_m}
     S_{\text{m}} = \frac{m_g^2}{2}\int d^4x (h_{\mu\nu}h^{\mu\nu} - h^2),
 \end{equation} 
-where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is the metric perturbation defined by the metric tensor as follows: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. In its original form, the Boulware-Deser ghost is present, so we adopt the ghost-free formulation of it. Additionally, we use the quadratic expansion because we are only interested in working at the linear level. In order to obtain the equations of motion, in the linear regime, we first take the Fourier transform of the metric perturbation 
+where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is the metric perturbation defined by the metric tensor as follows: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. In its original form, the Boulware-Deser ghost is present, so we adopt the ghost-free formulation. Additionally, we use the quadratic expansion because we are only interested in working at the linear level. In order to obtain the equations of motion, in the linear regime, we first take the Fourier transform of the metric perturbation 
 \begin{equation}\label{eqn:fourier}
     h_{\mu\nu}(t, {\bf x}) = \int \frac{d^4 k}{(2\pi)}h_{\mu\nu}(t, {\bf k})e^{i{\bf k}\cdot{\bf x}}
 \end{equation}
@@ -604,7 +604,7 @@ We neglect higher order terms past the linear order. We now assume that gravitat
 \begin{equation}\label{eqn:plane_wave}
     h_{\mu \nu}(t, \hat{\bf x}) = \int_{-\infty}^\infty df \int d^2 \hat{\bf \Omega} e^{i2\pi f \left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right)}h_{\mu \nu}\left(f, \frac{|{\bf k}|}{k_0} \hat{\bf \Omega} \right) \ ,
 \end{equation}
-where ${\bf x}$ is the position vector of the pulsar, $L\hat{\bf p}$. We apply the chain rule on the metric perturbation and we get
+where ${\bf x}$ is the position vector of the pulsar, $L\hat{\bf p}$. We apply the chain rule on the metric perturbation, and we get
 \begin{equation}\label{eqn:dhdlambda}
     \begin{aligned}
         \frac{dh^{(i)}_{\mu \nu} \left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{d\lambda } &= \frac{\partial h^{(i)}_{\mu \nu}\left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{\partial t} \frac{dt}{d \lambda} + \frac{\partial h^{(i)}_{\mu \nu}\left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{\partial (\hat{\bf \Omega}\cdot {\bf x})} \frac{d(\hat{\bf \Omega}\cdot {\bf x})}{d \lambda} \\ &= \nu\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}\right) \frac{\partial h^{(i)}_{\mu \nu}\left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{\partial t} \ .
@@ -614,17 +614,25 @@ Here, we have used Eq.\ \ref{eqn:null} and the intrinsic dependence of the metri
 \begin{equation}\label{eqn:dnudl}
     \frac{d\nu}{d\lambda} = \nu \left( \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}\frac{d h_{\alpha \beta}\left(t - \frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot {\boldsymbol{x}}\right)}{d \lambda} - \frac{1}{2} \frac{dh_{0\alpha}\left(t - \frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot {\boldsymbol{x}}\right)}{d\lambda}\hat{p}^\alpha \right) \ .
 \end{equation}
-This is simply a seperable differential equation, and is integrated from the pulsar to the solar system barycenter to yield the redshift (which we express in the Fourier space)
+This is simply a separable differential equation, and is integrated from the pulsar to the solar system barycenter to yield the redshift (which we express in the Fourier space)
 \begin{equation}\label{eqn:redshift}
-    z(t, \hat{\bf \Omega}) = \int_{-\infty}^\infty df \left(e^{-i2\pi f L\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}\right)} - 1\right)\sum_i h^{(i)}\left(f, \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\right)F^{(i)}(\hat{\bf \Omega}) \ .
+    z(t, \hat{\bf \Omega}) = \int_{-\infty}^\infty df \left(e^{-i2\pi f L\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}\right)} - 1\right)\sum_i h^{(i)}\left(f, \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\right)F^{(i)}(\hat{\bf \Omega}) \ ,
 \end{equation}
-A few details of the derivation have been excluded in this discussion, however, more careful derivations of this can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct} which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}.
+where we have defined the recieving function $F^{(i)}(\hat{\bf \Omega}) $ as 
+\begin{equation}\label{eqn:recieving}
+    F^{(i)}(\hat{\Omega}) = -\frac{\hat{p}^\mu \hat{p}^\nu}{2\left(1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}\right)} \epsilon_{\mu \nu}^{(i)}+\frac{\hat{p}^\mu}{2} \epsilon_{0 \mu}^{(i)} \ ,
+\end{equation}
+encoding the dependence on the metric perturbation. A few details of this derivation have been excluded in this discussion, however, more careful derivations of this can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}.
 %CC: I've spent a couple hours looking into this derivation, and I don't think the headache is worth it for now. I might eventually work out the full derivation in the appendix at a later date, but I dont know if it is necessary if liang and anholm basically do it in their appendices 
 %CC: i changed my mind, I do want to give the reader an intuition for where the redshift equation comes from, so i have done a general overview of the steps taken to derive it. 
-We arrive at the following expression for the ORF, for each mode of polarization 
+For PTA data, a quantity of interest is the two-point correlation of the total redshift, $\langle \tilde{z}(f) \tilde{z}(f') \rangle$, where $\tilde{z}(f)$ is the sky-averaged redshift $\tilde{z}(f) \equiv \int d^2\hat{\bf \Omega} z(f, \hat{\bf \Omega})$. Combining everything we have derived up until now, our expression for the two-point correlation is as follows
+\begin{equation}\label{eqn:two_point_z}
+    \langle \tilde{z}(f) \tilde{z}(f') \rangle = \frac{3H_0^2}{32 \beta \pi^3|f|^3}\delta^2\left(\hat{\bf \Omega} , \hat{\bf \Omega}'\right)\delta_{ii'}\delta(f - f')\Omega_{\text{gw}}(|f|) \Gamma(|f|) \ .
+\end{equation}
+Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = 1$ for coaligned and coincident pulsars. $\Omega_{\text{gw}}(|f|)$ is the energy density for the gravitational waves. A wealth of literature has been produced in analyzing the behavior of the energy density in massive gravity in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression, the overlap reduction function $\Gamma(|f|)$ 
 \begin{equation}
   \begin{aligned}\label{eq:orf_full}
-    \Gamma_{I}(|f|) &= \beta_I \sum_i \int_{S^2} d^2 \hat{\bf{\Omega}} \left( e^{i2\pi f L_1\left(1 + \frac{|\bf k|}{k_0}\hat{\bf{\Omega}}\cdot \hat{\bf p_1} \right)} - 1\right) \\ &\times  \left( e^{-i2\pi f L_2\left(1 + \frac{|\bf k|}{k_0}\hat{\bf{\Omega}}\cdot \hat{\bf p_2} \right)} - 1\right) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
+    \Gamma(|f|) &= \beta \sum_i \int_{S^2} d^2 \hat{\bf{\Omega}} \left( e^{i2\pi f L_1\left(1 + \frac{|\bf k|}{k_0}\hat{\bf{\Omega}}\cdot \hat{\bf p_1} \right)} - 1\right) \\ &\times  \left( e^{-i2\pi f L_2\left(1 + \frac{|\bf k|}{k_0}\hat{\bf{\Omega}}\cdot \hat{\bf p_2} \right)} - 1\right) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
   \end{aligned}\end{equation}
 where $i \in \{T,V,S\}$, the tensor, vector, and scalar modes respectively. Here we do not suppress the exponential factors, unlike in Ref.\ \cite{Liang:2021bct}, because the frequency we want to investigate is well within the regime where the exponential factors are not negligible. 
 
@@ -640,7 +648,7 @@ We see that the figure below
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{fig0.pdf}
-    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\theta$ between a pair of pulsars, in red. This is plotted at the lower bound of the frequency, $f_0$, and we set $\frac{|k|}{k_0} = 0.1$. The angular-separation–binned inter-pulsar correlations for the CPTA dataset for $f_0$ are plotted in blue. The bins are chosen to match the results of Ref.\ \cite{Xu:2023wog}, since their data are not public.}
+    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\theta$ between a pair of pulsars, in red. This is plotted at the lower bound of the frequency, $f_0$, and we set $\frac{|k|}{k_0} = 0.1$. The angular–separation–binned inter-pulsar correlations for the CPTA dataset for $f_0$ are plotted in blue. The bins are chosen to match the results of Ref.\ \cite{Xu:2023wog}, since their data are not public.}
     \label{fig:orf}
 \end{figure}
 
@@ -662,8 +670,6 @@ The NANOGrav 15-year data used in this paper are publicly available at NANOGrav.
     \textbf{ACKNOWLEDGMENTS}    
 \end{center}
 \ \ \ We thank Murman Gurgenidze and Qiuyue Liang for useful discussions related to the paper. C.C.\ and T.K.\ acknowledge support from the NASA Astrophysics Theory Program (ATP) Award 80NSSC22K0825 and  National Science Foundation (NSF) Astronomy and Astrophysics Research Grants (AAG) Award AST2408411.
-
-
 
 \bibliographystyle{apsrev4-2_edited}
 \bibliography{refs}
