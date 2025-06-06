@@ -19,6 +19,8 @@
 
 \usepackage{braket,orcidlink}
 
+\usepackage{relsize}
+
 %|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 %             Customized Commands
 %|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -558,7 +560,7 @@ $\epsilon^{(0)}_{\mu\nu}$      & Scalar  & $\dfrac{1}{\sqrt{6}} \left( \epsilon^
 \end{table}
 We note that this formulation of the polarization tensors is related to the typical set of polarization tensors $\{\epsilon_{\mu\nu}^+, \epsilon_{\mu\nu}^\times, \epsilon_{\mu\nu}^x, \epsilon_{\mu\nu}^y, \epsilon_{\mu\nu}^l \}$ in a nontrivial way \cite{Liang:2021bct}, but it is this formulation that we will use on account of its convenience for describing correlations in pulsars.
 
-We minimize the action from Eq.\ (\ref{eqn:action}) with respect to $h^{(i)}$ and we get the following equation of motion for each polarization mode \cite{Maggiore:v2} 
+We minimize the action from Eq.\ (\ref{eqn:action}) with respect to $h^{(i)}$, and we get the following equation of motion for each polarization mode \cite{Maggiore:v2} 
 \begin{equation}\label{eqn:eom}
     \ddot{h}^{(i)}(t, {\bf k}) + 3 H(t)\dot{h}^{(i)}(t, {\bf k}) + \left(\frac{k^2}{a^2(t)} + m_g^2\right)h^{(i)}(t, {\bf k}) = 0 \ ,
 \end{equation}
@@ -587,10 +589,7 @@ In the solar system barycenter reference frame, the frequency shift is character
 \begin{equation}\label{eqn:z}
     z(t) = \frac{\nu_0 - \nu(t)}{\nu_0} \ .
 \end{equation}
-PTA collabarations actually measure the integral of $z(t)$, otherwise known as the anomalous residual, but it is trivial to rewrite these equations in terms of the residual if we so desire. We take advantage of the freedom of choice granted by their simple relation and we proceed in our analysis using the redshift. 
-%In anticipation of our analysis of pulsar-pulsar correlations, we assume there are two pulsars, located distances $L_1$ and $L_2$ from the solar system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is an angle $\xi$ away and is parallel to the $x-z$ plane, which simplifies our calculations. 
-%CC: I want to define these a bit later
-Assume we have an electromagnetic wave traveling along a null geodesic 
+PTA collaborations actually measure the integral of $z(t)$, otherwise known as the anomalous residual, but it is trivial to rewrite these equations in terms of the residual if we so desire. We take advantage of the freedom of choice granted by their simple relation, so we proceed in our analysis using the redshift. Assume we have an electromagnetic wave traveling along a null geodesic 
 \begin{equation}\label{eqn:null}
     \sigma^\mu = s^\mu - \frac{1}{2} \eta^{\mu\nu}h_{\nu \gamma}s^\gamma \ .
 \end{equation}
@@ -601,7 +600,7 @@ Here, $s^\mu \equiv \nu (1, -\hat{\bf p})$ where $\hat{p}$ is the unit vector po
 \begin{equation}\label{eqn:geodesic_further}
     \frac{d\sigma^\mu}{d\lambda} = \frac{1}{2}\dot{h}_{\alpha \beta} s^\alpha s^\beta - h_{0\alpha, \beta} s^\alpha s^\beta \ .
 \end{equation}
-We neglect higher order terms past the linear order. We now assume that gravitational wave is propogating as a plane wave, whose metric perturbation takes the following form 
+We neglect higher-order terms past the linear order. We now assume that the gravitational wave is propagating as a plane wave, whose metric perturbation takes the following form 
 \begin{equation}\label{eqn:plane_wave}
     h_{\mu \nu}(t, \hat{\bf x}) = \int_{-\infty}^\infty df \int d^2 \hat{\bf \Omega} e^{i2\pi f \left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right)}h_{\mu \nu}\left(f, \frac{|{\bf k}|}{k_0} \hat{\bf \Omega} \right) \ ,
 \end{equation}
@@ -615,34 +614,44 @@ Here, we have used Eq.\ \ref{eqn:null} and the intrinsic dependence of the metri
 \begin{equation}\label{eqn:dnudl}
     \frac{d\nu}{d\lambda} = \nu \left( \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}\frac{d h_{\alpha \beta}\left(t - \frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot {\boldsymbol{x}}\right)}{d \lambda} - \frac{1}{2} \frac{dh_{0\alpha}\left(t - \frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot {\boldsymbol{x}}\right)}{d\lambda}\hat{p}^\alpha \right) \ .
 \end{equation}
-This is simply a separable differential equation, and is integrated from the pulsar to the solar system barycenter to yield the redshift (which we express in the Fourier space)
+This is simply a separable differential equation, and is integrated from some $j$-th pulsar to the solar system barycenter to yield the redshift (which we express in the Fourier space)
 \begin{equation}\label{eqn:redshift}
-    z(t, \hat{\bf \Omega}) = \int_{-\infty}^\infty df \left(e^{-i2\pi f L\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}\right)} - 1\right)\sum_i h^{(i)}\left(f, \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\right)F^{(i)}(\hat{\bf \Omega}) \ ,
+    z(t, \hat{\bf \Omega}) = \int_{-\infty}^\infty df \mathcal{E}_j(f, \hat{\Omega}) \sum_i h^{(i)}\left(f, \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\right)F^{(i)}_j(\hat{\bf \Omega}) \ ,
 \end{equation}
-where we have defined the recieving function $F^{(i)}(\hat{\bf \Omega}) $ as 
+where we have defined the recieving function $F^{(i)}_j(\hat{\bf \Omega}) $ as 
 \begin{equation}\label{eqn:recieving}
-    F^{(i)}(\hat{\Omega}) = -\frac{\hat{p}^\mu \hat{p}^\nu}{2\left(1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}\right)} \epsilon_{\mu \nu}^{(i)}+\frac{\hat{p}^\mu}{2} \epsilon_{0 \mu}^{(i)} \ ,
+    F^{(i)}_j(\hat{\Omega}) = \frac{\hat{p}^\mu_j}{2}\left(-\frac{\hat{p}^\nu_j}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}_j}} \epsilon_{\mu \nu}^{(i)}+\epsilon_{0 \mu}^{(i)}\right) \ ,
 \end{equation}
-encoding the dependence on the metric perturbation. A few details of this derivation have been excluded in this discussion, however, more careful derivations of this can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}.
-%CC: I've spent a couple hours looking into this derivation, and I don't think the headache is worth it for now. I might eventually work out the full derivation in the appendix at a later date, but I dont know if it is necessary if liang and anholm basically do it in their appendices 
-%CC: i changed my mind, I do want to give the reader an intuition for where the redshift equation comes from, so i have done a general overview of the steps taken to derive it. 
+and the exponential factor $\mathcal{E}_j(f, \hat{\Omega})$ encoding the dependence on the metric perturbation
+\begin{equation}
+    \mathcal{E}_j(f, \hat{\Omega}) = e^{-i2\pi f L_j\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}_j\right)} - 1 \ . 
+\end{equation}
+A few details of this derivation have been excluded in this discussion, however, more careful derivations of this can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}.
 For PTA data, a quantity of interest is the two-point correlation of the total redshift, $\langle \tilde{z}(f) \tilde{z}(f') \rangle$, where $\tilde{z}(f)$ is the sky-averaged redshift $\tilde{z}(f) \equiv \int d^2\hat{\bf \Omega} z(f, \hat{\bf \Omega})$. Combining everything we have derived up until now, our expression for the two-point correlation is as follows
 \begin{equation}\label{eqn:two_point_z}
     \langle \tilde{z}(f) \tilde{z}(f') \rangle = \frac{3H_0^2}{32 \beta \pi^3|f|^3}\delta^2\left(\hat{\bf \Omega} , \hat{\bf \Omega}'\right)\delta_{ii'}\delta(f - f')\Omega_{\text{gw}}(|f|) \Gamma(|f|) \ .
 \end{equation}
-Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = 1$ for coaligned and coincident pulsars. $\Omega_{\text{gw}}(|f|)$ is the energy density for the gravitational waves. A wealth of literature has been produced in analyzing the behavior of the energy density in massive gravity in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression, the overlap reduction function $\Gamma(|f|)$ 
-\begin{equation}
-  \begin{aligned}\label{eq:orf_full}
-    \Gamma(|f|) &= \beta \sum_i \int_{S^2} d^2 \hat{\bf{\Omega}} \left( e^{i2\pi f L_1\left(1 + \frac{|\bf k|}{k_0}\hat{\bf{\Omega}}\cdot \hat{\bf p_1} \right)} - 1\right) \\ &\times  \left( e^{-i2\pi f L_2\left(1 + \frac{|\bf k|}{k_0}\hat{\bf{\Omega}}\cdot \hat{\bf p_2} \right)} - 1\right) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
-  \end{aligned}\end{equation}
-where $i \in \{T,V,S\}$, the tensor, vector, and scalar modes respectively. Here we do not suppress the exponential factors, unlike in Ref.\ \cite{Liang:2021bct}, because the frequency we want to investigate is well within the regime where the exponential factors are not negligible. 
-
-Our effective overlap reduction function is given by \cite{Liang:2021bct}
-\begin{equation}\label{eq:eff_orf}
-    \tilde{\Gamma}_{T} = \Gamma_{T} + \Gamma_{V} \frac{\Omega_V}{\Omega_T}\frac{\beta_T}{\beta_V} + \Gamma_{S} \frac{\Omega_S}{\Omega_T}\frac{\beta_T}{\beta_S} \ ,
+Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = 1$ for coaligned and coincident pulsars. $\Omega_{\text{gw}}(|f|)$ is the energy density for the gravitational waves. A wealth of literature has been produced in analyzing the behavior of the energy density in massive gravity in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression, the overlap reduction function (ORF) $\Gamma(|f|)$ 
+\begin{equation}\label{eq:orf_full}
+    \Gamma(|f|) = \beta \mathlarger{\sum}_{i \in \{\pm 2, \pm 1,0\}} \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
 \end{equation}
+Here, we assume there are two pulsars, located at distances $L_1$ and $L_2$ from the solar system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is situated on the $x-z$ plane, an angle $\xi$ away from pulsar 1. Here we do not suppress the exponential factors, unlike in Ref.\ \cite{Liang:2021bct}, because the frequency we want to investigate is well within the regime where the exponential factors are not negligible. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fig2.pdf}
+    \caption{The frequency-dependent ORF plotted as a function of $fL$. We see that for $fL$ near 1, the ORF is certainly not negligibly different from its frequency-independent value.}
+    \label{fig:freq_dep}
+\end{figure}
+We define the ORF for each polarization type
+\begin{equation}\label{eq:orf_full}
+    \Gamma_I(|f|) = \mathlarger{\sum}_{i \in I} \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
+\end{equation}
+where we note that we have dropped the normalization factor since it only normalizes the total ORF, and $I = \{T,V,S\}$ for each polarization type, as specified in Table \ref{tbl:tensors}. It is possible to decompose the ORF in this way because the tensor, vector, and scalar modes decouple from each other. Our effective overlap reduction function is given by 
+\begin{equation}\label{eq:eff_orf}
+    \tilde{\Gamma}_{T} = \beta \left(\Gamma_{T} + \Gamma_{V} \frac{\Omega_V}{\Omega_T} + \Gamma_{S} \frac{\Omega_S}{\Omega_T} \right) \ ,
+\end{equation}
+which behaves as an effective tensor mode since PTA observations are not capable of distinguishing the different polarization modes from each other. We also suppress the frequency dependence of $\Omega_T, \Omega_V, \Omega_S$, and we assume that the energy density of each polarization mode is equipartitioned, i.e.\ $\Omega_T = \Omega_V = \frac{1}{2}\Omega_S$. 
 
-We suppress the frequency dependence of $\Omega_T, \Omega_V, \Omega_S$, since we want to focus on the modifications to the ORF, although there is a possibility that the ORFs we observe that \cite{Xu:2023wog}. 
 \section{Results}\label{sec:results}
 We assume the best-case scenario prospects of detection for another century, which corresponds to a frequency of $\sim 3.17 \times 10^{-10} \Hz$. 
 We see that the figure below
