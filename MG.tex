@@ -508,7 +508,7 @@ where we have written it in two parts to explicitly show the mass dependence. He
 \begin{equation} \label{eqn:action_m}
     S_{\text{m}} = \frac{m_g^2}{2}\int d^4x (h_{\mu\nu}h^{\mu\nu} - h^2),
 \end{equation} 
-where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is the metric perturbation defined by the metric tensor as follows: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. In its original form, the Boulware-Deser ghost is present, so we adopt the ghost-free formulation of it. Additionally, we use the quadratic expansion because we are only interested in working at the linear level. In order to obtain the equations of motion, in the linear regime, we first take the fourier transform of the metric perturbation 
+where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is the metric perturbation defined by the metric tensor as follows: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. In its original form, the Boulware-Deser ghost is present, so we adopt the ghost-free formulation of it. Additionally, we use the quadratic expansion because we are only interested in working at the linear level. In order to obtain the equations of motion, in the linear regime, we first take the Fourier transform of the metric perturbation 
 \begin{equation}\label{eqn:fourier}
     h_{\mu\nu}(t, {\bf x}) = \int \frac{d^4 k}{(2\pi)}h_{\mu\nu}(t, {\bf k})e^{i{\bf k}\cdot{\bf x}}
 \end{equation}
@@ -580,19 +580,47 @@ Suppose there is a massive gravitational wave propagating in an arbitrary spatia
                         \cos\theta
                     \end{pmatrix} \ .
 \end{equation}
-This gravitational wave affects the pulsar timing measurements by causing pulsar signals, originally emitted with a constant frequency $\nu_0$, to be perturbed as they travel from their source pulsars to our telescopes. In the solar system barycenter reference frame, the frequency shift is characterized by the redshift
+This gravitational wave affects the pulsar timing measurements by causing pulsar signals, originally emitted with a constant frequency $\nu_0$, to be perturbed as they travel from their source pulsars to our telescopes. 
+%Such a wealth of literature has been produced in hopes of capturing   
+In the solar system barycenter reference frame, the frequency shift is characterized by the redshift
 \begin{equation}\label{eqn:z}
     z(t) = \frac{\nu_0 - \nu(t)}{\nu_0} \ .
 \end{equation}
-PTA collabarations actually measure the integral of $z(t)$, with a quantity known as the anomalous residual, but it is almost trivial to rewrite our equations in terms of the anomalous residual if we so desire, so we proceed in our analysis with the redshift. In anticipation of our analysis of pulsar-pulsar correlations, let us assume we have two pulsars, located distances $L_1$ and $L_2$ from the solar system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is an angle $\xi$ away and is parallel to the $x-z$ plane, which simplifies our calculations. 
-
-We first note that 
-Following the results from Refs.\ \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970, Anholm:2008wy, Liang:2021bct}, we can write the redshift as
-\begin{equation}
-    z(t, \hat{\Omega}) = \frac{1}{2}\frac{\hat{p}^i\hat{p}^j}{1 + }
+PTA collabarations actually measure the integral of $z(t)$, otherwise known as the anomalous residual, but it is trivial to rewrite these equations in terms of the residual if we so desire. We take advantage of the freedom of choice granted by their simple relation and we proceed in our analysis using the redshift. 
+%In anticipation of our analysis of pulsar-pulsar correlations, we assume there are two pulsars, located distances $L_1$ and $L_2$ from the solar system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is an angle $\xi$ away and is parallel to the $x-z$ plane, which simplifies our calculations. 
+%CC: I want to define these a bit later
+Assume we have an electromagnetic wave traveling along a null geodesic 
+\begin{equation}\label{eqn:null}
+    \sigma^\mu = s^\mu - \frac{1}{2} \eta^{\mu\nu}h_{\nu \gamma}s^\gamma \ .
 \end{equation}
-
-From this, we use a result obtained by Detweiler \
+Here, $s^\mu \equiv \nu (1, -\hat{\bf p})$ where $\hat{p}$ is the unit vector pointing in the direction of the pulsar from the solar system barycenter, and $h_{\nu \gamma}$ is position dependent, as defined in Eq.\ \ref{eqn:fourier}. This null geodesic obeys the corresponding geodesic equation 
+\begin{equation}\label{eqn:geodesic}
+    \frac{d\sigma^\mu}{d\lambda} = -\Gamma_{\alpha \beta}^\mu \sigma^\alpha \sigma^\beta \ ,
+\end{equation} where $\lambda$ is the affine parameter that describes the null path the electromagnetic signal takes, and $\Gamma_{\alpha \beta}^\mu$ is the Christoffel symbol. After fully expanding the Christoffel symbol and applying the metric tensor, the geodesic equation becomes  
+\begin{equation}\label{eqn:geodesic_further}
+    \frac{d\sigma^\mu}{d\lambda} = \frac{1}{2}\dot{h}_{\alpha \beta} s^\alpha s^\beta - h_{0\alpha, \beta} s^\alpha s^\beta \ .
+\end{equation}
+We neglect higher order terms past the linear order. We now assume that gravitational wave is propogating as a plane wave, whose metric perturbation takes the following form 
+\begin{equation}\label{eqn:plane_wave}
+    h_{\mu \nu}(t, \hat{\bf x}) = \int_{-\infty}^\infty df \int d^2 \hat{\bf \Omega} e^{i2\pi f \left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right)}h_{\mu \nu}\left(f, \frac{|{\bf k}|}{k_0} \hat{\bf \Omega} \right) \ ,
+\end{equation}
+where ${\bf x}$ is the position vector of the pulsar, $L\hat{\bf p}$. We apply the chain rule on the metric perturbation and we get
+\begin{equation}\label{eqn:dhdlambda}
+    \begin{aligned}
+        \frac{dh^{(i)}_{\mu \nu} \left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{d\lambda } &= \frac{\partial h^{(i)}_{\mu \nu}\left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{\partial t} \frac{dt}{d \lambda} + \frac{\partial h^{(i)}_{\mu \nu}\left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{\partial (\hat{\bf \Omega}\cdot {\bf x})} \frac{d(\hat{\bf \Omega}\cdot {\bf x})}{d \lambda} \\ &= \nu\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}\right) \frac{\partial h^{(i)}_{\mu \nu}\left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{\partial t} \ .
+    \end{aligned}
+\end{equation}
+Here, we have used Eq.\ \ref{eqn:null} and the intrinsic dependence of the metric perturbation on time and $\hat{\bf \Omega}\cdot {\bf x}$. We now use Eq.\ \ref{eqn:geodesic_further} to get 
+\begin{equation}\label{eqn:dnudl}
+    \frac{d\nu}{d\lambda} = \nu \left( \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}\frac{d h_{\alpha \beta}\left(t - \frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot {\boldsymbol{x}}\right)}{d \lambda} - \frac{1}{2} \frac{dh_{0\alpha}\left(t - \frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot {\boldsymbol{x}}\right)}{d\lambda}\hat{p}^\alpha \right) \ .
+\end{equation}
+This is simply a seperable differential equation, and is integrated from the pulsar to the solar system barycenter to yield the redshift (which we express in the Fourier space)
+\begin{equation}\label{eqn:redshift}
+    z(t, \hat{\bf \Omega}) = \int_{-\infty}^\infty df \left(e^{-i2\pi f L\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}\right)} - 1\right)\sum_i h^{(i)}\left(f, \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\right)F^{(i)}(\hat{\bf \Omega}) \ .
+\end{equation}
+A few details of the derivation have been excluded in this discussion, however, more careful derivations of this can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct} which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}.
+%CC: I've spent a couple hours looking into this derivation, and I don't think the headache is worth it for now. I might eventually work out the full derivation in the appendix at a later date, but I dont know if it is necessary if liang and anholm basically do it in their appendices 
+%CC: i changed my mind, I do want to give the reader an intuition for where the redshift equation comes from, so i have done a general overview of the steps taken to derive it. 
 We arrive at the following expression for the ORF, for each mode of polarization 
 \begin{equation}
   \begin{aligned}\label{eq:orf_full}
