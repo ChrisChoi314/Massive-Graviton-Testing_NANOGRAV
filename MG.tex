@@ -589,7 +589,7 @@ In the solar system barycenter reference frame, the frequency shift is character
 \begin{equation}\label{eqn:z}
     z(t) = \frac{\nu_0 - \nu(t)}{\nu_0} \ .
 \end{equation}
-PTA collaborations actually measure the integral of $z(t)$, otherwise known as the anomalous residual, but it is trivial to rewrite these equations in terms of the residual if we so desire. We take advantage of the freedom of choice granted by their simple relation, so we proceed in our analysis using the redshift. Assume we have an electromagnetic wave traveling along a null geodesic 
+PTA collaborations actually measure the integral of $z(t)$, otherwise known as the anomalous residual, but it is trivial to rewrite these equations in terms of the residual if we so desire. We take advantage of the freedom of choice granted by their simple relation, and we proceed in our analysis using the redshift. Assume we have an electromagnetic wave traveling along a null geodesic 
 \begin{equation}\label{eqn:null}
     \sigma^\mu = s^\mu - \frac{1}{2} \eta^{\mu\nu}h_{\nu \gamma}s^\gamma \ .
 \end{equation}
@@ -635,22 +635,23 @@ Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = 1$ f
 \begin{equation}\label{eq:orf_full}
     \Gamma(|f|) = \beta \mathlarger{\sum}_{i \in \{\pm 2, \pm 1,0\}} \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
 \end{equation}
-Here, we assume there are two pulsars, located at distances $L_1$ and $L_2$ from the solar system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is situated on the $x-z$ plane, an angle $\xi$ away from pulsar 1. Here we do not suppress the exponential factors, unlike in Ref.\ \cite{Liang:2021bct}, because the frequency we want to investigate is well within the regime where the exponential factors are not negligible. 
+Here, we assume there are two pulsars, located at distances $L_1$ and $L_2$ from the solar system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is situated on the $x-z$ plane, an angle $\xi$ away from pulsar 1. Here we do not suppress the exponential factors, unlike in Refs.\ \cite{Liang:2021bct,Arjona:2024cex}, because the frequency we want to investigate is well within the regime where the exponential factors are not negligible, as we show below.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{fig2.pdf}
     \caption{The frequency-dependent ORF plotted as a function of $fL$. We see that for $fL$ near 1, the ORF is certainly not negligibly different from its frequency-independent value.}
     \label{fig:freq_dep}
 \end{figure}
+In the best-case scenario of PTA observation, we would be able to observe pulsars for nearly a century, if not longer. This corresponds to a frequency of $f_{\text{min}} \sim 3.17 \times 10^{-10} \Hz$, setting the lower bound of our frequency range. The closest pulsars used in observation are about $L_{\text{min}} \sim 100$ ly away \cite{Anholm:2008wy}, yielding $fL \sim 1$. 
 We define the ORF for each polarization type
-\begin{equation}\label{eq:orf_full}
+\begin{equation}\label{eq:orf_type}
     \Gamma_I(|f|) = \mathlarger{\sum}_{i \in I} \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
 \end{equation}
-where we note that we have dropped the normalization factor since it only normalizes the total ORF, and $I = \{T,V,S\}$ for each polarization type, as specified in Table \ref{tbl:tensors}. It is possible to decompose the ORF in this way because the tensor, vector, and scalar modes decouple from each other. Our effective overlap reduction function is given by 
+where we note that we have dropped the normalization factor $\beta$ since it is only required to normalize the total ORF, and $I = \{T,V,S\}$ for each polarization type, as specified in Table \ref{tbl:tensors}. It is possible to decompose the ORF in this way because the tensor, vector, and scalar modes all decouple from each other. Our effective overlap reduction function is given by 
 \begin{equation}\label{eq:eff_orf}
     \tilde{\Gamma}_{T} = \beta \left(\Gamma_{T} + \Gamma_{V} \frac{\Omega_V}{\Omega_T} + \Gamma_{S} \frac{\Omega_S}{\Omega_T} \right) \ ,
 \end{equation}
-which behaves as an effective tensor mode since PTA observations are not capable of distinguishing the different polarization modes from each other. We also suppress the frequency dependence of $\Omega_T, \Omega_V, \Omega_S$, and we assume that the energy density of each polarization mode is equipartitioned, i.e.\ $\Omega_T = \Omega_V = \frac{1}{2}\Omega_S$. 
+which behaves as an effective tensor mode since PTA observations are not capable of distinguishing the different polarization modes from each other. In general, the energy densities $\Omega_T, \Omega_V, \Omega_S$ are frequency dependent, but we will suppress the frequency dependence in our analysis and we assume that the energy densities of each polarization mode are equipartitioned, i.e.\ $\Omega_T = \Omega_V = \frac{1}{2}\Omega_S$. 
 
 \section{Results}\label{sec:results}
 We assume the best-case scenario prospects of detection for another century, which corresponds to a frequency of $\sim 3.17 \times 10^{-10} \Hz$. 
