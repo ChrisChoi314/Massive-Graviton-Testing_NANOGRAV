@@ -633,17 +633,9 @@ For PTA data, a quantity of interest is the two-point correlation of the total r
 \end{equation}
 Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = 1$ for coaligned and coincident pulsars. $\Omega_{\text{gw}}(|f|)$ is the energy density for the gravitational waves. A wealth of literature has been produced in analyzing the behavior of the energy density in massive gravity in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression, the overlap reduction function (ORF) $\Gamma(|f|)$ 
 \begin{equation}\label{eq:orf_full}
-    \Gamma(|f|) = \beta \mathlarger{\sum}_{i \in \{\pm 2, \pm 1,0\}} \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
+    \Gamma(|f|) = \beta {\sum}_i \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
 \end{equation}
-Here, we assume there are two pulsars, located at distances $L_1$ and $L_2$ from the solar system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is situated on the $x-z$ plane, an angle $\xi$ away from pulsar 1. Here we do not suppress the exponential factors, unlike in Refs.\ \cite{Liang:2021bct,Arjona:2024cex}, because the frequency we want to investigate is well within the regime where the exponential factors are not negligible, as we show below.
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{fig2.pdf}
-    \caption{The frequency-dependent ORF plotted as a function of $fL$. We see that for $fL$ near 1, the ORF is certainly not negligibly different from its frequency-independent value.}
-    \label{fig:freq_dep}
-\end{figure}
-In the best-case scenario of PTA observation, we would be able to observe pulsars for nearly a century, if not longer. This corresponds to a frequency of $f_{\text{min}} \sim 3.17 \times 10^{-10} \Hz$, setting the lower bound of our frequency range. The closest pulsars used in observation are about $L_{\text{min}} \sim 100$ ly away \cite{Anholm:2008wy}, yielding $fL \sim 1$. 
-We define the ORF for each polarization type
+Here, we assume there are two pulsars, located at distances $L_1$ and $L_2$ from the solar system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is situated on the $x-z$ plane, an angle $\xi$ away from pulsar 1. We define the ORF for each polarization type
 \begin{equation}\label{eq:orf_type}
     \Gamma_I(|f|) = \mathlarger{\sum}_{i \in I} \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
 \end{equation}
@@ -654,15 +646,24 @@ where we note that we have dropped the normalization factor $\beta$ since it is 
 which behaves as an effective tensor mode since PTA observations are not capable of distinguishing the different polarization modes from each other. In general, the energy densities $\Omega_T, \Omega_V, \Omega_S$ are frequency dependent, but we will suppress the frequency dependence in our analysis and we assume that the energy densities of each polarization mode are equipartitioned, i.e.\ $\Omega_T = \Omega_V = \frac{1}{2}\Omega_S$. 
 
 \section{Results}\label{sec:results}
-We assume the best-case scenario prospects of detection for another century, which corresponds to a frequency of $\sim 3.17 \times 10^{-10} \Hz$. 
-We see that the figure below
+\subsection{Exponential Factor Non-suppression}\label{sec:exp_fac}
+We now present the main results of this work. In the best-case scenario of PTA observation, we would be able to observe pulsars for nearly a century, if not longer. This corresponds to a frequency of $f_{\text{min}} \sim 3.17 \times 10^{-10} \Hz$, setting the lower bound of our frequency range. The closest pulsars used for PTAs are about $L_{\text{min}} \sim 100$ ly away \cite{Anholm:2008wy}, yielding $fL \sim 1$. Therefore, we do not suppress the exponential factors, unlike in Refs.\ \cite{Liang:2021bct,Arjona:2024cex}, because $fL$ is well within the regime where the exponential factors are not negligible, as shown in Fig.\ \ref{fig:freq_dep}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fig2.pdf}
+    \caption{The frequency-dependent ORF plotted as a function of $fL$. We see that for $fL$ near 1, the ORF is certainly not negligibly different from its frequency-independent value.}
+    \label{fig:freq_dep}
+\end{figure}
+We use Monte-carlo simulations to calculate the frequency dependence of the effective overlap reduction function. The magnitude of $\Gamma_T(|f_{\text{min}}|)$ is significantly greater than $\Gamma_T$ with the factors of $\mathcal{E}_k$ suppressed. 
+
+\subsection{Analysis}\label{sec:analysis}
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{fig0.pdf}
     \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\theta$ between a pair of pulsars, in red. This is plotted at the lower bound of the frequency, $f_0$, and we set $\frac{|k|}{k_0} = 0.1$. The angular–separation–binned inter-pulsar correlations for the CPTA dataset for $f_0$ are plotted in blue. The bins are chosen to match the results of Ref.\ \cite{Xu:2023wog}, since their data are not public.}
     \label{fig:orf}
 \end{figure}
-
 
 \begin{figure}[h]
     \centering
@@ -680,7 +681,7 @@ The NANOGrav 15-year data used in this paper are publicly available at NANOGrav.
 \begin{center}
     \textbf{ACKNOWLEDGMENTS}    
 \end{center}
-\ \ \ We thank Murman Gurgenidze and Qiuyue Liang for useful discussions related to the paper. C.C.\ and T.K.\ acknowledge support from the NASA Astrophysics Theory Program (ATP) Award 80NSSC22K0825 and  National Science Foundation (NSF) Astronomy and Astrophysics Research Grants (AAG) Award AST2408411.
+\ \ \ We thank Murman Gurgenidze and Qiuyue Liang for useful discussions related to the paper. We also thank the organizers of the Phenomenology 2025 Symposium, for which much of this paper has been developed. C.C.\ and T.K.\ acknowledge support from the NASA Astrophysics Theory Program (ATP) Award 80NSSC22K0825 and the National Science Foundation (NSF) Astronomy and Astrophysics Research Grants (AAG) Award AST2408411.
 
 \bibliographystyle{apsrev4-2_edited}
 \bibliography{refs}
