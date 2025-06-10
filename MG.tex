@@ -626,7 +626,7 @@ and the exponential factor $\mathcal{E}_j(f, \hat{\Omega})$ encoding the depende
 \begin{equation}
     \mathcal{E}_j(f, \hat{\Omega}) = e^{-i2\pi f L_j\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}_j\right)} - 1 \ . 
 \end{equation}
-A few details of this derivation have been excluded in this discussion, however, more careful derivations of this can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}.
+We discuss the nature of this exponential factor in more detail in Sec.\ \ref{subsec:exp_fac}. A few details of this derivation have been excluded in this discussion, however, more careful derivations can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}.
 For PTA data, a quantity of interest is the two-point correlation of the total redshift, $\langle \tilde{z}(f) \tilde{z}(f') \rangle$, where $\tilde{z}(f)$ is the sky-averaged redshift $\tilde{z}(f) \equiv \int d^2\hat{\bf \Omega} z(f, \hat{\bf \Omega})$. Combining everything we have derived up until now, our expression for the two-point correlation is as follows
 \begin{equation}\label{eqn:two_point_z}
     \langle \tilde{z}(f) \tilde{z}(f') \rangle = \frac{3H_0^2}{32 \beta \pi^3|f|^3}\delta^2\left(\hat{\bf \Omega} , \hat{\bf \Omega}'\right)\delta_{ii'}\delta(f - f')\Omega_{\text{gw}}(|f|) \Gamma(|f|) \ .
@@ -666,9 +666,9 @@ In Fig.\ \ref{fig:orfs}, we see how differently the ORFs behave when we take int
 \end{equation}
 
 \subsection{Graviton Mass}\label{subsec:mass}
-The graviton mass is intimately connected to the behavior of the effective ORF. It appears as a ratio between the mass and the effective angular frequency, through Eq.\ \ref{eqn:ratio_m}. If observations of PTAs follow the trajectory for the best-case scenario, as detailed in Subsection \ref{subsec:exp_fac}, then we can only hope to observe a graviton mass given by that lower frequency bound. This corresponds to $m_g \sim 1.31\times 10^{-24} \eV$.
+The graviton mass is intimately connected to the behavior of the effective ORF. It appears as a ratio between the mass and the effective angular frequency, through Eq.\ \ref{eqn:ratio_m}. If observations of PTAs follow the trajectory for the best-case scenario, as detailed in Sec.\ \ref{subsec:exp_fac}, then we can only hope to observe a graviton mass given by that lower frequency bound. This corresponds to $m_g \sim 1.31\times 10^{-24} \eV$. To be clear, we are assuming that the lowest theoretical frequency that we can probe, given by the limit of Eq.\ \ref{eqn:omega} as $k\rightarrow 0$, will coincide with the lowest practical frequency that PTAs can measure, hence the `best-case' scenario.
 
-The graviton mass affects all the ORFs for each polarization state, including the tensor modes. 
+The graviton mass affects all the ORFs for each polarization state, including the tensor modes. The graviton mass shows up in the 
 
 \section{Results}\label{sec:results}
 We use the NANOGrav 15-year data set to obtain the angular correlations of 2,211 pairs of pulsars from a 67-pulsar array \cite{Agazie:2023}. We also use the CPTA Data Release I to manually reconstruct the binned average values from 1,596 pairs of pulsars of a 57-pulsar array \cite{Xu:2023wog}. We see this in Fig.\ \ref{fig:ng}.
