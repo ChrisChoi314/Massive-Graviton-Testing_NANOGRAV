@@ -643,7 +643,7 @@ where we note that we have dropped the normalization factor $\beta$ since it is 
 \begin{equation}\label{eq:eff_orf}
     \tilde{\Gamma}_{T} = \beta \left(\Gamma_{T} + \Gamma_{V} \frac{\Omega_V}{\Omega_T} + \Gamma_{S} \frac{\Omega_S}{\Omega_T} \right) \ ,
 \end{equation}
-which behaves as an effective tensor mode since PTA observations are not capable of distinguishing the different polarization modes from each other. In general, the energy densities $\Omega_T, \Omega_V, \Omega_S$ are frequency dependent, but we will suppress the frequency dependence in our analysis and we assume that the energy densities of each polarization mode are equipartitioned, i.e.\ $\Omega_T = \Omega_V = \frac{1}{2}\Omega_S$. 
+which behaves as an effective tensor mode since PTA observations are not capable of distinguishing the different polarization modes from each other. In general, the energy densities $\Omega_T, \Omega_V,$ and $\Omega_S$ are frequency dependent, but we will suppress the frequency dependence in our analysis and we assume that the energy densities of each polarization mode are equipartitioned, i.e.\ $\Omega_T = \Omega_V = \frac{1}{2}\Omega_S$. 
 
 \subsection{Exponential Factor Non-suppression}\label{subsec:exp_fac}
 In the best-case scenario of PTA observation, we would be able to observe pulsars for nearly a century, if not longer. This corresponds to a frequency of $f_{\text{min}} \sim 3.17 \times 10^{-10} \Hz$, setting the lower bound of our frequency range. The closest pulsars used for PTAs are about $L_{\text{min}} \sim 100$ ly away \cite{Anholm:2008wy}, yielding $fL \sim 1$. Therefore, we do not suppress the exponential factors, unlike in Refs.\ \cite{Liang:2021bct,Arjona:2024cex}, because $fL$ is well within the regime where the exponential factors are not negligible, as shown in Fig.\ \ref{fig:freq_dep}.
@@ -686,10 +686,10 @@ We use CPTA DR1 to manually reconstruct the binned average values from 1,596 pai
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{fig3.pdf}
-    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\xi$ between a pair of pulsars, in blue. This is plotted at the lower bound of the frequency, $1/T_{\text{CTPA}}$, and we set $|{\bf k}|/k_0 = 0.1$. The angular–separation–binned inter-pulsar correlations for the CPTA dataset for $1/T_{\text{CTPA}}$ are plotted with error bars. The bins are chosen to match the results of Ref.\ \cite{Xu:2023wog}, since their data are not public.}
+    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\xi$ between a pair of pulsars, in blue. This is plotted at the lower bound of the frequency, $1/T_{\text{CTPA}}$, and we set $|{\bf k}|/k_0 = 0.1$. The angular–separation–binned inter-pulsar correlations for the CPTA dataset for $1/T_{\text{CTPA}}$ are plotted with error bars.}
     \label{fig:cpta}
 \end{figure}
-This data set is chosen because of the frequency dependence that the CPTA collaboration noted \cite{Xu:2023wog}, and due to the peculiar shape of the data. The CPTA collaboration has done an analysis on the correlation coefficients for the frequencies $1/T_{\text{CTPA}}, 1.5/T_{\text{CTPA}},$ and $2/T_{\text{CTPA}}$, where $T_{\text{CTPA}} \sim 3.40$ years. We use the data for $1/T_{\text CTPA}$ since it is closer to $f_0$ which we wish to analyze. 
+This data set is chosen because of the frequency dependence that the CPTA collaboration noted \cite{Xu:2023wog}, and due to the peculiar shape of the data. The CPTA collaboration has done an analysis on the correlation coefficients for the frequencies $1/T_{\text{CTPA}}, 1.5/T_{\text{CTPA}},$ and $2/T_{\text{CTPA}}$, where $T_{\text{CTPA}} \sim 3.40$ years. We use the data for $1/T_{\text CTPA}$ since it is closer to $f_0$, which we wish to analyze. 
 
 We find that for CPTA DR1, the Hellings-Downs gives a fit of $\chi^2$/d.o.f.\ $\sim 3.00$ whereas $\tilde{\Gamma}_T(f_0)$ with $|{\bf k}|/k_0 = 0.1$ gives a fit of $\chi^2$/d.o.f.\ $\sim 1.51$. The effective ORF from massive gravity is a significantly better fit than the Hellings-Downs. In fact, the effective ORF from massive gravity does remarkably well in matching the data, with the only pathology located at the very first data point.
 We summarize our statistics in Table \ref{tbl:chi}. 
@@ -716,10 +716,18 @@ CPTA DR1 & Massive Gravity & 16.58 & 1.51 \\
 \section{Discussion}\label{sec:discussion}
 In this paper, we have reviewed the methods for obtaining the modified dispersion relation and ORF in the theory of massive gravity. We have analyzed the behavior of this effective ORF when the exponential factors are not ignored. We discuss the implications for this behavior by comparing it with data from the NANOGrav 15-yr data set and CPTA DR1.
 
-Our findings are surprising; they show that 
+Our findings show that massive gravity is able to explain the observed pulsar-pulsar correlation better than the Hellings-Downs, with varying levels of success. We note that we have not done a rigorous fitting of the data, we simply took characteristic frequencies to compare with. A rigorous fitting to the full data has been done in Ref.\ \cite{Arjona:2024cex}, and the ratio that has been found to best fit the frequentist optimal statistic of the NANOGrav 15-yr data is 0.73. We deem this to be plausible based on our statistics and the resulting shape of our ORF. A future study may introduce more free parameters than the ones we considered and perform a hollistic fitting procedure to place constraints on the mass of the graviton and their relative energy densities.
+
+Our analysis explores the novel possibility of incorporating the exponential factors in the ORFs. For most of the galactic millisecond pulsars considered in PTA experiments, the exponential factors will be safely ignored because of the large distances involved with them, but for a substantial portion of them, $fL$ will be less than 10. This means it is crucial that we understand how $\mathcal{E}$ affects the ORF in these cases. For a more complete analysis, we would want to calculate the ORF for every single pulsar pair with their real $L_1$ and $L_2$ values, and see how this diverges from the ORF when $\mathcal{E}$ is ignored.
+
+An assumption we made previously is that the stochastic gravitational wave background is isotropic. It is what allows us to decompose Eq.\ \ref{eqn:two_point_z} in the way that we did, but it is not necessarily an assumption we can take for granted \cite{Depta:2024ykq, Bravo:2025csu, Cusin:2025xle, Kuwahara:2024jiz, Li:2024lvt}. Anisotropy in the background can be analyzed by decomposing the ORF in the basis of spherical harmonics and analzying the multipole moments associated with these harmonics. This can be applied to the effective ORFs we have derived, and may be of interest to do in further work. It is an approach we have briefly considered for our analysis of the ORFs, but ultimately had to abandon in order to pursue a more hollistic approach.
+
+The frequency dependence of the ORF in general is an underexplored landscape. The NANOGrav collaboration and other PTA collaborations do not claim to detect any frequency dependence in the ORF, while the CPTA collaboration has. If the graviton is massive, then there will certainly be frequency dependence in the data, even without considering $\mathcal{E}$. Doing an analysis of the frequency dependence of the NANOGrav data would therefore be quite elucidative. It is beyond the scope of this paper to perform such an analysis.
+
+The detection prospects suggested in Sec.\ \ref{subsec:exp_fac} are quite optimistic. It may be unlikely that we see a PTA experiment last that long, but we nevertheless provide a detailed overview for the ORFs that we may observe if such a scenario takes place. Regarding data from current PTA collaborations, the prospects seem hopeful to continue detecting pulsar-pulsar correlation coefficients such that the ORFs generated in a theory of massive gravity stay within their standard deviations. 
 
 \vspace{3mm}
-The NANOGrav 15-year data used in this paper are publicly available at NANOGrav. Source code to reproduce all of the figures and Table \ref{tbl:chi} is available in our GitHub repository.
+The NANOGrav 15-year data used in this paper are publicly available at NANOGrav. Source code to reproduce all of the figures and Table \ref{tbl:chi} is available in our GitHub repository \href{https://github.com/ChrisChoi314/graviton_mass_ORF}{graviton\_mass\_ORF}.
 
 \begin{center}
     \textbf{ACKNOWLEDGMENTS}    
@@ -732,7 +740,7 @@ The NANOGrav 15-year data used in this paper are publicly available at NANOGrav.
 \clearpage
 \end{document}
 Recent detection of stochastic gravitational wave background via 15-year observation 
-have further ignited interest in the gravitational wave astronomy, and its application to constrain fundamental physics, and correspondingly to better understand the nature of gravity. 
+have further ignited interest in gravitational wave astronomy, and its application to constrain fundamental physics, and correspondingly to better understand the nature of gravity. 
 The detected PTA signal can be understood, along with the possibility of the astrophysical sources  (such as supermassive black holes) induced gravitational waves, as a signal possibly from the early universe \cite{Figueroa:2023zhu}. Actually 
 relic gravitational waves promise a new window into the highest-energy events in the evolution of the universe: indeed gravitational radiation propagates {\it almost} (see below) freely throughout cosmic history, and primordial gravitational waves reflect a precise picture of the universe at their time of production in the first fractions of a second after the Big Bang.  
 Detecting these gravitational waves today would open the possibility of testing physical processes at extreme energy scales far beyond what is reached by particle physics experiments and astrophysical observations \cite{Chongchitnan:2006pe}. 
