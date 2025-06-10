@@ -631,9 +631,9 @@ For PTA data, a quantity of interest is the two-point correlation of the total r
 \begin{equation}\label{eqn:two_point_z}
     \langle \tilde{z}(f) \tilde{z}(f') \rangle = \frac{3H_0^2}{32 \beta \pi^3|f|^3}\delta^2\left(\hat{\bf \Omega} , \hat{\bf \Omega}'\right)\delta_{ii'}\delta(f - f')\Omega_{\text{gw}}(|f|) \Gamma(|f|) \ .
 \end{equation}
-Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = 1$ for coaligned and coincident pulsars. $\Omega_{\text{gw}}(|f|)$ is the energy density for the gravitational waves. A wealth of literature has been produced in analyzing the behavior of the energy density in massive gravity in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression, the overlap reduction function (ORF) $\Gamma(|f|)$ 
+Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = \frac{1}{2}$ for coaligned and coincident pulsars, to match the conventions of the Hellings-Downs \cite{Romano:2023zhb}. $\Omega_{\text{gw}}(|f|)$ is the energy density for the gravitational waves. A wealth of literature has been produced in analyzing the behavior of the energy density in massive gravity in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression, the overlap reduction function (ORF) $\Gamma(|f|)$ 
 \begin{equation}\label{eq:orf_full}
-    \Gamma(|f|) = \beta {\sum}_i \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
+    \Gamma(|f|) = \beta \sum_i \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}),
 \end{equation}
 Here, we assume there are two pulsars, located at distances $L_1$ and $L_2$ from the solar system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is situated on the $x-z$ plane, an angle $\xi$ away from pulsar 1. We define the ORF for each polarization type
 \begin{equation}\label{eq:orf_type}
@@ -654,22 +654,33 @@ We now present the main results of this work. In the best-case scenario of PTA o
     \caption{The frequency-dependent ORF plotted as a function of $fL$. We see that for $fL$ near 1, the ORF is certainly not negligibly different from its frequency-independent value.}
     \label{fig:freq_dep}
 \end{figure}
-We use Monte-carlo simulations to calculate the frequency dependence of the effective overlap reduction function. The magnitude of $\Gamma_T(|f_{\text{min}}|)$ is significantly greater than $\Gamma_T$ with the factors of $\mathcal{E}_k$ suppressed. 
+We use Monte-Carlo integration to numerically compute the frequency dependence of the effective ORF. The magnitude of $\Gamma_T(|f_{\text{min}}|)$ is significantly greater than $\Gamma_T$ with the factors of $\mathcal{E}(f, \hat{\bf \Omega})$ suppressed. If the ORF is in the regime where the Taylor expansions in the short wavelength ($fL \gg 1$) or long wavelength ($fL \ll 1$) cannot be carried out, then we must not ignore $\mathcal{E}(f, \hat{\bf \Omega})$.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{fig3.pdf}
+    \caption{The ORFs plotted as a function of angular separation $\xi$. The solid lines use the full expression of the ORFs, including the factors of $\mathcal{E}$. The dotted lines are frequency independent and ignore the factors of $\mathcal{E}$. The solid lines are plotted with $fL = 1$}
+    \label{fig:orfs}
+\end{figure}
+In Fig.\ \ref{fig:orfs}, we see how differently the ORFs behave when we take into account the frequency dependence and when we ignore it. We observe that for a fixed $fL$, the ratio $|{\bf k}|/k_0$ corresponds to an increasing disparity between the frequency-dependent and -independent ORFs. For sufficiently small values of the ratio $|{\bf k}|/k_0$, e.g.\ $|{\bf k}|/k_0 \lesssim 0.1$, the frequency-dependent ORF acquires additional local extrema, namely a minimum and a maximum. This is a peculiarity that only arises when factors of $\mathcal{E}$ are taken into account. We also expect such a drastic behavior to emerge when the mass of the graviton is sufficiently high, which corresponds to the ratio according to 
+\begin{equation}\label{eqn:ratio_m}
+    \frac{|{\bf k}|}{k_0} = \sqrt{1 - \frac{m^2}{k_0^2}}
+\end{equation}
 
 \subsection{Analysis}\label{sec:analysis}
+We use the NANOGrav 15-year data set to obtain the angular correlations of 2,211 pairs of pulsars from a 67-pulsar array \cite{Agazie:2023}. We also use the CPTA Data Release I to manually reconstruct the binned average values from 1,596 pairs of pulsars of a 57-pulsar array \cite{Xu:2023wog}. We see this in Fig.\ \ref{fig:ng}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{fig1.pdf}
+    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\theta$ between a pair of pulsars, in red. This is plotted at the upper bound of the frequency, $\sim 30f_0$, and we set $|{\bf k}|/k_0 = 0.5$. The angular-separation–binned inter-pulsar correlations for the NANOGrav 15-year dataset are plotted in blue. Note that this is only for visual confirmation; the analysis uses the full unbinned statistics.}
+    \label{fig:ng}
+\end{figure}
+We note that we do not use the frequentist optimal statistic that Ref.\ \cite{Agazie:2023} employs, based on methods described in Ref.\ \cite{Allen:2022ksj}, since it is crucial that the estimator is not biased towards the Hellings-Downs. We want the statistics to not assume anything about the additional polarizations so our comparison is legit. For Fig.\ \ref{fig:ng}, we used 13 bins constructed such that the mean of each bin matches the mean $\xi$'s of the CPTA data as closely as possible, since we are not able to alter the number or range of the bins in the CPTA data due to its public inaccessibility. 
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{fig0.pdf}
-    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\theta$ between a pair of pulsars, in red. This is plotted at the lower bound of the frequency, $f_0$, and we set $\frac{|k|}{k_0} = 0.1$. The angular–separation–binned inter-pulsar correlations for the CPTA dataset for $f_0$ are plotted in blue. The bins are chosen to match the results of Ref.\ \cite{Xu:2023wog}, since their data are not public.}
-    \label{fig:orf}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\textwidth]{fig1.pdf}
-    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\theta$ between a pair of pulsars, in red. This is plotted at the upper bound of the frequency, $\sim 30f_0$, and we set $\frac{|k|}{k_0} = 0.5$. The angular-separation–binned inter-pulsar correlations for the NANOGrav 15 yr dataset are plotted in blue. Note that this is only for visual confirmation; the analysis uses the full unbinned statistics. We note that we do not use the frequentist optimal statistic that Ref.\ \cite{Agazie:2023} employs, since it is crucial that the estimator is unbiased, rather than biased towards the Hellings-Downs.} 
-    \label{fig:orf}
+    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\theta$ between a pair of pulsars, in red. This is plotted at the lower bound of the frequency, $f_0$, and we set $|{\bf k}|/k_0 = 0.1$. The angular–separation–binned inter-pulsar correlations for the CPTA dataset for $f_0$ are plotted in blue. The bins are chosen to match the results of Ref.\ \cite{Xu:2023wog}, since their data are not public.}
+    \label{fig:cpta}
 \end{figure}
 
 \section{Discussion}\label{sec:discussion}
