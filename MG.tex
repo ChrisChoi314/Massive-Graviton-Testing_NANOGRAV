@@ -668,18 +668,39 @@ In Fig.\ \ref{fig:orfs}, we see how differently the ORFs behave when we take int
 \subsection{Graviton Mass}\label{subsec:mass}
 The graviton mass is intimately connected to the behavior of the effective ORF. It appears as a ratio between the mass and the effective angular frequency, through Eq.\ \ref{eqn:ratio_m}. If observations of PTAs follow the trajectory for the best-case scenario, as detailed in Sec.\ \ref{subsec:exp_fac}, then we can only hope to observe a graviton mass given by that lower frequency bound. This corresponds to $m_g \sim 1.31\times 10^{-24} \eV$. To be clear, we are assuming that the lowest theoretical frequency that we can probe, given by the limit of Eq.\ \ref{eqn:omega} as $k\rightarrow 0$, will coincide with the lowest practical frequency that PTAs can measure, hence the ``best-case'' scenario. Going forth, this is the mass that we will take $m_g$ to be in our analysis.
 
-The graviton mass affects all the ORFs for each polarization type, including the tensor modes. The graviton mass shows up in the exponential terms as the coefficient in front of the dot product $\sqrt{1 - (m_g/k_0)^2}\hat{\bf \Omega}\cdot \hat{\bf p}_j$ and in the massive spin-1 helicity-0 polarization vector $\epsilon_\mu^0(m_g) = \sqrt{1 / (1 - (m_g/k_0)^2)}(\sqrt{1 - (m_g/k_0)^2}, \sin\theta\cos\varphi, \sin\theta\sin\varphi, \cos\theta)$. The former appears in all of the polarization types, but the latter only appears in the vector and scalar modes in the receiving functions, further complicating their mass dependences. The analytical expressions we are integrating can be found in Ref.\ \cite{Liang:2021bct}, except the expressions we use contain $\mathcal{E}$. Interestingly, because the graviton mass only appears as a ratio $m_g / k_0$, the behavior of the ORF is only sensitive to the mass relative to the frequency. In other words, there is no significance of an ORF purely due to a graviton mass of $m_g$. The question would be, with regards to what frequency? This is unlike previous models of massive gravity that have been analyzed.
+The graviton mass affects all the ORFs for each polarization type, including the tensor modes. The graviton mass shows up in the exponential terms as the coefficient in front of the dot product $\sqrt{1 - (m_g/k_0)^2}\hat{\bf \Omega}\cdot \hat{\bf p}_j$ and in the massive spin-1 helicity-0 polarization vector $\epsilon_\mu^0(m_g) = \sqrt{1 / (1 - (m_g/k_0)^2)}(\sqrt{1 - (m_g/k_0)^2}, \sin\theta\cos\varphi, \sin\theta\sin\varphi, \cos\theta)$. The former appears in all of the polarization types, but the latter only appears in the vector and scalar modes in the receiving functions, further complicating their mass dependences. The analytical expressions we are integrating can be found in Ref.\ \cite{Liang:2021bct}, except the expressions we use contain $\mathcal{E}$. Interestingly, because the graviton mass only appears as a ratio $m_g / k_0$, the behavior of the ORF is only sensitive to the mass relative to the frequency. In other words, there is no significance of an ORF purely due to a graviton mass of $m_g$. The question would be, with regards to what frequency?
 
 \section{Results}\label{sec:results}
 We now present the main results of this work. Although our calculations are for observations that extend well into the future, it is instructive to compare to current data and confirm whether they are within the present standard deviations, or perhaps explain the current data better than the Hellings-Downs. We use the NANOGrav 15-year data set to obtain the angular correlations of 2,211 pairs of pulsars from a 67-pulsar array \cite{Agazie:2023}. We also use the CPTA Data Release I to manually reconstruct the binned average values from 1,596 pairs of pulsars of a 57-pulsar array \cite{Xu:2023wog}.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{fig1.pdf}
-    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\theta$ between a pair of pulsars, in red. This is plotted at the upper bound of the frequency, $\sim 30f_0$, and we set $|{\bf k}|/k_0 = 0.5$. The angular-separation–binned inter-pulsar correlations for the NANOGrav 15-year dataset are plotted in blue. Note that this is only for visual confirmation; the analysis uses the full unbinned statistics.}
+    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\theta$ between a pair of pulsars, in red. This is plotted at the upper bound of the frequency, $\sim 30f_0$, and we set $|{\bf k}|/k_0 = 0.5$. The angular-separation–binned inter-pulsar correlations for the NANOGrav 15-year dataset are plotted in blue.}
     \label{fig:ng}
 \end{figure}
 We note that we do not use the frequentist optimal statistic that Ref.\ \cite{Agazie:2023} employs, which is based on methods described in Ref.\ \cite{Allen:2022ksj}, since it is crucial that the estimator is not biased towards the Hellings-Downs. We want the statistics to not assume anything about the additional polarizations so our comparison is legit. For Fig.\ \ref{fig:ng}, we used 13 bins constructed such that the mean of each bin matches the mean $\xi$'s of the CPTA data as closely as possible, since we are not able to alter the number or range of the bins in the CPTA data due to its public inaccessibility. Unfortunately, due to this complication, we compute the statistics for each binned average, rather than the correlation coefficient for each pair, since we want the statistics for the two data sets to be on equal footing.
-We find the Hellings-Downs to describe the NANOGrav 15-year data with $\chi^2/$
+
+We present Table \ref{tbl:chi}
+\begin{table}[h] 
+\centering
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Data} & \textbf{Fit} & \textbf{$\chi^2$} & \textbf{$\chi^2$/d.o.f.} \\
+\hline
+NANOGrav 15-yr & Hellings-Downs & 22.20 & 1.71 \\
+\hline
+NANOGrav 15-yr & Massive Gravity & 11.22 & 1.02 \\
+\hline
+CPTA DR1 & Hellings-Downs & 38.95 & 3.00 \\
+\hline
+CPTA DR1 & Massive Gravity & 16.58 & 1.51 \\
+\hline
+\end{tabular}
+\caption{The $\chi^2$ and $\chi^2$/d.o.f.\ values for diferent fit functions for the two datasets used in this analysis. We have 13 degrees of freedom for the Hellings-Downs correlation and 11 for the massive gravity models, with 2 fit parameters: $m_g$ and $f$. }
+\label{tbl:chi}
+\end{table}
+for the statistics in our analysis. We see that 
 
 \begin{figure}[h]
     \centering
@@ -691,7 +712,7 @@ We find the Hellings-Downs to describe the NANOGrav 15-year data with $\chi^2/$
 \section{Discussion}\label{sec:discussion}
 
 \vspace{3mm}
-The NANOGrav 15-year data used in this paper are publicly available at NANOGrav. Source code to reproduce all of the figures in this paper is available in our GitHub repository.
+The NANOGrav 15-year data used in this paper are publicly available at NANOGrav. Source code to reproduce all of the figures and Table \ref{tbl:chi} is available in our GitHub repository.
 
 \begin{center}
     \textbf{ACKNOWLEDGMENTS}    
