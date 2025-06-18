@@ -1,6 +1,6 @@
 %\documentclass[prd,twocolumn,aps,psfig,showpacs,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers,times]{revtex4}
-%\documentclass[prd,twocolumn,aps,psfig,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers,times]{revtex4-2}
-\documentclass[prd,aps,psfig,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers,times]{revtex4-2}\setlength{\topmargin}{-14mm}
+\documentclass[prd,twocolumn,aps,psfig,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers,times]{revtex4-2}
+%\documentclass[prd,aps,psfig,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers,times]{revtex4-2}\setlength{\topmargin}{-14mm}
 \usepackage{graphicx,bm,color,amsmath,amssymb, mathtools,subcaption}
 \graphicspath{{./fig/}}
 \captionsetup{justification   = RaggedRight,
@@ -448,8 +448,8 @@ There are outstanding questions about our universe, including the accelerated ex
 
 \maketitle
 
-\section{Introduction}
-The standard cosmological concordance model assumes that general relativity (GR) is the correct theory of gravity on cosmological length and time scales, and that the acceleration of the universe
+%\section{Introduction}
+\textit{Introduction}---The standard cosmological concordance model assumes that general relativity (GR) is the correct theory of gravity on cosmological length and time scales, and that the acceleration of the universe
 is due to a cosmological constant ($\Lambda$) that has a time-independent energy density and becomes dominant at late times \cite{Copeland:2006wr, Peebles:2002gy}. 
 %TK Reference, any recent review
 %CC wondering if these papers are recent enough, im guessing probably not
@@ -494,9 +494,9 @@ Bloomfield:2014zfa,Falck:2015rsa,Falck:2014jwa,Kase:2015zva,Koyama:2015oma}, whi
 
 In this paper, we derive the overlap reduction function (ORF) and the dispersion relation in the case of ghost-free massive gravity, taking into account the effect of these extra helicity modes. We carefully calculate, at first analytically and then numerically, the contribution of the helicity modes to the ORF. The propagation of the different modes will be shown to modify the extrema of the ORFs. The speed of propagation is, in general, mode- and mass-dependent, but in this paper we will ignore this different propagation speed, assuming instead that $c_g$ is very close to $c$ \cite{Blas:2016qmn}. This work differs from previous work \cite{Liang:2021bct, Anholm:2008wy, Arjona:2024cex, Lee:2013awh} because of the particular emphasis we place on the non-suppression of the exponential factors. This is only possible because we analyze the ORFs in the context of an optimistic PTA observation prospect.
 
-The paper is arranged as follows: in Sec.\ \ref{sec:setup}, we derive the modified dispersion relation from the action and establish the additional polarization modes we observe in massive gravity. In Sec.\ \ref{sec:overlap}, we derive the modified ORF from the redshift, discuss what occurs when we do not suppress the exponential factor from the ORF, and discuss how the graviton mass affects the ORF. In Sec.\ \ref{sec:results}, we compare the numerical results to the data from NANOGrav 15yr and CPTA. In Sec.\ \ref{sec:discussion}, we discuss the implications of our findings. Throughout this paper, we use  (+,--,--,--) for the Minkowski metric $\eta_{\mu\nu}$, and we use natural units, setting $c = $$\ \hbar = $$\ k_B = $$\ 1$. 
+%The paper is arranged as follows: in Sec.\ \ref{sec:setup}, we derive the modified dispersion relation from the action and establish the additional polarization modes we observe in massive gravity. In Sec.\ \ref{sec:overlap}, we derive the modified ORF from the redshift, discuss what occurs when we do not suppress the exponential factor from the ORF, and discuss how the graviton mass affects the ORF. In Sec.\ \ref{sec:results}, we compare the numerical results to the data from NANOGrav 15yr and CPTA. In Sec.\ \ref{sec:discussion}, we discuss the implications of our findings. Throughout this paper, we use  (+,--,--,--) for the Minkowski metric $\eta_{\mu\nu}$, and we use natural units, setting $c = $$\ \hbar = $$\ k_B = $$\ 1$. 
 
-\section{Setup}\label{sec:setup}
+%\section{Setup}\label{sec:setup}
 %In general, the linearized action in massive gravity is given by the Fierz-Pauli action \cite{Fierz:1939ix}, the oldest and simplest of the actions constructed for a massive spin-2 field
 %\begin{equation}\label{eqn:action}
 %    \mathcal{S}_{\text{FP}} = \mathcal{S}_{\text{EH}}^{(2)} + S_{\text{m}},
@@ -507,83 +507,42 @@ The paper is arranged as follows: in Sec.\ \ref{sec:setup}, we derive the modifi
 %\end{equation} 
 %where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is the metric perturbation defined by the metric tensor as follows: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. In its original form, the Boulware-Deser ghost is present, so we adopt the ghost-free formulation. Additionally, we use the quadratic expansion because we are only interested in working at the linear level. 
 Gravitons are the hypothetical quanta of the gravitational field, and while their direct detection and a nonlinear theory that is consistent at the quantum level still elude us, we can work within the linearized level in a ghost-free formulation. In such a formulation, the action appears as
-\begin{equation} \label{eqn:action_m}
-   \mathcal{S} = \int d^4 x \left(\frac{1}{2} \partial_{\lambda} h_{\mu\nu} \partial^\lambda h^{\mu\nu} -\partial_{\mu} h_{\nu \lambda}\partial^\nu h^{\nu\lambda} + \partial_{\mu}h^{\lambda\nu}\partial_{\nu}h - \frac{1}{2}\partial_{\lambda} h\partial^\lambda h +\frac{1}{2}m_g^2(h_{\mu\nu}h^{\mu\nu} - h^2) \right),
-\end{equation} 
-where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is the metric perturbation defined by the metric tensor as follows: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. While the region of observation is much smaller than the radius of curvature induced by the graviton, we may express $h_{\mu\nu}$ as a plane-wave \cite{Isi:2018miq}
-$h_{\mu \nu}$
 
-In order to obtain the equations of motion in the linear regime, we start with the metric perturbation
-\begin{equation}\label{eqn:fourier}
-    h_{\mu\nu}(t, {\bf x}) = \int \frac{d^4 k}{(2\pi)^4}h_{\mu\nu}(t, {\bf k})e^{i{\bf k}\cdot{\bf x}}
+\begin{align}\label{eqn:action_m}
+   \mathcal{S} = \int d^4 x \Bigg( & \frac{1}{2} \partial_{\lambda} h_{\mu\nu} \partial^\lambda h^{\mu\nu} -\partial_{\mu} h_{\nu \lambda}\partial^\nu h^{\nu\lambda} + \partial_{\mu}h^{\lambda\nu}\partial_{\nu}h \nonumber \\ &- \frac{1}{2}\partial_{\lambda} h\partial^\lambda h +\frac{1}{2}m_g^2(h_{\mu\nu}h^{\mu\nu} - h^2) \Bigg),
+\end{align}
+where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is the metric perturbation defined by the metric tensor as follows: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. Whenever the region of observation is much smaller than the radius of curvature induced by the graviton, we may express $h_{\mu\nu}$ as a plane wave \cite{Isi:2018miq}
+\begin{equation}\label{eqn:planewave}
+    h_{\mu\nu}(x) = \frac{1}{(2\pi)^4}\int d{\bf k} \ h_{\mu\nu}(k) e^{ikx} \ .
 \end{equation}
-We further decompose $h_{\mu\nu}(t, {\bf k}) $ using polarization tensors
-\begin{equation}\label{eqn:decomp}
-    h_{\mu\nu}(t, {\bf k}) = \sum_{i} \epsilon^\lambda_{\mu\nu}({\bf k})h^{(i)}(t, {\bf k}),
-\end{equation}
-where ${\bf k}$ is the graviton wave vector, $i \in \{\pm 2, \pm 1,0\}$, and $\epsilon^\lambda_{ij}$ are the polarization tensors given by Table \ref{tbl:tensors} in terms of the massive spin-1 polarization vectors
-\begin{equation}\label{eqn:pol_vec}
-    \epsilon_\mu^{\pm}(k) = \frac{1}{\sqrt{2}} 
-\begin{pmatrix}
-0 \\
-\cos\theta \cos\varphi \mp i \sin\varphi \\
-\cos\theta \sin\varphi \pm i \cos\varphi \\
-- \sin\theta
-\end{pmatrix}
-, \ \ \ \epsilon_\mu^{0}(k) = \frac{1}{\sqrt{k^2}} 
-\begin{pmatrix}
-|\mathbf{k}| \\
-k_0 \sin\theta \cos\varphi \\
-k_0 \sin\theta \sin\varphi \\
-k_0 \cos\theta
-\end{pmatrix} \ .
-\end{equation}
-Here, $\theta$ and $\varphi$ describe the polar and azimuthal angles that describe the spatial direction of the propagating graviton, and $k_0$ is the timelike coordinate of the wavevector, given by $k_0 = 2\pi f$. 
-\begin{table}[h] 
-\centering
-\renewcommand{\arraystretch}{1.8}
-\begin{tabular}{|c|c|c|l|}
-\hline
-\textbf{Mode} & \textbf{Type} & \textbf{Polarization Tensor $\epsilon^{\lambda}_{\mu\nu}$} \\
-\hline
-$\epsilon^{(+2)}_{\mu\nu}$     & Tensor  & $\epsilon^+_\mu \epsilon^+_\nu $ \\
-\hline
-$\epsilon^{(-2)}_{\mu\nu}$     & Tensor   & $\epsilon^-_\mu \epsilon^-_\nu $ \\
-\hline
-$\epsilon^{(+1)}_{\mu\nu}$     & Vector   & $\dfrac{1}{\sqrt{2}} \left( \epsilon^+_\mu \epsilon^0_\nu + \epsilon^0_\mu \epsilon^+_\nu \right)$ \\
-\hline
-$\epsilon^{(-1)}_{\mu\nu}$     & Vector   & $\dfrac{1}{\sqrt{2}} \left( \epsilon^-_\mu \epsilon^0_\nu + \epsilon^0_\mu \epsilon^-_\nu \right)$ \\
-\hline
-$\epsilon^{(0)}_{\mu\nu}$      & Scalar  & $\dfrac{1}{\sqrt{6}} \left( \epsilon^+_\mu \epsilon^-_\nu + \epsilon^-_\mu \epsilon^+_\nu - 2\epsilon^0_\mu \epsilon^0_\nu \right)$ \\
-\hline
-\end{tabular}
-\caption{Polarization tensors $\epsilon^{(i)}_{\mu\nu}$ of a spin-2 particle expressed in terms of vector polarizations $\epsilon^\lambda_\mu$ for helicities $\lambda = 0, \pm1$.}
-\label{tbl:tensors}
-\end{table}
-We note that this formulation of the polarization tensors is related to the typical set of polarization tensors $\{\epsilon_{\mu\nu}^+, \epsilon_{\mu\nu}^\times, \epsilon_{\mu\nu}^x, \epsilon_{\mu\nu}^y, \epsilon_{\mu\nu}^l \}$ in a nontrivial way \cite{Liang:2021bct}, but it is this formulation that we will use on account of its convenience for describing correlations in pulsars.
-
+Here, we have the 4-dimensional measure $d{\bf k} \equiv d^4 k 2\delta(|{\bf k}|^2 - |k_{\omega}|^2)/|{\bf k}|$ where $|k_{\omega}| \equiv |{\bf k}(\omega)$ and is given by the dispersion relation, which comes from imposing the on-shell condition \cite{Liang:2021bct} and is of the form $k_0^2 = \omega^2 = |{\bf k}|^2 + m_g^2$. This dispersion relation is specific to the theory of massive gravity we have chosen to study. In general, the dispersion relation is a function of the scale factor and may also be dependent on the propagation speed of the graviton \cite{Gumrukcuoglu:2012wt}. We can decompose $h_{\mu\nu}(t, {\bf k}) $ in terms of polarization tensors as $h_{\mu\nu}(t, {\bf k}) = \sum_{i} \epsilon^\lambda_{\mu\nu}({\bf k})h^{(i)}(t, {\bf k})$, where ${\bf k}$ is the graviton wave vector, $i \in \{\pm 2, \pm 1,0\}$, and $\epsilon^\lambda_{ij}$ are the polarization tensors given in Appendix \ref{sec:polarization_tensors}.
 %We minimize the action from Eq.\ (\ref{eqn:action}) with respect to $h^{(i)}$, and we get the following equation of motion for each polarization mode \cite{Maggiore:v2} 
 %\begin{equation}\label{eqn:eom}
 %    \ddot{h}^{(i)}(\tau, {\bf k}) + 3 H(t)\dot{h}^{(i)}(t, {\bf k}) + \left(\frac{k^2}{a^2(t)} + m_g^2\right)h^{(i)}(t, {\bf k}) = 0 \ ,
 %\end{equation}
 %where we have made a transformation into conformal time $\tau = \int  dt / a(t)$, the dots represents a conformal time derivative, $a(\tau)$ is the scale factor and $H(\tau)$ is the Hubble parameter. From this, we can easily see that the dispersion relation for the massive graviton is 
-\begin{equation}\label{eq:dispersion}
-    \omega^2 = \frac{k^2}{a^2} + m_g^2 \ ,
-\end{equation}
-where $\omega$ is the effective angular frequency, equivalent to $k_0$. Since we are observing gravitational waves at very nearly the present time, we set $a = 1$. Eq.\ \ref{eq:dispersion} provides a lower bound on the frequency for a gravitational wave, given by the mass of the graviton $m_g$, provided that $k$ goes to 0. In other words, $\omega$ must be at least $m_g$. Pulsar-timing arrays are sensitive to frequencies in the range \cite{Moore:2014lga}
-\begin{equation}\label{eq:freqrange}
-    \frac{1}{T_{\text{obs}}} < f < \frac{1}{\delta t} \ ,
-\end{equation} where $T_{\text{obs}}$ is the total length of time the pulsars are observed for and $\delta t$ is the cadence, i.e.\ how often the pulsars are measured. For reference, $T_{\text{obs}} \approx$ 15 years and $\delta t \approx$ 0.5 weeks for the most frequent observations of a pulsar observed in NANOGrav. In section \ref{sec:results}, we discuss how we use Eq.\ \ref{eq:dispersion} in the context of observational prospects. 
+%\begin{equation}\label{eq:dispersion}
+%    \omega^2 = \frac{k^2}{a^2} + m_g^2 \ ,
+%\end{equation}
+%where $\omega$ is the effective angular frequency, equivalent to $k_0$. Since we are observing gravitational waves at very nearly the present time, we set $a = 1$. Eq.\ \ref{eq:dispersion} 
+The dispersion relation provides a lower bound on the frequency for a gravitational wave, given by the mass of the graviton $m_g$, provided that $k$ goes to 0. In other words, $\omega$ must be at least $m_g$. Pulsar-timing arrays are sensitive to frequencies in the range \cite{Moore:2014lga}
+%\begin{equation}\label{eq:freqrange}
+    %\frac{1}{T_{\text{obs}}} < f < \frac{1}{\delta t}\ ,
+%\end{equation} 
+$1/T_{\text{obs}} < f < 1/\delta t,$ where $T_{\text{obs}}$ is the total length of time the pulsars are observed for and $\delta t$ is the cadence, i.e.\ how often the pulsars are measured. For reference, $T_{\text{obs}} \approx$ 15 years and $\delta t \approx$ 0.5 weeks for the most frequent observations of a pulsar observed in NANOGrav. 
+%In section \ref{sec:results}, we discuss how we use Eq.\ \ref{eq:dispersion} in the context of observational prospects. 
 
-\section{Overlap Reduction Functions}\label{sec:overlap}
-\subsection{Derivation}\label{subsec:derivation}
+%\section{Overlap Reduction Functions}\label{sec:overlap}
+%\subsection{Derivation}\label{subsec:derivation}
+
 Suppose there is a massive gravitational wave propagating in an arbitrary spatial direction specified by the unit vector $\hat{\Omega} = (                     \sin\theta \cos\varphi,
                         \sin\theta \sin\varphi,
                         \cos\theta)$.
 This gravitational wave affects the pulsar timing measurements by perturbing the pulsar signals, originally emitted with a constant frequency $\nu_0$, as they travel from their source pulsars to our telescopes. In the solar-system barycenter reference frame, the frequency shift is characterized by the redshift
-\begin{equation}\label{eqn:z}
-    z(t) = \frac{\nu_0 - \nu(t)}{\nu_0} \ .
-\end{equation}
+%\begin{equation}\label{eqn:z}
+ %   z(t) = \frac{\nu_0 - \nu(t)}{\nu_0} \ .
+%\end{equation}
+$z(t) = (\nu_0 - \nu(t))/\nu_0$.
 PTA collaborations actually measure the integral of $z(t)$, otherwise known as the anomalous residual, but it is trivial to rewrite these equations in terms of the residual if we so desire. We take advantage of the freedom of choice granted by their simple relation, and we proceed in our analysis using the redshift. 
 
 This is simply a separable differential equation, and is integrated from some $j$-th pulsar to the solar-system barycenter to yield the redshift (which we express in the Fourier space)
@@ -617,18 +576,18 @@ where we note that we have dropped the normalization factor $\beta$ since it is 
 \end{equation}
 which behaves as an effective tensor mode since PTA observations are not capable of distinguishing the different polarization modes from each other. In general, the energy densities $\Omega_T, \Omega_V,$ and $\Omega_S$ are frequency dependent, but we will suppress the frequency dependence in our analysis and we assume that the energy densities of each polarization mode are equipartitioned, i.e.\ $\Omega_T = \Omega_V = \frac{1}{2}\Omega_S$. 
 
-\subsection{Exponential Factor Non-suppression}\label{subsec:exp_fac}
-In the best-case scenario of PTA observation, we would be able to observe pulsars for nearly a century, if not longer. This corresponds to a frequency of $f_{\text{min}} \sim 3.17 \times 10^{-10} \Hz$, setting the lower bound of our frequency range. The closest pulsars used for PTAs are about $L_{\text{min}} \sim 100$ ly away \cite{Anholm:2008wy}, yielding $fL \sim 1$. Therefore, we do not suppress the exponential factors, unlike in Refs.\ \cite{Liang:2021bct,Arjona:2024cex}, because $fL$ is well within the regime where the exponential factors are not negligible, as shown in Fig.\ \ref{fig:freq_dep}.
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{fig0.pdf}
-    \caption{The frequency-dependent ORF plotted as a function of $fL$. We see that for $fL$ near 1, the ORF is certainly not negligibly different from the frequency-independent value.}
-    \label{fig:freq_dep}
-\end{figure}
+%\subsection{Exponential Factor Non-suppression}\label{subsec:exp_fac}
+In the best-case scenario of PTA observation, we would be able to observe pulsars for nearly a century, if not longer. This corresponds to a frequency of $f_{\text{min}} \sim 3.17 \times 10^{-10} \Hz$, setting the lower bound of our frequency range. The closest pulsars used for PTAs are about $L_{\text{min}} \sim 100$ ly away \cite{Anholm:2008wy}, yielding $fL \sim 1$. Therefore, we do not suppress the exponential factors, unlike in Refs.\ \cite{Liang:2021bct,Arjona:2024cex}, because $fL$ is well within the regime where the exponential factors are not negligible. %as shown in Fig.\ \ref{fig:freq_dep}.
+%\begin{figure}[h]
+%    \centering
+%    \includegraphics[width=0.8\textwidth]{fig0.pdf}
+%    \caption{The frequency-dependent ORF plotted as a function of $fL$. We see that for $fL$ near 1, the ORF is certainly not negligibly different from the frequency-independent value.}
+%    \label{fig:freq_dep}
+%\end{figure}
 We use Monte-Carlo integration to numerically compute the frequency dependence of the effective ORF. The magnitude of $\Gamma_T(|f_{\text{min}}|)$ is significantly greater than $\Gamma_T$ with the factors of $\mathcal{E}(f, \hat{\bf \Omega})$ suppressed. If the ORF is in the regime where the Taylor expansions in the short wavelength ($fL \gg 1$) or long wavelength ($fL \ll 1$) cannot be carried out, then we must not ignore $\mathcal{E}(f, \hat{\bf \Omega})$.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{fig1.pdf}
+    \includegraphics[scale=0.48]{fig1.pdf}
     \caption{The ORFs plotted as a function of angular separation $\xi$. The solid lines use the full expression of the ORFs, including the factors of $\mathcal{E}$. The dotted lines are frequency independent and ignore the factors of $\mathcal{E}$. The solid lines are plotted with $fL = 1$}
     \label{fig:orfs}
 \end{figure}
@@ -648,7 +607,7 @@ We now present the main results of this work. Although our calculations are for 
 We use the NANOGrav 15-yr to obtain the angular correlations of 2,211 pairs of pulsars from a 67-pulsar array \cite{Agazie:2023}. 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{fig2.pdf}
+    \includegraphics[width=0.45\textwidth]{fig2.pdf}
     \caption{The frequency-dependent effective overlap reduction function plotted in red as a function of the angular separation $\xi$ between a pair of pulsars, in red. This is plotted at the upper frequency, $f_1$, and we set $|{\bf k}|/k_0 = 0.5$. The angular-separation–binned inter-pulsar correlations for the NANOGrav 15-year dataset are plotted with error bars.}
     \label{fig:ng}
 \end{figure}
@@ -659,7 +618,7 @@ We find that for the NANOGrav 15-yr data, the Hellings-Downs gives a fit of $\ch
 We use CPTA DR1 to manually reconstruct the binned average values from 1,596 pairs of pulsars of a 57-pulsar array \cite{Xu:2023wog}. 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{fig3.pdf}
+    \includegraphics[width=0.45\textwidth]{fig3.pdf}
     \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\xi$ between a pair of pulsars, in blue. This is plotted at the lower bound of the frequency, $1/T_{\text{CTPA}}$, and we set $|{\bf k}|/k_0 = 0.1$. The angular–separation–binned inter-pulsar correlations for the CPTA dataset for $1/T_{\text{CTPA}}$ are plotted with error bars.}
     \label{fig:cpta}
 \end{figure}
@@ -687,8 +646,8 @@ CPTA DR1 & Massive Gravity & 16.58 & 1.51 \\
 \label{tbl:chi}
 \end{table}
 
-\section{Discussion}\label{sec:discussion}
-In this paper, we have reviewed the methods for obtaining the modified dispersion relation and effective ORF in the theory of ghost-free massive gravity. We have analyzed the behavior of this effective ORF when the exponential factors are not ignored. We were able to demonstrate using un‑biased NANOGrav 15-yr data and CPTA DR1 that the effective ORF fits the data significantly better than the Hellings–Downs with an optimistic graviton mass $m_g \sim$ $1.3\times10^{-24} \eV$.
+%\section{Discussion}\label{sec:discussion}
+\textit{Discussion}---In this paper, we have reviewed the methods for obtaining the modified dispersion relation and effective ORF in the theory of ghost-free massive gravity. We have analyzed the behavior of this effective ORF when the exponential factors are not ignored. We were able to demonstrate using un‑biased NANOGrav 15-yr data and CPTA DR1 that the effective ORF fits the data significantly better than the Hellings–Downs with an optimistic graviton mass $m_g \sim$ $1.3\times10^{-24} \eV$.
 
 Our findings show that massive gravity is able to explain the observed pulsar-pulsar correlation more convincingly than the Hellings-Downs. We note that we have not done a rigorous fitting of the data, we simply took characteristic frequencies to compare with. A rigorous fitting to the full data has been done in Ref.\ \cite{Arjona:2024cex}, and the ratio that has been found to best fit the frequentist optimal statistic of the NANOGrav 15-yr data is $|{\bf k}|/k_0 \sim 0.73$. We deem this to be plausible, based on our statistics and the resulting shape of our ORF. A future study may introduce more free parameters than the ones we considered and perform a holistic fitting procedure to place constraints on the mass of the graviton and its relative energy densities. Additionally, it would be of use to perform the fitting on the individual pulsar-pulsar correlation coefficients rather than the binned averages. 
 
@@ -700,13 +659,11 @@ The frequency dependence of the ORF in general is an underexplored landscape. Th
 
 The detection prospects suggested in Sec.\ \ref{subsec:exp_fac} are quite optimistic. It may be unlikely that we see a PTA experiment last that long, but we nevertheless provide a detailed overview of the ORFs that we may observe if such a scenario takes place. Regarding data from current PTA collaborations, the prospects seem hopeful to continue detecting pulsar-pulsar correlation coefficients such that the ORFs generated in a theory of massive gravity stay within their standard deviations. 
 
-\vspace{3mm}
-The NANOGrav 15-year data used in this paper are publicly available at NANOGrav. Source code to reproduce all of the figures and Table \ref{tbl:chi} is available in our GitHub repository \href{https://github.com/ChrisChoi314/graviton_mass_ORF}{graviton\_mass\_ORF}.
+\vspace{5mm}
+\textit{Acknowledgements}---We thank Murman Gurgenidze and Qiuyue Liang for useful discussions related to the paper. We also thank the organizers of the Phenomenology 2025 Symposium, for which much of this paper has been developed. C.C.\ and T.K.\ acknowledge support from the NASA Astrophysics Theory Program (ATP) Award 80NSSC22K0825 and the National Science Foundation (NSF) Astronomy and Astrophysics Research Grants (AAG) Award AST2408411.
 
-\begin{center}
-    \textbf{ACKNOWLEDGMENTS}    
-\end{center}
-\ \ \ We thank Murman Gurgenidze and Qiuyue Liang for useful discussions related to the paper. We also thank the organizers of the Phenomenology 2025 Symposium, for which much of this paper has been developed. C.C.\ and T.K.\ acknowledge support from the NASA Astrophysics Theory Program (ATP) Award 80NSSC22K0825 and the National Science Foundation (NSF) Astronomy and Astrophysics Research Grants (AAG) Award AST2408411.
+\vspace{5mm}
+\textit{Data availability}---The NANOGrav 15-year data used in this paper are publicly available at NANOGrav. Source code to reproduce all of the figures and Table \ref{tbl:chi} is available in our GitHub repository \href{https://github.com/ChrisChoi314/graviton_mass_ORF}{graviton\_mass\_ORF}.
 
 \bibliographystyle{apsrev4-2_edited}
 \bibliography{refs}
@@ -731,21 +688,65 @@ We neglect higher-order terms past the linear order. We now assume that the grav
 where ${\bf x}$ is the position vector of the pulsar, $L\hat{\bf p}$. We apply the chain rule on the metric perturbation, and we get
 \begin{equation}\label{eqn:dhdlambda}
     \begin{aligned}
-        \frac{dh^{(i)}_{\mu \nu} \left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{d\lambda } &= \frac{\partial h^{(i)}_{\mu \nu}\left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{\partial t} \frac{dt}{d \lambda} + \frac{\partial h^{(i)}_{\mu \nu}\left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{\partial (\hat{\bf \Omega}\cdot {\bf x})} \frac{d(\hat{\bf \Omega}\cdot {\bf x})}{d \lambda} \\ &= \nu\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}\right) \frac{\partial h^{(i)}_{\mu \nu}\left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{\partial t} \ .
+        \frac{dh^{(i)}_{\mu \nu} \left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{d\lambda } &= \frac{\partial h^{(i)}_{\mu \nu}}{\partial t} \frac{dt}{d \lambda} + \frac{\partial h^{(i)}_{\mu \nu}}{\partial (\hat{\bf \Omega}\cdot {\bf x})} \frac{d(\hat{\bf \Omega}\cdot {\bf x})}{d \lambda} \\ &= \nu\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}\right) \frac{\partial h^{(i)}_{\mu \nu}}{\partial t} \ .
     \end{aligned}
 \end{equation}
 Here, we have used Eq.\ \ref{eqn:null} and the intrinsic dependence of the metric perturbation on time and $\hat{\bf \Omega}\cdot {\bf x}$. We now use Eq.\ \ref{eqn:geodesic_further} to get 
 \begin{equation}\label{eqn:dnudl}
-    \frac{d\nu}{d\lambda} = \nu \left( \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}\frac{d h_{\alpha \beta}\left(t - \frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot {\boldsymbol{x}}\right)}{d \lambda} - \frac{1}{2} \frac{dh_{0\alpha}\left(t - \frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot {\boldsymbol{x}}\right)}{d\lambda}\hat{p}^\alpha \right) \ .
+    \frac{d\nu}{d\lambda} = \nu \left( \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}\frac{d h_{\alpha \beta}}{d \lambda} - \frac{1}{2} \frac{dh_{0\alpha}}{d\lambda}\hat{p}^\alpha \right) \ .
 \end{equation}
 This is nothing but a separable differential equation, which we integrate from the pulsar to the solar-system barycenter. First, we separate the variables, isolating them to either side
 \begin{equation}\label{eqn:diff_eq}
-    \frac{d\nu}{\nu} =  \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}d h_{\alpha \beta}\left(t - \frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot {\boldsymbol{x}}\right) - \frac{1}{2} dh_{0\alpha}\left(t - \frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot {\boldsymbol{x}}\right)\hat{p}^\alpha \ .
+    \frac{d\nu}{\nu} =  \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}d h_{\alpha \beta} - \frac{1}{2} dh_{0\alpha}\hat{p}^\alpha \ .
 \end{equation}
 Then, after integrating, we get 
 \begin{equation}\label{eqn:integrating_eq}
-    \ln\left(\frac{\nu(t)}{\nu_0}\right) =  \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}\Delta h_{\alpha \beta}\left(t - \frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot {\boldsymbol{x}}\right) - \frac{1}{2} \Delta h_{0\alpha}\left(t - \frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot {\boldsymbol{x}}\right)\hat{p}^\alpha \ .
+    \ln\left(\frac{\nu(t)}{\nu_0}\right) =  \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}\Delta h_{\alpha \beta} - \frac{1}{2} \Delta h_{0\alpha}\hat{p}^\alpha \ .
 \end{equation}
+
+\section{Polarization Tensors}\label{sec:polarization_tensors}
+Table \ref{tbl:tensors} gives the polarization tensors in terms of the massive spin-1 polarization vectors
+\begin{equation}\label{eqn:pol_vec}
+\begin{aligned}
+    \epsilon_\mu^{\pm}(k) &= \frac{1}{\sqrt{2}} 
+\begin{pmatrix}
+0 \\
+\cos\theta \cos\varphi \mp i \sin\varphi \\
+\cos\theta \sin\varphi \pm i \cos\varphi \\
+- \sin\theta
+\end{pmatrix}
+, \\ \epsilon_\mu^{0}(k) &= \frac{1}{\sqrt{k^2}} 
+\begin{pmatrix}
+|\mathbf{k}| \\
+k_0 \sin\theta \cos\varphi \\
+k_0 \sin\theta \sin\varphi \\
+k_0 \cos\theta
+\end{pmatrix} \ .
+\end{aligned}
+\end{equation}
+Here, $\theta$ and $\varphi$ describe the polar and azimuthal angles that describe the spatial direction of the propagating graviton, and $k_0$ is the timelike coordinate of the wavevector, given by $k_0 = 2\pi f$. 
+\begin{table}[h] 
+\centering
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|c|c|c|l|}
+\hline
+\textbf{Mode} & \textbf{Type} & \textbf{Polarization Tensor $\epsilon^{\lambda}_{\mu\nu}$} \\
+\hline
+$\epsilon^{(+2)}_{\mu\nu}$     & Tensor  & $\epsilon^+_\mu \epsilon^+_\nu $ \\
+\hline
+$\epsilon^{(-2)}_{\mu\nu}$     & Tensor   & $\epsilon^-_\mu \epsilon^-_\nu $ \\
+\hline
+$\epsilon^{(+1)}_{\mu\nu}$     & Vector   & $\dfrac{1}{\sqrt{2}} \left( \epsilon^+_\mu \epsilon^0_\nu + \epsilon^0_\mu \epsilon^+_\nu \right)$ \\
+\hline
+$\epsilon^{(-1)}_{\mu\nu}$     & Vector   & $\dfrac{1}{\sqrt{2}} \left( \epsilon^-_\mu \epsilon^0_\nu + \epsilon^0_\mu \epsilon^-_\nu \right)$ \\
+\hline
+$\epsilon^{(0)}_{\mu\nu}$      & Scalar  & $\dfrac{1}{\sqrt{6}} \left( \epsilon^+_\mu \epsilon^-_\nu + \epsilon^-_\mu \epsilon^+_\nu - 2\epsilon^0_\mu \epsilon^0_\nu \right)$ \\
+\hline
+\end{tabular}
+\caption{Polarization tensors $\epsilon^{(i)}_{\mu\nu}$ of a spin-2 particle expressed in terms of vector polarizations $\epsilon^\lambda_\mu$ for helicities $\lambda = 0, \pm1$.}
+\label{tbl:tensors}
+\end{table}
+We note that this formulation of the polarization tensors is related to the typical set of polarization tensors $\{\epsilon_{\mu\nu}^+, \epsilon_{\mu\nu}^\times, \epsilon_{\mu\nu}^x, \epsilon_{\mu\nu}^y, \epsilon_{\mu\nu}^l \}$ in a nontrivial way \cite{Liang:2021bct}, but it is this formulation that we will use on account of its convenience for describing correlations in pulsars.
 
 
 \clearpage
