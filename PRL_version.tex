@@ -428,7 +428,7 @@ $\displaystyle##$\hfil\cr>\cr\sim\cr}}}
 
 \begin{document}
 
-\title{Graviton Mass Limits from Gravitational Wave Detection Data and Future Prospects}
+\title{Do pulsar timing data sets favor the massive graviton?}
 
 \date{\today}
 \author{Chris~Choi\,\orcidlink{0009-0005-2328-3044}}
@@ -492,7 +492,7 @@ Bloomfield:2014zfa,Falck:2015rsa,Falck:2014jwa,Kase:2015zva,Koyama:2015oma}, whi
 %TK Rewrite what we do and how
 %In this paper, we address the graviton mass limits obtained through their direct detection at high frequencies by the Laser Interferometer Gravitational-Wave Observatory (LIGO) and VIRGO collaborations \cite{LIGOScientific:2016aoc,LIGOScientific:2016sjg}, and at low frequency ranges by the North American Nanohertz Observatory for Gravitational Waves (NANOGrav) collaboration \cite{Agazie:2023}, that has been confirmed by other pulsar timing arrays (PTAs) such as  European PTA (EPTA) \cite{Antoniadis:2023lym,Antoniadis:2023ott}, the Chinese PTA (CPTA) \cite{Xu:2023wog}, and the Parkes Pulsar Timing Array (PPTA) \cite{Zic:2023gta,Reardon:2023gzh}. 
 
-In this paper, we derive the overlap reduction function (ORF) and the dispersion relation in the case of ghost-free massive gravity, taking into account the effect of these extra helicity modes. We carefully calculate, at first analytically and then numerically, the contribution of the helicity modes to the ORF. The propagation of the different modes will be shown to modify the extrema of the ORFs. The speed of propagation is, in general, mode- and mass-dependent, but in this paper we will ignore this different propagation speed, assuming instead that $c_g$ is very close to $c$ \cite{Blas:2016qmn}. This work differs from previous work \cite{Liang:2021bct, Anholm:2008wy, Arjona:2024cex, Lee:2013awh} because of the particular emphasis we place on the non-suppression of the exponential factors. This is only possible because we analyze the ORFs in the context of an optimistic PTA observation prospect.
+In this Letter, we derive the overlap reduction function (ORF) and the dispersion relation in the case of ghost-free massive gravity, taking into account the effect of these extra helicity modes. We carefully calculate, at first analytically and then numerically, the contribution of the helicity modes to the ORF. The propagation of the different modes will be shown to modify the extrema of the ORFs. The speed of propagation is, in general, mode- and mass-dependent, but in this paper we will ignore this different propagation speed, assuming instead that $c_g$ is very close to $c$ \cite{Blas:2016qmn}. This work differs from previous work \cite{Liang:2021bct, Anholm:2008wy, Arjona:2024cex, Lee:2013awh} because of the particular emphasis we place on the non-suppression of the exponential factors. This is only possible because we analyze the ORFs in the context of an optimistic PTA observation prospect.
 
 %The paper is arranged as follows: in Sec.\ \ref{sec:setup}, we derive the modified dispersion relation from the action and establish the additional polarization modes we observe in massive gravity. In Sec.\ \ref{sec:overlap}, we derive the modified ORF from the redshift, discuss what occurs when we do not suppress the exponential factor from the ORF, and discuss how the graviton mass affects the ORF. In Sec.\ \ref{sec:results}, we compare the numerical results to the data from NANOGrav 15yr and CPTA. In Sec.\ \ref{sec:discussion}, we discuss the implications of our findings. Throughout this paper, we use  (+,--,--,--) for the Minkowski metric $\eta_{\mu\nu}$, and we use natural units, setting $c = $$\ \hbar = $$\ k_B = $$\ 1$. 
 
@@ -506,16 +506,17 @@ In this paper, we derive the overlap reduction function (ORF) and the dispersion
 %    S_{\text{m}} = \frac{m_g^2}{2}\int d^4x (h_{\mu\nu}h^{\mu\nu} - h^2),
 %\end{equation} 
 %where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is the metric perturbation defined by the metric tensor as follows: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. In its original form, the Boulware-Deser ghost is present, so we adopt the ghost-free formulation. Additionally, we use the quadratic expansion because we are only interested in working at the linear level. 
-Gravitons are the hypothetical quanta of the gravitational field, and while their direct detection and a nonlinear theory that is consistent at the quantum level still elude us, we can work within the linearized level in a ghost-free formulation. In such a formulation, the action appears as
-
-\begin{align}\label{eqn:action_m}
-   \mathcal{S} = \int d^4 x \Bigg( & \frac{1}{2} \partial_{\lambda} h_{\mu\nu} \partial^\lambda h^{\mu\nu} -\partial_{\mu} h_{\nu \lambda}\partial^\nu h^{\nu\lambda} + \partial_{\mu}h^{\lambda\nu}\partial_{\nu}h \nonumber \\ &- \frac{1}{2}\partial_{\lambda} h\partial^\lambda h +\frac{1}{2}m_g^2(h_{\mu\nu}h^{\mu\nu} - h^2) \Bigg),
-\end{align}
-where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is the metric perturbation defined by the metric tensor as follows: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. Whenever the region of observation is much smaller than the radius of curvature induced by the graviton, we may express $h_{\mu\nu}$ as a plane wave \cite{Isi:2018miq}
+\textit{Massive gravity}---Gravitons are the hypothetical quanta of the gravitational field, and while their direct detection and a nonlinear theory that is consistent at the quantum level still elude us, we can work within the linearized level in a ghost-free formulation. In such a formulation
+%, the action appears as
+%\begin{align}\label{eqn:action_m}
+%   \mathcal{S} = \int d^4 x \Bigg( & \frac{1}{2} \partial_{\lambda} h_{\mu\nu} \partial^\lambda h^{\mu\nu} -\partial_{\mu} h_{\nu \lambda}\partial^\nu h^{\nu\lambda} + \partial_{\mu}h^{\lambda\nu}\partial_{\nu}h \nonumber \\ &- \frac{1}{2}\partial_{\lambda} h\partial^\lambda h +\frac{1}{2}m_g^2(h_{\mu\nu}h^{\mu\nu} - h^2) \Bigg),
+%\end{align}
+%where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is 
+, the metric perturbation is defined by the metric tensor as follows: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. Whenever the region of observation is much smaller than the radius of curvature induced by the graviton, we may express $h_{\mu\nu}$ as a plane wave \cite{Isi:2018miq}
 \begin{equation}\label{eqn:planewave}
     h_{\mu\nu}(x) = \frac{1}{(2\pi)^4}\int d{\bf k} \ h_{\mu\nu}(k) e^{ikx} \ .
 \end{equation}
-Here, we have the 4-dimensional measure $d{\bf k} \equiv d^4 k 2\delta(|{\bf k}|^2 - |k_{\omega}|^2)/|{\bf k}|$ where $|k_{\omega}| \equiv |{\bf k}(\omega)$ and is given by the dispersion relation, which comes from imposing the on-shell condition \cite{Liang:2021bct} and is of the form $k_0^2 = \omega^2 = |{\bf k}|^2 + m_g^2$. This dispersion relation is specific to the theory of massive gravity we have chosen to study. In general, the dispersion relation is a function of the scale factor and may also be dependent on the propagation speed of the graviton \cite{Gumrukcuoglu:2012wt}. We can decompose $h_{\mu\nu}(t, {\bf k}) $ in terms of polarization tensors as $h_{\mu\nu}(t, {\bf k}) = \sum_{i} \epsilon^\lambda_{\mu\nu}({\bf k})h^{(i)}(t, {\bf k})$, where ${\bf k}$ is the graviton wave vector, $i \in \{\pm 2, \pm 1,0\}$, and $\epsilon^\lambda_{ij}$ are the polarization tensors given in Appendix \ref{sec:polarization_tensors}.
+Here, we have the 4-dimensional measure $d{\bf k} \equiv d^4 k 2\delta(|{\bf k}|^2 - |k_{\omega}|^2)/|{\bf k}|$ where $k_{\omega} \equiv {\bf k}(\omega)$ and is given by the dispersion relation, which comes from imposing the on-shell condition \cite{Liang:2021bct} and is of the form $k_0^2 \equiv \omega^2 = |{\bf k}|^2 + m_g^2$. This dispersion relation is specific to the theory of massive gravity we have chosen to study. In general, the dispersion relation is a function of the scale factor and may also be dependent on the propagation speed of the graviton \cite{Gumrukcuoglu:2012wt}. We can decompose $h_{\mu\nu}(t, {\bf k}) $ in terms of polarization tensors as $h_{\mu\nu}(t, {\bf k}) = \sum_{i} \epsilon^\lambda_{\mu\nu}({\bf k})h^{(i)}(t, {\bf k})$, where ${\bf k}$ is the graviton wave vector, $i \in \{\pm 2, \pm 1,0\}$, and $\epsilon^\lambda_{ij}$ are the polarization tensors given in Appendix \ref{app:polarization_tensors}.
 %We minimize the action from Eq.\ (\ref{eqn:action}) with respect to $h^{(i)}$, and we get the following equation of motion for each polarization mode \cite{Maggiore:v2} 
 %\begin{equation}\label{eqn:eom}
 %    \ddot{h}^{(i)}(\tau, {\bf k}) + 3 H(t)\dot{h}^{(i)}(t, {\bf k}) + \left(\frac{k^2}{a^2(t)} + m_g^2\right)h^{(i)}(t, {\bf k}) = 0 \ ,
@@ -535,7 +536,7 @@ $1/T_{\text{obs}} < f < 1/\delta t,$ where $T_{\text{obs}}$ is the total length 
 %\section{Overlap Reduction Functions}\label{sec:overlap}
 %\subsection{Derivation}\label{subsec:derivation}
 
-Suppose there is a massive gravitational wave propagating in an arbitrary spatial direction specified by the unit vector $\hat{\Omega} = (                     \sin\theta \cos\varphi,
+\textit{Overlap reduction function}---Suppose there is a massive gravitational wave propagating in an arbitrary spatial direction specified by the unit vector $\hat{\Omega} = (                     \sin\theta \cos\varphi,
                         \sin\theta \sin\varphi,
                         \cos\theta)$.
 This gravitational wave affects the pulsar timing measurements by perturbing the pulsar signals, originally emitted with a constant frequency $\nu_0$, as they travel from their source pulsars to our telescopes. In the solar-system barycenter reference frame, the frequency shift is characterized by the redshift
@@ -543,34 +544,34 @@ This gravitational wave affects the pulsar timing measurements by perturbing the
  %   z(t) = \frac{\nu_0 - \nu(t)}{\nu_0} \ .
 %\end{equation}
 $z(t) = (\nu_0 - \nu(t))/\nu_0$.
-PTA collaborations actually measure the integral of $z(t)$, otherwise known as the anomalous residual, but it is trivial to rewrite these equations in terms of the residual if we so desire. We take advantage of the freedom of choice granted by their simple relation, and we proceed in our analysis using the redshift. 
-
-This is simply a separable differential equation, and is integrated from some $j$-th pulsar to the solar-system barycenter to yield the redshift (which we express in the Fourier space)
-\begin{equation}\label{eqn:redshift}
-    z(t, \hat{\bf \Omega}) = \int_{-\infty}^\infty df \mathcal{E}_j(f, \hat{\Omega}) \sum_i h^{(i)}\left(f, \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\right)F^{(i)}_j(\hat{\bf \Omega}) \ ,
-\end{equation}
-where we have defined the recieving function $F^{(i)}_j(\hat{\bf \Omega}) $ as 
-\begin{equation}\label{eqn:recieving}
-    F^{(i)}_j(\hat{\Omega}) = \frac{\hat{p}^\mu_j}{2}\left(-\frac{\hat{p}^\nu_j}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}_j}} \epsilon_{\mu \nu}^{(i)}+\epsilon_{0 \mu}^{(i)}\right) \ ,
-\end{equation}
-and the exponential factor $\mathcal{E}_j(f, \hat{\Omega})$ encoding the dependence on the metric perturbation
-\begin{equation}
-    \mathcal{E}_j(f, \hat{\Omega}) = e^{-i2\pi f L_j\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}_j\right)} - 1 \ . 
-\end{equation}
-We discuss the nature of this exponential factor in more detail in Sec.\ \ref{subsec:exp_fac}. A few details of this derivation have been excluded in this discussion, however, more careful derivations can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}.
-For PTA data, a quantity of interest is the two-point correlation of the total redshift, $\langle \tilde{z}(f) \tilde{z}(f') \rangle$, where $\tilde{z}(f)$ is the sky-averaged redshift $\tilde{z}(f) \equiv \int d^2\hat{\bf \Omega} z(f, \hat{\bf \Omega})$. Combining everything we have derived up until now, our expression for the two-point correlation is as follows
+PTA collaborations actually measure the integral of $z(t)$, otherwise known as the anomalous residual, but it is trivial to rewrite these equations in terms of the residual if we so desire. We take advantage of the freedom of choice granted by their simple relation, and we proceed with the redshift. For PTA data, a quantity of interest is the two-point correlation of the total redshift, $\langle \tilde{z}(f) \tilde{z}(f') \rangle$, where $\tilde{z}(f)$ is the sky-averaged redshift $\tilde{z}(f) \equiv \int d^2\hat{\bf \Omega} z(f, \hat{\bf \Omega})$. Combining everything we have derived up until now, our expression for the two-point correlation is
 \begin{equation}\label{eqn:two_point_z}
-    \langle \tilde{z}(f) \tilde{z}(f') \rangle = \frac{3H_0^2}{32 \beta \pi^3|f|^3}\delta^2\left(\hat{\bf \Omega} , \hat{\bf \Omega}'\right)\delta_{ii'}\delta(f - f')\Omega_{\text{gw}}(|f|) \Gamma(|f|) \ .
+    \langle \tilde{z}(f) \tilde{z}(f') \rangle = \frac{3H_0^2\delta^2\left(\hat{\bf \Omega} , \hat{\bf \Omega}'\right)\delta_{ii'}\delta(f - f')}{32 \beta \pi^3|f|^3}\Omega_{\text{gw}}(|f|) \Gamma(|f|).
 \end{equation}
-Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = \frac{1}{2}$ for coaligned and coincident pulsars, to match the conventions of the Hellings-Downs \cite{Romano:2023zhb}. $\Omega_{\text{gw}}(|f|)$ is the energy density for the gravitational waves. A wealth of literature has been produced in analyzing the behavior of the energy density in massive gravity in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression, the ORF $\Gamma(|f|)$ 
-\begin{equation}\label{eq:orf_full}
-    \Gamma(|f|) = \beta \sum_i \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}),
-\end{equation}
-Here, we assume there are two pulsars, located at distances $L_1$ and $L_2$ from the solar-system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is situated on the $x-z$ plane, an angle $\xi$ away from pulsar 1. We define the ORF for each polarization type
+Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = \frac{1}{2}$ for coaligned, coincident pulsars, to match the conventions of the Hellings-Downs \cite{Romano:2023zhb}. $\Omega_{\text{gw}}(|f|)$ is the energy density for the gravitational waves. Details of this derivation can be found in Appendix \ref{app:derivation_orf}. A wealth of literature has been produced in analyzing the behavior of the energy density in massive gravity in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression, the ORF $\Gamma(|f|)$. 
+%The ORF is defined for each  
+%\begin{equation}\label{eq:orf_full}
+%    \Gamma(|f|) = \beta \sum_i \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}),
+%\end{equation}
+%We discuss the nature of this exponential factor in more detail in Sec.\ \ref{subsec:exp_fac}. 
+We assume there are two pulsars, located at distances $L_1$ and $L_2$ from the solar-system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is situated on the $x-z$ plane, an angle $\xi$ away from pulsar 1. We define the ORF for each polarization type
 \begin{equation}\label{eq:orf_type}
     \Gamma_I(|f|) = \mathlarger{\sum}_{i \in I} \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
 \end{equation}
-where we note that we have dropped the normalization factor $\beta$ since it is only required to normalize the total ORF, and $I = \{T,V,S\}$ for each polarization type, as specified in Table \ref{tbl:tensors}. It is possible to decompose the ORF in this way because the tensor, vector, and scalar modes all decouple from each other. Our effective overlap reduction function is given by 
+%where we note that we have dropped the normalization factor $\beta$ since it is only required to normalize the total ORF, and 
+where $I = \{T,V,S\}$ for each polarization type, as specified in Table \ref{tbl:tensors}, and we have defined the recieving function $F^{(i)}_j(\hat{\bf \Omega})$ and the exponential factor $\mathcal{E}_j(f, \hat{\Omega})$ as 
+\begin{equation}\label{eqn:recieving}
+    \begin{aligned}
+        F^{(i)}_j(\hat{\Omega}) &= \frac{\hat{p}^\mu_j}{2}\left(-\frac{\hat{p}^\nu_j}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}_j}} \epsilon_{\mu \nu}^{(i)}+\epsilon_{0 \mu}^{(i)}\right) , \\ 
+        \mathcal{E}_j(f, \hat{\Omega}) &= e^{-i2\pi f L_j\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}_j\right)} - 1 \ . 
+    \end{aligned}
+\end{equation}
+%and  encoding the dependence on the metric perturbation
+%\begin{equation}
+%    \mathcal{E}_j(f, \hat{\Omega}) = e^{-i2\pi f L_j\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}_j\right)} - 1 \ . 
+%\end{equation}
+These functions encode the dependence on the metric perturbation, via the polarization tensors, and the frequency.
+It is possible to decompose the ORF into the different modes because the tensor, vector, and scalar modes all decouple from each other with an appropriate gauge fixing term, allowing the kinetic terms to properly diagonalize \cite{Hinterbichler:2011tt}. Our effective overlap reduction function is given by 
 \begin{equation}\label{eq:eff_orf}
     \tilde{\Gamma}_{T} = \beta \left(\Gamma_{T} + \Gamma_{V} \frac{\Omega_V}{\Omega_T} + \Gamma_{S} \frac{\Omega_S}{\Omega_T} \right) \ ,
 \end{equation}
@@ -591,18 +592,21 @@ We use Monte-Carlo integration to numerically compute the frequency dependence o
     \caption{The ORFs plotted as a function of angular separation $\xi$. The solid lines use the full expression of the ORFs, including the factors of $\mathcal{E}$. The dotted lines are frequency independent and ignore the factors of $\mathcal{E}$. The solid lines are plotted with $fL = 1$}
     \label{fig:orfs}
 \end{figure}
-In Fig.\ \ref{fig:orfs}, we see how differently the ORFs behave when we take into account the frequency dependence and when we ignore it. We observe that for a fixed $fL$, the ratio $|{\bf k}|/k_0$ corresponds to an increasing disparity between the frequency-dependent and -independent ORFs. For sufficiently small values of the ratio $|{\bf k}|/k_0$, e.g.\ $|{\bf k}|/k_0 \lesssim 0.1$, the frequency-dependent ORF acquires additional local extrema, namely a minimum and a maximum. This is a peculiarity that only arises when factors of $\mathcal{E}$ are taken into account. We also expect such a drastic behavior to emerge when the mass of the graviton is sufficiently high, which corresponds to the ratio according to 
-\begin{equation}\label{eqn:ratio_m}
-    \frac{|{\bf k}|}{k_0} = \sqrt{1 - \frac{m^2}{k_0^2}}
-\end{equation}
+In Fig.\ \ref{fig:orfs}, we see how differently the ORFs behave when we take into account the frequency dependence and when we ignore it. We observe that for a fixed $fL$, the ratio $|{\bf k}|/k_0$ corresponds to an increasing disparity between the frequency-dependent and -independent ORFs. For sufficiently small values of the ratio $|{\bf k}|/k_0$, e.g.\ $|{\bf k}|/k_0 \lesssim 0.1$, the frequency-dependent ORF acquires additional local extrema, namely a minimum and a maximum. This is a peculiarity that only arises when factors of $\mathcal{E}$ are taken into account. We also expect such a drastic behavior to emerge when the mass of the graviton is sufficiently high.
+%, which corresponds to the ratio according to 
+%\begin{equation}\label{eqn:ratio_m}
+%    \frac{|{\bf k}|}{k_0} = \sqrt{1 - \frac{m^2}{k_0^2}}
+%\end{equation}
 
-\subsection{Graviton Mass}\label{subsec:mass}
-The graviton mass is intimately connected to the behavior of the effective ORF. It appears as a ratio between the mass and the effective angular frequency, through Eq.\ \ref{eqn:ratio_m}. If observations of PTAs follow the trajectory for the best-case scenario, as detailed in Sec.\ \ref{subsec:exp_fac}, then we can only hope to observe a graviton mass given by that lower frequency bound. This corresponds to $m_g \sim 1.31\times 10^{-24} \eV$. To be clear, we are assuming that the lowest theoretical frequency that we can probe, given by the limit of Eq.\ \ref{eqn:omega} as $k\rightarrow 0$, will coincide with the lowest practical frequency that PTAs can measure, hence the ``best-case'' scenario. Going forth, this is the mass that we will take $m_g$ to be in our analysis.
+%\subsection{Graviton Mass}\label{subsec:mass}
+The graviton mass is intimately connected to the behavior of the effective ORF. It appears as a ratio between the mass and the effective angular frequency.
+%, through Eq.\ \ref{eqn:ratio_m}. 
+If observations of PTAs follow the trajectory for the best-case scenario, then we can only hope to observe a graviton mass given by that lower frequency bound. This corresponds to $m_g \sim 1.31\times 10^{-24} \eV$. To be clear, we are assuming that the lowest theoretical frequency that we can probe, given by the limit of the dispersion relation as $k\rightarrow 0$, will coincide with the lowest practical frequency that PTAs can measure, hence the ``best-case'' scenario. Going forth, this is the mass that we will take $m_g$ to be in our analysis.
 
-The graviton mass affects all the ORFs for each polarization type, including the tensor modes. The graviton mass shows up in the exponential terms as the coefficient in front of the dot product $\sqrt{1 - (m_g/k_0)^2}\hat{\bf \Omega}\cdot \hat{\bf p}_j$ and in the massive spin-1 helicity-0 polarization vector $\epsilon_\mu^0(m_g) = \sqrt{1 / (1 - (m_g/k_0)^2)}(\sqrt{1 - (m_g/k_0)^2}, \sin\theta\cos\varphi, \sin\theta\sin\varphi, \cos\theta)$. The former appears in all of the polarization types, but the latter only appears in the vector and scalar modes in the receiving functions, further complicating their mass dependences. The analytical expressions we are integrating can be found in Ref.\ \cite{Liang:2021bct}, except the expressions we use contain $\mathcal{E}$. Interestingly, because the graviton mass only appears as a ratio $m_g / k_0$, the behavior of the ORF is only sensitive to the mass relative to the frequency. In other words, there is no significance of an ORF purely due to a graviton mass of $m_g$. The question would be, with regard to what frequency?
+The graviton mass affects all the ORFs for each polarization type, including the tensor modes. The graviton mass shows up in the exponential terms as the coefficient in front of the dot product $\sqrt{1 - (m_g/k_0)^2}\hat{\bf \Omega}\cdot \hat{\bf p}_j$ and in the massive spin-1 helicity-0 polarization vector $\epsilon_\mu^0(m_g) = \sqrt{1 / (1 - (m_g/k_0)^2)}\times (\sqrt{1 - (m_g/k_0)^2},$ $\sin\theta\cos\varphi, \sin\theta\sin\varphi, \cos\theta)$. The former appears in all of the polarization types, but the latter only appears in the vector and scalar modes in the receiving functions, further complicating their mass dependences. The analytical expressions we are integrating can be found in Ref.\ \cite{Liang:2021bct}, except that the expressions we use contain $\mathcal{E}$. Interestingly, because the graviton mass only appears as a ratio $m_g / k_0$, the behavior of the ORF is only sensitive to the mass relative to the frequency. In other words, there is no significance of an ORF purely due to a graviton mass of $m_g$. The question would be, with regard to what frequency?
 
-\section{Results}\label{sec:results}
-We now present the main results of this work. Although our calculations are for observations that extend well into the future, it is instructive to compare to current data and confirm whether they are within the present standard deviations, or perhaps explain the current data better than the Hellings-Downs. We compute the full frequency-dependent ORF using the same technique as in Sec.\ \ref{subsec:exp_fac}, i.e.\ Monte-Carlo integration. We keep $m_g$ fixed \ref{subsec:mass}, and we modify the ratio $|{\bf k}|/k_0$ by changing the frequency $f$ we put into the ORF. We take two characteristic frequencies, one in the first half of the frequency interval (let us call this $f_0$), and one in the second half ($f_1$). This yields ratios of 0.1 and 0.5 respectively. We then compare the resulting effective ORFs with PTA data that it most closely resembles the ORF. For the ORF generated from $|{\bf k}|/k_0 = 0.1$, we compare it against the NANOGrav 15-year data set \cite{Agazie:2023}, and for the ORF generated from $|{\bf k}|/k_0 = 0.5$, we compare it against the CPTA Data Release I (DR1).
+%\section{Results}\label{sec:results}
+\textit{Results}---We now present the main results of this work. Although our calculations are for observations that extend well into the future, it is instructive to compare to current data and confirm whether they are within the present standard deviations, or perhaps explain the current data better than the Hellings-Downs. We compute the full frequency-dependent ORF using the same technique as earlier, i.e.\ Monte-Carlo integration. We keep $m_g$ fixed, and we modify the ratio $|{\bf k}|/k_0$ by changing the frequency $f$ we put into the ORF. We take two characteristic frequencies, one in the first half of the frequency interval (let us call this $f_0$), and one in the second half ($f_1$). This yields ratios of 0.1 and 0.5, respectively. We then compare the resulting effective ORFs with PTA data that it most closely resembles the ORF. For the ORF generated from $|{\bf k}|/k_0 = 0.1$, we compare it against the NANOGrav 15-year data set \cite{Agazie:2023}, and for the ORF generated from $|{\bf k}|/k_0 = 0.5$, we compare it against the CPTA Data Release I (DR1).
 
 We use the NANOGrav 15-yr to obtain the angular correlations of 2,211 pairs of pulsars from a 67-pulsar array \cite{Agazie:2023}. 
 \begin{figure}[h]
@@ -642,12 +646,12 @@ CPTA DR1 & Hellings-Downs & 38.95 & 3.00 \\
 CPTA DR1 & Massive Gravity & 16.58 & 1.51 \\
 \hline
 \end{tabular}
-\caption{The $\chi^2$ and $\chi^2$/d.o.f.\ values for diferent fit functions for the two datasets used in this analysis. We have 13 degrees of freedom for the Hellings-Downs correlation and 11 for the massive gravity models, with 2 fit parameters: $m_g$ and $f$. }
+\caption{The $\chi^2$ and $\chi^2$/d.o.f.\ values for different fit functions for the two datasets used in this analysis. We have 13 degrees of freedom for the Hellings-Downs correlation and 11 for the massive gravity models, with 2 fit parameters: $m_g$ and $f$. }
 \label{tbl:chi}
 \end{table}
 
 %\section{Discussion}\label{sec:discussion}
-\textit{Discussion}---In this paper, we have reviewed the methods for obtaining the modified dispersion relation and effective ORF in the theory of ghost-free massive gravity. We have analyzed the behavior of this effective ORF when the exponential factors are not ignored. We were able to demonstrate using un‑biased NANOGrav 15-yr data and CPTA DR1 that the effective ORF fits the data significantly better than the Hellings–Downs with an optimistic graviton mass $m_g \sim$ $1.3\times10^{-24} \eV$.
+\textit{Discussion and conclusion}---In this paper, we have reviewed the methods for obtaining the modified dispersion relation and effective ORF in the theory of ghost-free massive gravity. We have analyzed the behavior of this effective ORF when the exponential factors are not ignored. We were able to demonstrate using un‑biased NANOGrav 15-yr data and CPTA DR1 that the effective ORF fits the data significantly better than the Hellings–Downs with an optimistic graviton mass $m_g \sim$ $1.3\times10^{-24} \eV$.
 
 Our findings show that massive gravity is able to explain the observed pulsar-pulsar correlation more convincingly than the Hellings-Downs. We note that we have not done a rigorous fitting of the data, we simply took characteristic frequencies to compare with. A rigorous fitting to the full data has been done in Ref.\ \cite{Arjona:2024cex}, and the ratio that has been found to best fit the frequentist optimal statistic of the NANOGrav 15-yr data is $|{\bf k}|/k_0 \sim 0.73$. We deem this to be plausible, based on our statistics and the resulting shape of our ORF. A future study may introduce more free parameters than the ones we considered and perform a holistic fitting procedure to place constraints on the mass of the graviton and its relative energy densities. Additionally, it would be of use to perform the fitting on the individual pulsar-pulsar correlation coefficients rather than the binned averages. 
 
@@ -657,7 +661,7 @@ An assumption we made previously is that the stochastic gravitational wave backg
 
 The frequency dependence of the ORF in general is an underexplored landscape. The NANOGrav collaboration and other PTA collaborations do not claim to detect any frequency dependence in the ORF, while the CPTA collaboration has. If the graviton is massive, then there will certainly be frequency dependence in the data, even without considering $\mathcal{E}$. Doing an analysis of the frequency dependence of the NANOGrav data would therefore be quite elucidative. It is beyond the scope of this paper to perform such an analysis.
 
-The detection prospects suggested in Sec.\ \ref{subsec:exp_fac} are quite optimistic. It may be unlikely that we see a PTA experiment last that long, but we nevertheless provide a detailed overview of the ORFs that we may observe if such a scenario takes place. Regarding data from current PTA collaborations, the prospects seem hopeful to continue detecting pulsar-pulsar correlation coefficients such that the ORFs generated in a theory of massive gravity stay within their standard deviations. 
+The detection prospects suggested in this Letter are quite optimistic. It may be unlikely that we see a PTA experiment last that long, but we nevertheless provide a detailed overview of the ORFs that we may observe if such a scenario takes place. Regarding data from current PTA collaborations, the prospects seem hopeful to continue detecting pulsar-pulsar correlation coefficients such that the ORFs generated in a theory of massive gravity stay within their standard deviations. With more galactic pulsars being added to PTAs and the planned missions of space-based gravitational wave observatories (LISA and Taiji) on the horizon, it seems plausible that the mysteries that have evaded our investigations surrounding the cosmos, thus far, may finally start to be unravelled. Clearly, a new era of gravitational wave observations is well underway to this end. 
 
 \vspace{5mm}
 \textit{Acknowledgements}---We thank Murman Gurgenidze and Qiuyue Liang for useful discussions related to the paper. We also thank the organizers of the Phenomenology 2025 Symposium, for which much of this paper has been developed. C.C.\ and T.K.\ acknowledge support from the NASA Astrophysics Theory Program (ATP) Award 80NSSC22K0825 and the National Science Foundation (NSF) Astronomy and Astrophysics Research Grants (AAG) Award AST2408411.
@@ -669,12 +673,12 @@ The detection prospects suggested in Sec.\ \ref{subsec:exp_fac} are quite optimi
 \bibliography{refs}
 
 \appendix
-\section{Derivation of ORF}
+\section{Derivation of ORF}\label{app:derivation_orf}
 We derive the ORF in more detail. Assume we have an electromagnetic wave traveling along a null geodesic 
 \begin{equation}\label{eqn:null}
     \sigma^\mu = s^\mu - \frac{1}{2} \eta^{\mu\nu}h_{\nu \gamma}s^\gamma \ .
 \end{equation}
-Here, $s^\mu \equiv \nu (1, -\hat{\bf p})$ where $\hat{p}$ is the unit vector pointing in the direction of the pulsar from the solar-system barycenter, and $h_{\nu \gamma}$ is position dependent, as defined in Eq.\ \ref{eqn:fourier}. This null geodesic obeys the corresponding geodesic equation 
+Here, $s^\mu \equiv \nu (1, -\hat{\bf p})$ where $\hat{p}$ is the unit vector pointing in the direction of the pulsar from the solar-system barycenter, and $h_{\nu \gamma}$ is position dependent. This null geodesic obeys the corresponding geodesic equation 
 \begin{equation}\label{eqn:geodesic}
     \frac{d\sigma^\mu}{d\lambda} = -\Gamma_{\alpha \beta}^\mu \sigma^\alpha \sigma^\beta \ ,
 \end{equation} where $\lambda$ is the affine parameter that describes the null path the electromagnetic signal takes, and $\Gamma_{\alpha \beta}^\mu$ is the Christoffel symbol. After fully expanding the Christoffel symbol and applying the metric tensor, the geodesic equation becomes  
@@ -699,12 +703,17 @@ This is nothing but a separable differential equation, which we integrate from t
 \begin{equation}\label{eqn:diff_eq}
     \frac{d\nu}{\nu} =  \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}d h_{\alpha \beta} - \frac{1}{2} dh_{0\alpha}\hat{p}^\alpha \ .
 \end{equation}
-Then, after integrating, we get 
+Then, after integrating from some $j$-th pulsar to the solar-system barycenter, we get 
 \begin{equation}\label{eqn:integrating_eq}
     \ln\left(\frac{\nu(t)}{\nu_0}\right) =  \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}\Delta h_{\alpha \beta} - \frac{1}{2} \Delta h_{0\alpha}\hat{p}^\alpha \ .
 \end{equation}
+We can now write the redshift (which we express in the Fourier space)
+\begin{equation}\label{eqn:redshift}
+    z(t, \hat{\bf \Omega}) = \int_{-\infty}^\infty df \mathcal{E}_j(f, \hat{\Omega}) \sum_i h^{(i)}\left(f, \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\right)F^{(i)}_j(\hat{\bf \Omega}) \ .
+\end{equation}
+There are still details that have been left out, however, more careful derivations can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}.
 
-\section{Polarization Tensors}\label{sec:polarization_tensors}
+\section{Polarization Tensors}\label{app:polarization_tensors}
 Table \ref{tbl:tensors} gives the polarization tensors in terms of the massive spin-1 polarization vectors
 \begin{equation}\label{eqn:pol_vec}
 \begin{aligned}
