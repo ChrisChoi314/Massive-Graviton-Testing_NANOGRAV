@@ -1,0 +1,85 @@
+
+\appendix
+\section{Derivation of ORF}\label{app:derivation_orf}
+We derive the ORF in more detail. Assume we have an electromagnetic wave traveling along a null geodesic 
+\begin{equation}\label{eqn:null}
+    \sigma^\mu = s^\mu - \frac{1}{2} \eta^{\mu\nu}h_{\nu \gamma}s^\gamma \ .
+\end{equation}
+Here, $s^\mu \equiv \nu (1, -\hat{\bf p})$ where $\hat{p}$ is the unit vector pointing in the direction of the pulsar from the solar-system barycenter, and $h_{\nu \gamma}$ is position dependent. This null geodesic obeys the corresponding geodesic equation 
+\begin{equation}\label{eqn:geodesic}
+    \frac{d\sigma^\mu}{d\lambda} = -\Gamma_{\alpha \beta}^\mu \sigma^\alpha \sigma^\beta \ ,
+\end{equation} where $\lambda$ is the affine parameter that describes the null path the electromagnetic signal takes, and $\Gamma_{\alpha \beta}^\mu$ is the Christoffel symbol. After fully expanding the Christoffel symbol and applying the metric tensor, the geodesic equation becomes  
+\begin{equation}\label{eqn:geodesic_further}
+    \frac{d\sigma^\mu}{d\lambda} = \frac{1}{2}\dot{h}_{\alpha \beta} s^\alpha s^\beta - h_{0\alpha, \beta} s^\alpha s^\beta \ .
+\end{equation}
+We neglect higher-order terms past the linear order. We now assume that the gravitational wave is propagating as a plane wave, whose metric perturbation takes the following form 
+\begin{equation}\label{eqn:plane_wave}
+    h_{\mu \nu}(t, \hat{\bf x}) = \int_{-\infty}^\infty df \int d^2 \hat{\bf \Omega} e^{i2\pi f \left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right)}h_{\mu \nu}\left(f, \frac{|{\bf k}|}{k_0} \hat{\bf \Omega} \right) \ ,
+\end{equation}
+where ${\bf x}$ is the position vector of the pulsar, $L\hat{\bf p}$. We apply the chain rule on the metric perturbation, and we get
+\begin{equation}\label{eqn:dhdlambda}
+    \begin{aligned}
+        \frac{dh^{(i)}_{\mu \nu} \left(t - \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot {\bf x}\right) }{d\lambda } &= \frac{\partial h^{(i)}_{\mu \nu}}{\partial t} \frac{dt}{d \lambda} + \frac{\partial h^{(i)}_{\mu \nu}}{\partial (\hat{\bf \Omega}\cdot {\bf x})} \frac{d(\hat{\bf \Omega}\cdot {\bf x})}{d \lambda} \\ &= \nu\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}\right) \frac{\partial h^{(i)}_{\mu \nu}}{\partial t} \ .
+    \end{aligned}
+\end{equation}
+Here, we have used Eq.\ \ref{eqn:null} and the intrinsic dependence of the metric perturbation on time and $\hat{\bf \Omega}\cdot {\bf x}$. We now use Eq.\ \ref{eqn:geodesic_further} to get 
+\begin{equation}\label{eqn:dnudl}
+    \frac{d\nu}{d\lambda} = \nu \left( \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}\frac{d h_{\alpha \beta}}{d \lambda} - \frac{1}{2} \frac{dh_{0\alpha}}{d\lambda}\hat{p}^\alpha \right) \ .
+\end{equation}
+This is nothing but a separable differential equation, which we integrate from the pulsar to the solar-system barycenter. First, we separate the variables, isolating them to either side
+\begin{equation}\label{eqn:diff_eq}
+    \frac{d\nu}{\nu} =  \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}d h_{\alpha \beta} - \frac{1}{2} dh_{0\alpha}\hat{p}^\alpha \ .
+\end{equation}
+Then, after integrating from some $j$-th pulsar to the solar-system barycenter, we get 
+\begin{equation}\label{eqn:integrating_eq}
+    \ln\left(\frac{\nu(t)}{\nu_0}\right) =  \frac{1}{2} \frac{\hat{p}^\alpha \hat{p}^\beta}{1+\frac{|\boldsymbol{k}|}{k_0} \hat{\boldsymbol{\Omega}} \cdot \hat{\boldsymbol{p}}}\Delta h_{\alpha \beta} - \frac{1}{2} \Delta h_{0\alpha}\hat{p}^\alpha \ .
+\end{equation}
+We can now write the redshift (which we express in the Fourier space)
+\begin{equation}\label{eqn:redshift}
+    z(t, \hat{\bf \Omega}) = \int_{-\infty}^\infty df \mathcal{E}_j(f, \hat{\Omega}) \sum_i h^{(i)}\left(f, \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\right)F^{(i)}_j(\hat{\bf \Omega}) \ .
+\end{equation}
+There are still details that have been left out, however, more careful derivations can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}.
+
+\section{Polarization Tensors}\label{app:polarization_tensors}
+Table \ref{tbl:tensors} gives the polarization tensors in terms of the massive spin-1 polarization vectors
+\begin{equation}\label{eqn:pol_vec}
+\begin{aligned}
+    \epsilon_\mu^{\pm}(k) &= \frac{1}{\sqrt{2}} 
+\begin{pmatrix}
+0 \\
+\cos\theta \cos\varphi \mp i \sin\varphi \\
+\cos\theta \sin\varphi \pm i \cos\varphi \\
+- \sin\theta
+\end{pmatrix}
+, \\ \epsilon_\mu^{0}(k) &= \frac{1}{\sqrt{k^2}} 
+\begin{pmatrix}
+|\mathbf{k}| \\
+k_0 \sin\theta \cos\varphi \\
+k_0 \sin\theta \sin\varphi \\
+k_0 \cos\theta
+\end{pmatrix} \ .
+\end{aligned}
+\end{equation}
+Here, $\theta$ and $\varphi$ describe the polar and azimuthal angles that describe the spatial direction of the propagating graviton, and $k_0$ is the timelike coordinate of the wavevector, given by $k_0 = 2\pi f$. 
+\begin{table}[ht] 
+\centering
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|c|c|c|l|}
+\hline
+\textbf{Mode} & \textbf{Type} & \textbf{Polarization Tensor $\epsilon^{\lambda}_{\mu\nu}$} \\
+\hline
+$\epsilon^{(+2)}_{\mu\nu}$     & Tensor  & $\epsilon^+_\mu \epsilon^+_\nu $ \\
+\hline
+$\epsilon^{(-2)}_{\mu\nu}$     & Tensor   & $\epsilon^-_\mu \epsilon^-_\nu $ \\
+\hline
+$\epsilon^{(+1)}_{\mu\nu}$     & Vector   & $\dfrac{1}{\sqrt{2}} \left( \epsilon^+_\mu \epsilon^0_\nu + \epsilon^0_\mu \epsilon^+_\nu \right)$ \\
+\hline
+$\epsilon^{(-1)}_{\mu\nu}$     & Vector   & $\dfrac{1}{\sqrt{2}} \left( \epsilon^-_\mu \epsilon^0_\nu + \epsilon^0_\mu \epsilon^-_\nu \right)$ \\
+\hline
+$\epsilon^{(0)}_{\mu\nu}$      & Scalar  & $\dfrac{1}{\sqrt{6}} \left( \epsilon^+_\mu \epsilon^-_\nu + \epsilon^-_\mu \epsilon^+_\nu - 2\epsilon^0_\mu \epsilon^0_\nu \right)$ \\
+\hline
+\end{tabular}
+\caption{Polarization tensors $\epsilon^{(i)}_{\mu\nu}$ of a spin-2 particle expressed in terms of vector polarizations $\epsilon^\lambda_\mu$ for helicities $\lambda = 0, \pm1$.}
+\label{tbl:tensors}
+\end{table}
+We note that this formulation of the polarization tensors is related to the typical set of polarization tensors $\{\epsilon_{\mu\nu}^+, \epsilon_{\mu\nu}^\times, \epsilon_{\mu\nu}^x, \epsilon_{\mu\nu}^y, \epsilon_{\mu\nu}^l \}$ in a nontrivial way \cite{Liang:2021bct}, but it is this formulation that we will use on account of its convenience for describing correlations in pulsars.
