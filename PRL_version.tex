@@ -434,8 +434,9 @@ $\displaystyle##$\hfil\cr>\cr\sim\cr}}}
 
 \begin{document}
 
-\title{Do Pulsar Timing datasets Favor Massive Gravity}
+\title{Do Pulsar Timing Datasets Favor Massive Gravity?}
 %TK the massive graviton?
+%CC added a question mark to title, i feel like it is justified because of this PRL paper that also has a question mark: https://arxiv.org/abs/2405.01332 "How much entanglement is needed for quantum error correction?". Also, capitalized the D in datasets. 
 
 \date{\today}
 \author{Chris~Choi\,\orcidlink{0009-0005-2328-3044}}
@@ -544,7 +545,7 @@ A resounding confirmation of the graviton's nonzero mass will involve the observ
 %\end{align}
 %where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is 
 %$TK Start directly with GWs -small intro$ 
-%CC I moved the discussion of the 3 ways to constrain the mass into the massive gravity section, because it seems to fit better here, and makes the intro flow better
+%CC I moved the discussion of the 3 ways to constrain the mass into the massive gravity section, because it seems to fit better here, and makes the intro flow better. Also, I have expanded the discussions for each
 metric tensor, $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. Here, we use the (+,--,--,--) convention for the Minkowski metric $\eta_{\mu\nu}$. Whenever the region of observation is much smaller than the radius of curvature induced by the gravitational wave, we may express $h_{\mu\nu}$ as a plane wave \cite{Isi:2018miq}
 \begin{equation}\label{eqn:planewave}
     h_{\mu\nu}(x) = \frac{1}{(2\pi)^4}\int d{\bf k} \ h_{\mu\nu}(k) e^{ikx} \ .
@@ -580,11 +581,11 @@ This GW affects the pulsar timing measurements by perturbing the pulsar signals,
  %   z(t) = \frac{\nu_0 - \nu(t)}{\nu_0} \ .
 %\end{equation}
 $z(t) = (\nu_0 - \nu(t))/\nu_0$.
-PTA collaborations actually measure the integral of $z(t)$, otherwise known as the anomalous residual, but it is trivial to rewrite these equations in terms of the residual if we so desire. We take advantage of the freedom of choice granted by their simple relation, and we proceed with the redshift. For PTA data, a quantity of interest is the two-point correlation of the total redshift, $\langle \tilde{z}(f) \tilde{z}(f') \rangle$, where $\tilde{z}(f)$ is the sky-averaged redshift $\tilde{z}(f) \equiv \int d^2\hat{\bf \Omega} z(f, \hat{\bf \Omega})$. Combining everything we have derived up until now, our expression for the two-point correlation is
+PTA collaborations actually measure the integral of $z(t)$, otherwise known as the anomalous residual, but it is trivial to rewrite these equations in terms of the residual if we so desire. We take advantage of the freedom of choice granted by their simple relation, and we proceed with the redshift. For PTA data, a quantity of interest is the two-point correlation of the total redshift, $\langle \tilde{z}(f) \tilde{z}(f') \rangle$, where $\tilde{z}(f)$ is the sky-averaged redshift $\tilde{z}(f) \equiv \int d^2\hat{\bf \Omega} z(f, \hat{\bf \Omega})$. The expression for the two-point correlation is given by
 \begin{equation}\label{eqn:two_point_z}
     \langle \tilde{z}(f) \tilde{z}(f') \rangle = \frac{3H_0^2\delta^2\left(\hat{\bf \Omega} , \hat{\bf \Omega}'\right)\delta_{ii'}\delta(f - f')}{32 \beta \pi^3|f|^3}\Omega_{\text{gw}}(|f|) \Gamma(|f|).
 \end{equation}
-Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = \frac{1}{2}$ for coaligned coincident pulsars to match the conventions of the Hellings-Downs correlation \cite{Romano:2023zhb}. $\Omega_{\text{gw}}(|f|)$ is the energy density for the GWs. Details of the derivation of this expression can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}. A wealth of literature has been produced in the hopes of analyzing the behavior of the energy density in MG in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression: the ORF $\Gamma(|f|)$. 
+Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = \frac{1}{2}$ for coaligned coincident pulsars to match the conventions of the Hellings-Downs correlation \cite{Romano:2023zhb}. $\Omega_{\text{gw}}(|f|)$ is the energy density for the GWs. Details of this derivation can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}. A wealth of literature has been produced in the hopes of analyzing the behavior of the energy density in MG in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression: the ORF $\Gamma(|f|)$. 
 %The ORF is defined for each  
 %\begin{equation}\label{eq:orf_full}
 %    \Gamma(|f|) = \beta \sum_i \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}),
@@ -607,7 +608,7 @@ where $I = \{T,V,S\}$ for each polarization type, and we have defined the reciev
 %    \mathcal{E}_j(f, \hat{\Omega}) = e^{-i2\pi f L_j\left( 1 + \frac{|{\bf k}|}{k_0} \hat{\bf \Omega}\cdot \hat{\bf p}_j\right)} - 1 \ . 
 %\end{equation}
 The scalar product $\hat{\bf \Omega}\cdot \hat{\bf p}_j$ comes directly from applying the delta function to the complex exponential in the plane-wave decomposition of the metric perturbation (\ref{eqn:planewave}). 
-It is possible to decompose the ORF into the different modes because the tensor, vector, and scalar modes all decouple from each other with an appropriate gauge fixing term, allowing the kinetic terms to fully diagonalize \cite{Hinterbichler:2011tt}. Our effective overlap reduction function is given by 
+It is possible to decompose the ORF into the different modes because the tensor, vector, and scalar modes all decouple from each other with an appropriate gauge-fixing term, allowing the kinetic terms to fully diagonalize \cite{Hinterbichler:2011tt}. Our effective overlap reduction function is given by 
 \begin{equation}\label{eq:eff_orf}
     \tilde{\Gamma}_{T} = \beta \left(\Gamma_{T} + \Gamma_{V} \frac{\Omega_V}{\Omega_T} + \Gamma_{S} \frac{\Omega_S}{\Omega_T} \right) \ ,
 \end{equation}
