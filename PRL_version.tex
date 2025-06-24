@@ -501,22 +501,16 @@ such as in the context of
 %the stability of solutions (at background and perturbation levels), star and black hole (BH) formation, 
 GW generation and propagation \cite{DeFelice:2013awa,Gumrukcuoglu:2013nza,DeFelice:2013bxa,DeFelice:2015moy,Babichev:2015xha,Sakstein:2017bws}. 
 
-The following effects of MG on GWs can phenomenologically be used to constrain the graviton mass \cite{deRham:2016nuf}:
-(i) the presence of a non-zero graviton mass, resulting in a Yukawa-type exponential suppression of the gravitational potential ($\Phi \propto e^{-m_gR}/R$) and the suppression of GWs at wavelengths larger than the Compton length scale of the graviton ($R_g \simeq m_g^{-1}$)\footnote{The length scale determined by the graviton mass through the Yukawa suppression can naively be treated as a ``gravitational causal horizon'', outside of which we expect the correlations of gravitational perturbations to be suppressed.},
-(ii) modification of the GW dispersion relation, i.e., the difference of the GW propagation speed ($c_g$) from the speed of light ($c$), and
-(iii) the additional degrees of polarization (helicity-$0$ and helicity-$\pm 1$). The main consequence of the helicity-$0$ polarization for the graviton is the coupling of the helicity-0 mode to matter (the so-called {\it fifth force}) \cite{deRham:2014naa}. A resounding sign of the graviton's nonzero mass will involve the observation of all three of these effects at the corresponding scales. 
 %TK no need\footnote{{In dense environments, however, the Vainshtein mechanism \cite{Vainshtein:1972sx} ensures the screening of the helicity-0 and -$\pm 1$ modes \cite{deRham:2012fw, Bloomfield:2014zfa,Falck:2015rsa,Falck:2014jwa,Kase:2015zva,Koyama:2015oma}. The helicity-$\pm 2$ modes end up identical to those in GR.}}
 %TK You should say few words about GWs detection & PTA
 %CC updated this part with a few sentences about GW detection & PTA
 
-Recent detection of the stochastic GW background via various PTA collaborations \cite{Agazie:2023, Xu:2023wog,EPTA:2023sfo,EPTA:2023akd,EPTA:2023fyk, Zic:2023gta,Reardon:2023gzh}
-has further ignited interest in GW astronomy, and its application to constrain fundamental physics, and correspondingly to better understand the nature of gravity. It has allowed us the most promising look into the 
-
+Recent detection of the stochastic GW background via various PTA collaborations \cite{Agazie:2023, Xu:2023wog,EPTA:2023sfo,EPTA:2023akd,EPTA:2023fyk, Zic:2023gta,Reardon:2023gzh} has further ignited interest in GW astronomy, its application to constrain fundamental physics, and trying to better understand the nature of gravity. It has given us the most promising look thus far into the 
 
 In this Letter, we investigate the third effect, where we expect to find the most significant deviation from the expected behavior of gravity. We derive the overlap reduction function (ORF) and the dispersion relation in the case of ghost-free MG, taking into account the effect of these extra polarization modes. We carefully calculate, at first analytically and then numerically, the contribution of the modes to the ORF.
 %The propagation of the different modes will be shown to modify the extrema of the ORFs.
 %The speed of propagation is, in general, mode- and mass-dependent, but in this paper we will ignore this different propagation speed, assuming instead that $c_g$ is very close to $c$ \cite{Blas:2016qmn}, which we set to 1. 
-This work differs from previous work \cite{Liang:2021bct, Anholm:2008wy, Arjona:2024cex, Lee:2013awh} because of the particular emphasis we place on the non-suppression of the exponential factors. This is only possible because we analyze the ORFs in the context of an optimistic PTA observation prospect. Throughout this Letter, we use the (+,--,--,--) convention for the Minkowski metric $\eta_{\mu\nu}$, and we use natural units, setting $c = $$\ \hbar = $$\ k_B = $$\ 1$. 
+This work differs from previous work \cite{Liang:2021bct, Anholm:2008wy, Arjona:2024cex, Lee:2013awh} because of the particular emphasis we place on the non-suppression of the exponential factors. This is only possible because we analyze the ORFs in the context of an optimistic PTA observation prospect.
 
 %TK Units should be here
 %The paper is arranged as follows: in Sec.\ \ref{sec:setup}, we derive the modified dispersion relation from the action and establish the additional polarization modes we observe in massive gravity. In Sec.\ \ref{sec:overlap}, we derive the modified ORF from the redshift, discuss what occurs when we do not suppress the exponential factor from the ORF, and discuss how the graviton mass affects the ORF. In Sec.\ \ref{sec:results}, we compare the numerical results to the data from NANOGrav 15yr and CPTA. In Sec.\ \ref{sec:discussion}, we discuss the implications of our findings. Throughout this paper, we use  (+,--,--,--) for the Minkowski metric $\eta_{\mu\nu}$, and we use natural units, setting $c = $$\ \hbar = $$\ k_B = $$\ 1$. 
@@ -533,6 +527,15 @@ This work differs from previous work \cite{Liang:2021bct, Anholm:2008wy, Arjona:
 %where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is the metric perturbation defined by the metric tensor as follows: $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. In its original form, the Boulware-Deser ghost is present, so we adopt the ghost-free formulation. Additionally, we use the quadratic expansion because we are only interested in working at the linear level. 
 %TK \textit{Massive gravity}---
 \textit{Massive Gravity}---
+The following effects of MG on GWs can phenomenologically be used to constrain the graviton mass \cite{deRham:2016nuf}:
+
+(i) \textit{Yukawa-like exponential suppression}---This is due directly to the presence of a non-zero graviton mass, and yields a suppression of gravitational potential of the form $\Phi \propto e^{-m_gR}/R$, setting $c = $$\ \hbar = $$\ k_B = $$\ 1$.  There is also a suppression of GWs at wavelengths larger than the Compton length scale of the graviton ($R_g \simeq m_g^{-1}$)\footnote{The length scale determined by the graviton mass through the Yukawa suppression can naively be treated as a ``gravitational causal horizon'', outside of which we expect the correlations of gravitational perturbations to be suppressed.}.
+
+(ii) \textit{modification of the GW dispersion relation}---The dispersion relation gains a massive term and will be discussed at length later in this Letter. This implies a difference between the GW propagation speed ($c_g$) and the speed of light. 
+
+(iii) \textit{additional degrees of polarization}---These are characterized by the additional helicity-$0$ and helicity-$\pm 1$ modes. The main consequence of the helicity-$0$ polarization for the graviton is the coupling of the helicity-0 mode to matter (the so-called {\it fifth force}) \cite{deRham:2014naa}. Some theories of massive gravity, such as the minimal theory of massive gravity \cite{DeFelice:2015hla}, only have the two tensor modes like in GR, but a general theory of massive gravity that does not do away with Lorentz invariance will have five in total. 
+
+A resounding sign of the graviton's nonzero mass will involve the observation of all three of these effects at the corresponding scales. In this Letter, we shall turn our attention to the latter two effects, (ii) and (iii). Gravitational waves are described by perturbations to the
 %TK avoid graviton where possible change to GW
 %TK too general no need 
 %Gravitons are the hypothetical quanta of the gravitational field, and while their direct detection and a nonlinear theory that is consistent at the quantum level still evade us, we can work within the linearized level in a ghost-free formulation and still have a sound description using gravitons. In such a formulation, the graviton is described by the metric perturbation,
@@ -541,10 +544,9 @@ This work differs from previous work \cite{Liang:2021bct, Anholm:2008wy, Arjona:
 %   \mathcal{S} = \int d^4 x \Bigg( & \frac{1}{2} \partial_{\lambda} h_{\mu\nu} \partial^\lambda h^{\mu\nu} -\partial_{\mu} h_{\nu \lambda}\partial^\nu h^{\nu\lambda} + \partial_{\mu}h^{\lambda\nu}\partial_{\nu}h \nonumber \\ &- \frac{1}{2}\partial_{\lambda} h\partial^\lambda h +\frac{1}{2}m_g^2(h_{\mu\nu}h^{\mu\nu} - h^2) \Bigg),
 %\end{align}
 %where $m_{g}$ is the mass of the graviton and $h_{\mu\nu}$ is 
-%$TK Start directly with GWs -small intro$  
-... 
-Gravitons are the hypothetical quanta of the gravitational field, and while their direct detection and a nonlinear theory that is consistent at the quantum level still evade us, we can work within the linearized level in a ghost-free formulation and still have a sound description using gravitons. In such a formulation, the graviton is described by the metric perturbation,
-defined by the metric tensor $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. Whenever the region of observation is much smaller than the radius of curvature induced by the graviton, we may express $h_{\mu\nu}$ as a plane wave \cite{Isi:2018miq}
+%$TK Start directly with GWs -small intro$ 
+%CC What do you think about moving this discussion of ways to constrain the mass into the massive gravity section?
+metric tensor, $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$. Here, we use the (+,--,--,--) convention for the Minkowski metric $\eta_{\mu\nu}$. Whenever the region of observation is much smaller than the radius of curvature induced by the graviton, we may express $h_{\mu\nu}$ as a plane wave \cite{Isi:2018miq}
 \begin{equation}\label{eqn:planewave}
     h_{\mu\nu}(x) = \frac{1}{(2\pi)^4}\int d{\bf k} \ h_{\mu\nu}(k) e^{ikx} \ .
 \end{equation}
@@ -565,10 +567,9 @@ where $\omega \equiv k_0 = 2\pi f$.
 %    \omega^2 = \frac{k^2}{a^2} + m_g^2 \ ,
 %\end{equation}
 %where $\omega$ is the effective angular frequency, equivalent to $k_0$. Since we are observing GWsat very nearly the present time, we set $a = 1$. Eq.\ \ref{eq:dispersion} 
-To build intuition for this, we remind ourselves that an identical dispersion relation is obtained from the Proca equations \cite{Proca:1936fbw}, which describe massive spin-1 particles. A careful derivation shows how the mass term emerges \cite{Wang:2024kir} for the massive photon. It is therefore not unexpected that the dispersion relation for the massive graviton, in the context of a spin-2 field, takes on the same form. In general, the dispersion relation is dependent on the scale factor $a$ and the propagation speed of the graviton $c_g$ \cite{Gumrukcuoglu:2012wt}. We assume that $a=1$, since we are observing the gravitational waves at the present time, and $c_g = 1$, based on observational constraints \cite{LIGOScientific:2017vwq, LIGOScientific:2017zic, LIGOScientific:2017ync}.
+To build intuition for this, we remind ourselves that an identical dispersion relation is obtained from the Proca equations \cite{Proca:1936fbw}, which describe massive spin-1 particles. A careful derivation shows how the mass term emerges \cite{Wang:2024kir} for the massive photon. It is therefore not unexpected that the dispersion relation for the massive graviton, in the context of a spin-2 field, takes on the same form. In general, the dispersion relation is dependent on the scale factor $a$ and the propagation speed of gravitational waves $c_g$ \cite{Gumrukcuoglu:2012wt}. We assume that $a=1$, since we are observing the gravitational waves at the present time, and $c_g = 1$, based on observational constraints \cite{LIGOScientific:2017vwq, LIGOScientific:2017zic, LIGOScientific:2017ync}.
 The dispersion relation provides a lower bound on the frequency for a GW, given by the mass of the graviton $m_g$, provided that $k$ goes to 0. In other words, $\omega$ must be at least $m_g$. 
 %In section \ref{sec:results}, we discuss how we use Eq.\ \ref{eq:dispersion} in the context of observational prospects. 
-
 %\section{Overlap Reduction Functions}\label{sec:overlap}
 %\subsection{Derivation}\label{subsec:derivation}
 
@@ -584,7 +585,7 @@ PTA collaborations actually measure the integral of $z(t)$, otherwise known as t
 \begin{equation}\label{eqn:two_point_z}
     \langle \tilde{z}(f) \tilde{z}(f') \rangle = \frac{3H_0^2\delta^2\left(\hat{\bf \Omega} , \hat{\bf \Omega}'\right)\delta_{ii'}\delta(f - f')}{32 \beta \pi^3|f|^3}\Omega_{\text{gw}}(|f|) \Gamma(|f|).
 \end{equation}
-Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = \frac{1}{2}$ for coaligned coincident pulsars to match the conventions of the Hellings Downs \cite{Romano:2023zhb}. $\Omega_{\text{gw}}(|f|)$ is the energy density for the GWs. Details of the derivation of this expression can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}. A wealth of literature has been produced in the hopes of analyzing the behavior of the energy density in MG in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression, the ORF $\Gamma(|f|)$. 
+Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = \frac{1}{2}$ for coaligned coincident pulsars to match the conventions of the Hellings Downs \cite{Romano:2023zhb}. $\Omega_{\text{gw}}(|f|)$ is the energy density for the GWs. Details of the derivation of this expression can be found in Refs.\ \cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}. A wealth of literature has been produced in the hopes of analyzing the behavior of the energy density in MG in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression: the ORF $\Gamma(|f|)$. 
 %The ORF is defined for each  
 %\begin{equation}\label{eq:orf_full}
 %    \Gamma(|f|) = \beta \sum_i \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}),
