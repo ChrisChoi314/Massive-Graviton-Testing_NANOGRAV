@@ -7,6 +7,7 @@
               singlelinecheck = false}
 
 \usepackage[hidelinks]{hyperref}
+\usepackage[font=small,labelfont=bf]{caption}
 %\hypersetup{
 %  colorlinks   = true, %Colours links instead of ugly boxes
 %  urlcolor     = blue, %Colour for external hyperlinks
@@ -488,7 +489,7 @@ The following effects of MG on GWs can phenomenologically be used to constrain t
 
 (i) \textit{Yukawa-like exponential suppression}---Yukawa suppression is expected when the force carrier possesses a nonzero mass. In the case of MG, suppression of the gravitational potential is of the form $\Phi \propto e^{-m_gR}/R$, dependent on the length scale $R$. There is also a suppression of GWs at wavelengths larger than the Compton length scale of the graviton ($R_g \simeq m_g^{-1}$)\footnote{The length scale determined by the graviton mass through the Yukawa suppression can naively be treated as a ``gravitational causal horizon'', outside of which we expect the correlations of gravitational perturbations to be suppressed \cite{Will:1997bb}.}.
 
-(ii) \textit{modification of the GW dispersion relation}---The dispersion relation gains a massive term. This implies a difference between the GW propagation speed ($c_g$) and the speed of light, which can be used to constrain $m_g$ \cite{LIGOScientific:2017vwq, LIGOScientific:2017zic, LIGOScientific:2017ync}. 
+(ii) \textit{modification of the dispersion relation}---The dispersion relation gains a massive term, implying a difference between the GW propagation speed ($c_g$) and the speed of light, which can be used to constrain $m_g$ \cite{LIGOScientific:2017vwq, LIGOScientific:2017zic, LIGOScientific:2017ync}. 
 
 (iii) \textit{additional degrees of polarization}---These are characterized by the additional helicity-$0$ and helicity-$\pm 1$ modes. The main consequence of the helicity-$0$ polarization for the graviton is the coupling of the helicity-0 mode to matter (the so-called {\it fifth force}) \cite{deRham:2014naa}. This affects the evolution of density perturbations and the growth of cosmological structures \cite{Sipp:2022kmb}. Some theories of MG, such as the minimal theory of MG \cite{DeFelice:2015hla}, only have two tensor modes, as in GR, but a general theory of MG that assumes Lorentz invariance will have five in total \cite{Comelli:2013tja}.
 
@@ -510,7 +511,7 @@ where $\omega \equiv k_0 = 2\pi f$, the frequency of the GW. If the graviton wer
 %CC defined and discussed now
 To build intuition for this, we remind ourselves that an identical dispersion relation is obtained from the Proca equations \cite{Proca:1936fbw}, which describe massive helicity (spin) $\pm$ 1 particles. A careful derivation shows how the mass term emerges \cite{Wang:2024kir} for the massive photon. It is therefore not unexpected that the dispersion relation for the massive graviton, in the context of a helicity $\pm 2$ field, takes on the same form. 
 
-In general, the dispersion relation is dependent on the scale factor $a$ and the propagation speed of GWs $c_g$ \cite{Gumrukcuoglu:2012wt}. We assume that $a=1$, since we observe the GWs at present, and $c_g \leq  1$, based on observational constraints \cite{LIGOScientific:2017vwq, LIGOScientific:2017zic, LIGOScientific:2017ync}.
+In general, the dispersion relation is dependent on the scale factor $a$ and the propagation speed of GWs $c_g$ \cite{Gumrukcuoglu:2012wt}. We assume that $a=1$, since we observe the GWs at present, and $c_g \sim  1$, based on observational constraints \cite{LIGOScientific:2017vwq, LIGOScientific:2017zic, LIGOScientific:2017ync}.
 The dispersion relation provides a lower bound on the frequency for a GW, given by the mass of the graviton $m_g$, provided that $k$ goes to 0. In other words, $\omega$ must be greater than or equal to $m_g$; a departure from the behavior of GWs in GR.
 
 \textit{Overlap reduction function}---Suppose there is a massive GW propagating in an arbitrary spatial direction specified by the unit vector $\hat{\Omega} = (\sin\theta \cos\varphi,
@@ -541,7 +542,7 @@ It is possible to decompose the ORF into different modes because the tensor, vec
 \begin{equation}\label{eq:eff_orf}
     \tilde{\Gamma}_{T} = \beta \left(\Gamma_{T} + \Gamma_{V} \frac{\Omega_V}{\Omega_T} + \Gamma_{S} \frac{\Omega_S}{\Omega_T} \right) \ ,
 \end{equation}
-which behaves as an effective tensor mode, since PTA observations are not capable of distinguishing the different polarization modes from each other. In general, the energy densities $\Omega_T, \Omega_V,$ $\Omega_S$ are frequency dependent, but we suppress the frequency dependence in our analysis and assume that the energy density is equipartitioned, that is, $\Omega_T = \Omega_V = \frac{1}{2}\Omega_S$. 
+which behaves like an effective tensor mode, since PTA observations are not capable of distinguishing the different polarization modes from each other \cite{Liang:2021bct}. In general, the energy densities $\Omega_T, \Omega_V,\Omega_S$ are frequency dependent, but we suppress the frequency dependence in our analysis and assume that the energy density is equipartitioned, that is, $\Omega_T = \Omega_V = \frac{1}{2}\Omega_S$. 
 
 \textit{Observational constraints}---Pulsar timing arrays are sensitive to frequencies in the range \cite{Moore:2014lga}
 \begin{equation}\label{eq:freqrange}
@@ -616,11 +617,12 @@ An assumption made in this Letter is the isotropy of the SGWB, allowing us to de
 %TK ask Murman about anisotropic Fisher analysis 
 This can be applied to the effective ORFs we have derived and may be of interest in further work. 
 %
+
 The frequency dependence analysis of the ORF in general is underexplored. NANOGrav and other PTA collaborations do not claim to detect any frequency dependence in the ORF \cite{Agazie:2023,EPTA:2023sfo,EPTA:2023akd,EPTA:2023fyk, Zic:2023gta,Reardon:2023gzh} , while CPTA has \cite{Xu:2023wog}. If the graviton is massive, then there will certainly be a frequency dependence in the data, even without considering $\mathcal{E}$. Doing an analysis of the frequency dependence of the pulsar correlations in the rest of the PTA observations, therefore, will be quite elucidative. 
 
-The detection prospects suggested in this Letter are quite optimistic. It may be unlikely that we would see a PTA experiment last that long, but we nonetheless provide a detailed overview of the ORFs that we may observe if such a scenario takes place. With regard to data from current PTA collaborations, the prospects seem hopeful of continuing to detect pulsar-pulsar correlation coefficients such that the ORFs generated in a theory of MG stay within their standard deviations. With more pulsars being added to PTAs and the planned missions of space-based GW observatories (LISA and Taiji) on the horizon, it seems plausible that the mysteries that have evaded our investigations surrounding the cosmos may finally start to be unravelled. Clearly, a new era of GW observations is well underway. 
+The detection prospects suggested in this Letter are quite optimistic. It may be unlikely that we would see a PTA experiment last that long, but we nonetheless provide a detailed overview of the ORFs that we may observe if such a scenario takes place. With regard to data from current PTA collaborations, the prospects seem hopeful of continuing to detect pulsar-pulsar correlation coefficients such that the ORFs generated in a theory of MG stay within their standard deviations. With more pulsars being added to PTAs and the planned missions of space-based GW observatories on the horizon \cite{LISA:2017, TianQin:2015yph, Hu:2017mde}, it seems plausible that the mysteries that have evaded our investigations surrounding the cosmos may finally start to be unravelled. Clearly, a new era of GW observations is well underway. 
 
-We conclude with the notion that these results do not depend on the origins of the SGWB. If gravitons are massive, then they will behave according to the principles laid out in this Letter, and we should expect to see the effects of this appear in various observables, regardless of whether the source is astrophysical or cosmological in origin.
+We conclude with the notion that these results do not depend on the origins of the SGWB. If gravitons are massive, then they will behave according to the principles laid out in this Letter, and we should expect to see the three effects of MG, regardless of whether the source is astrophysical or cosmological in origin.
 
 \vspace{5mm}
 \textit{Acknowledgements}---We thank Qiuyue Liang, Neil Cornish, and Murman Gurgenidze for useful discussions related to the paper. We also thank the organizers of the 2025 Phenomenology Symposium (PHENO), during which much of this paper has been developed. C.C.\ and T.K.\ acknowledge support from the NASA Astrophysics Theory Program (ATP) Award 80NSSC22K0825 and the National Science Foundation (NSF) Astronomy and Astrophysics Research Grants (AAG) Award AST2408411.
