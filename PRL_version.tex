@@ -7,7 +7,7 @@
               singlelinecheck = false}
 
 \usepackage[hidelinks]{hyperref}
-\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[font=small]{caption}
 %\hypersetup{
 %  colorlinks   = true, %Colours links instead of ugly boxes
 %  urlcolor     = blue, %Colour for external hyperlinks
@@ -475,14 +475,11 @@ leading to investigations of the consequences of MG and massive cosmologies (pio
 such as in the context of the generation and propagation of GWs \cite{DeFelice:2013awa,Gumrukcuoglu:2013nza,DeFelice:2013bxa,DeFelice:2015moy,Babichev:2015xha,Sakstein:2017bws}. 
 
 The direct detection of GWs at high frequencies by interferometers \cite{LIGOScientific:2016aoc,LIGOScientific:2016sjg, KAGRA:2020agh, VIRGO:2014yos} and the more recent detection of the stochastic GW background (SGWB) through various PTA collaborations \cite{Agazie:2023, Xu:2023wog,EPTA:2023sfo,EPTA:2023akd,EPTA:2023fyk, Zic:2023gta,Reardon:2023gzh} have ignited further interest in GW astronomy, giving us the unique possibility of constraining fundamental physics and understanding the nature of gravity. 
-%TK changed a bit - please check above 
-In our study, we use data collected by two GW detection missions, namely NANOGrav \cite{Agazie:2023} and the Chinese PTA (CPTA) \cite{Xu:2023wog}, chosen for their unique approach to their data, to help us better understand gravity and connect MG to observables. 
+In our study, we used data collected by two GW detection missions, namely NANOGrav \cite{Agazie:2023} and Chinese PTA (CPTA) \cite{Xu:2023wog}, chosen for their unique approach to their data, to help us better understand gravity and connect MG to observables. 
 
 
-In this Letter, we derive the overlap reduction function (ORF) and the dispersion relation in the case of ghost-free MG, taking into account the effect of these extra polarization modes.
-%We carefully calculate, first analytically and then numerically, the contribution of the modes to the ORF. 
+In this Letter, we derive the overlap reduction function (ORF) and the dispersion relation in the case of ghost-free MG, taking into account the effect of these extra polarization modes. 
 Unlike Refs. ~\cite{Liang:2021bct, Anholm:2008wy, Arjona:2024cex, Lee:2013awh}, we place an emphasis on the non-suppression of the exponential factors in the ORF, made possible by analyzing them within the context of an optimistic PTA observation prospect. In what follows, we use natural units, setting $c = $$\ \hbar = $$\ k_B = $$\ 1$.
-
 
 \textit{Massive Gravity}---
 The following effects of MG on GWs can phenomenologically be used to constrain the graviton mass \cite{deRham:2016nuf}:
@@ -498,6 +495,7 @@ A resounding confirmation of the graviton's non-zero mass will involve the obser
 metric tensor, $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$.
 %TK add that you use \mu\nu for 1-4 and i, j, 1-3 go to the spatial components. I am not sure if we should use transverse-traceless projection - check Emir's paper how he defines
 %CC i reviewed his paper and it seems like he does use the transverse traceless projection. should i use his formalism for the metric and ds^2?, also found this writeup going into the formalism regarding how to express the metric https://wwwusers.ts.infn.it/~milotti/Didattica/GravitationalWaves/handouts/13-TTGauge.pdf but wasnt sure which one to use
+%TK since we use Emir's eq. use his convention
 Here, we use the (+,--,--,--) convention for the Minkowski metric $\eta_{\mu\nu}$, and the Greek indices $\mu,\nu$ indicate a summation over all four spacetime coordinates. Whenever the region of observation is much smaller than the radius of curvature induced by the GW, we may express $h_{\mu\nu}$ as a plane wave \cite{Isi:2018miq}
 \begin{equation}\label{eqn:planewave}
     h_{\mu\nu}(x) = \frac{1}{(2\pi)^4}\int d\boldsymbol{k} \ h_{\mu\nu}(k) e^{ikx} \ .
@@ -506,15 +504,13 @@ Here, we have the 4-dimensional measure $d\boldsymbol{k} \equiv d^4 k 2\delta(|\
 \begin{equation}\label{eq:dispersion}
     \omega^2 = |\boldsymbol{k}|^2+ m_g^2 \ ,
 \end{equation}
-where $\omega \equiv k_0 = 2\pi f$, the frequency of the GW. If the graviton were massless, then we would have the standard dispersion relation, $\omega^2 = |\boldsymbol{k}|^2$, but the dispersion relation gains a nontriviality due to the nonzero mass in MG. 
-% define f as frequency, k, wavenumber, say about non massive case, k^2\Omega^2, 
-%CC defined and discussed now
-To build intuition for this, we remind ourselves that an identical dispersion relation is obtained from the Proca equations \cite{Proca:1936fbw}, which describe massive helicity (spin) $\pm$ 1 particles. A careful derivation shows how the mass term emerges \cite{Wang:2024kir} for the massive photon. It is therefore not unexpected that the dispersion relation for the massive graviton, in the context of a helicity $\pm 2$ field, takes on the same form. 
+where $\omega \equiv k_0 = 2\pi f$, the frequency of the GW. If the graviton were massless, then we would have the standard dispersion relation, $\omega^2 = |\boldsymbol{k}|^2$, but the dispersion relation gains nontriviality due to the non-zero mass in MG. 
+To build intuition for this, we remind ourselves that an identical dispersion relation is obtained from the Proca equations \cite{Proca:1936fbw}, which describe the massive helicity (spin) $\pm$ 1 particles. A careful derivation shows how the mass term emerges \cite{Wang:2024kir} for the massive photon. It is therefore not unexpected that the dispersion relation for the massive graviton, in the context of a helicity $\pm 2$ field, takes on the same form. 
 
 In general, the dispersion relation is dependent on the scale factor $a$ and the propagation speed of GWs $c_g$ \cite{Gumrukcuoglu:2012wt}. We assume that $a=1$, since we observe the GWs at present, and $c_g \sim  1$, based on observational constraints \cite{LIGOScientific:2017vwq, LIGOScientific:2017zic, LIGOScientific:2017ync}.
 The dispersion relation provides a lower bound on the frequency for a GW, given by the mass of the graviton $m_g$, provided that $k$ goes to 0. In other words, $\omega$ must be greater than or equal to $m_g$; a departure from the behavior of GWs in GR.
 
-\textit{Overlap reduction function}---Suppose there is a massive GW propagating in an arbitrary spatial direction specified by the unit vector $\hat{\Omega} = (\sin\theta \cos\varphi,
+\textit{Overlap reduction function}------Suppose that there is a massive GW propagating in an arbitrary spatial direction specified by the unit vector $\hat{\Omega} = (\sin\theta \cos\varphi,
                         \sin\theta \sin\varphi,
                         \cos\theta)$.
 This GW affects PTA measurements by perturbing the pulsar signals, originally emitted with a constant frequency $\nu_0$, as they travel from their source pulsars to our telescopes. In the barycenter reference frame of the solar system, the frequency shift is characterized by the redshift $z(t) = (\nu_0 - \nu(t))/\nu_0$. PTA collaborations actually measure the integral of $z(t)$ \cite{Anholm:2008wy, Dahal:2020}, otherwise known as the anomalous residual, but it is trivial to rewrite these equations in terms of the residual if we so desire. We take advantage of the freedom of choice granted by their simple relation, and we proceed with the redshift. For PTA data, a quantity of interest is the two-point correlation of the total redshift, $\langle \tilde{z}(f) \tilde{z}(f') \rangle$, where $\tilde{z}(f)$ is the sky-averaged redshift $\tilde{z}(f) \equiv \int d^2\hat{\bf \Omega} z(f, \hat{\bf \Omega})$. The expression for the two-point correlation is given by
@@ -523,11 +519,10 @@ This GW affects PTA measurements by perturbing the pulsar signals, originally em
 \end{equation}
 Here, $\beta$ is the normalization factor introduced so that $\Gamma(|f|) = \frac{1}{2}$ for coaligned coincident pulsars to match the conventions of the Hellings-Downs (HD) correlation \cite{Romano:2023zhb}. $\Omega_{\text{gw}}(|f|)$ is the energy density of the GWs. Details of this derivation can be found in Refs.~\cite{Anholm:2008wy, Liang:2021bct}, which ultimately derive from even earlier work \cite{Detweiler:1979wn, Estabrook:1975jtn, Kaufmann:1970}. A wealth of literature has been produced to analyze the behavior of the energy density in MG in the context of PTAs \cite{Choi:2023tun, Wu:2023rib, Kenjale:2024rsc, He:2021bqm}, but we turn our attention to the last factor in the expression: $\Gamma(|f|)$, otherwise known as the ORF. 
 
-We assume that there are two pulsars, located at distances $L_1$ and $L_2$ from the solar-system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is situated on the $x-z$ plane at an angle $\xi$ away from pulsar 1. We define the ORF for each polarization type
+We assume that there are two pulsars, located at distances $L_1$ and $L_2$ from the solar-system barycenter, and in directions $\hat{p}_1$ and $\hat{p}_2$. For convenience, we assume pulsar 1 is situated along the $z$-axis and pulsar 2 is situated on the $x-z$ plane at an angle $\xi$ away from pulsar 1. We define the ORF for each polarization type: 
 \begin{equation}\label{eq:orf_type}
     \Gamma_I(|f|) = \mathlarger{\sum}_{i \in I} \int_{S^2} d^2 \hat{\bf{\Omega}} \mathcal{E}_1(-f, \hat{\Omega}) \mathcal{E}_2(f, \hat{\Omega}) F_1^{(i)}(\hat{\bf{\Omega}}) F_2^{(i)}(\hat{\bf{\Omega}}) \ ,
 \end{equation}
-
 where $I = \{T,V,S\}$ for each type of polarization and we have defined the receiving function $F^{(i)}_j(\hat{\bf \Omega})$ and the exponential factor $\mathcal{E}_j(f, \hat{\Omega})$ as 
 \begin{equation}\label{eqn:recieving}
     \begin{aligned}
@@ -536,7 +531,6 @@ where $I = \{T,V,S\}$ for each type of polarization and we have defined the rece
     \end{aligned}
 \end{equation}
 The scalar product $\hat{\bf \Omega}\cdot \hat{\boldsymbol{p}}_j$ comes directly from applying the delta function to the complex exponential in 
-%the plane-wave decomposition of the metric perturbation
 Eq.~(\ref{eqn:planewave}). 
 It is possible to decompose the ORF into different modes because the tensor, vector, and scalar modes decouple from each other with an appropriate gauge-fixing term, allowing the kinetic terms to fully diagonalize \cite{Hinterbichler:2011tt}. Our effective overlap reduction function is given by 
 \begin{equation}\label{eq:eff_orf}
@@ -548,8 +542,7 @@ which behaves like an effective tensor mode, since PTA observations are not capa
 \begin{equation}\label{eq:freqrange}
     \frac{1}{T_{\text{obs}}} < f < \frac{1}{\delta t}\ ,
 \end{equation} 
-where $T_{\text{obs}}$ is the total length of time the pulsars are observed and $\delta t$ is the cadence, that is, how often the pulsars are observed. 
-%For reference, $T_{\text{obs}} \approx$ 15 years and $\delta t \approx$ 0.5 weeks for the most frequent observations of a pulsar observed in NANOGrav. 
+where $T_{\text{obs}}$ is the total length of time the pulsars are observed and $\delta t$ is the cadence, that is, how often the pulsars are observed.  
 In the best-case scenario of PTA observation, we would be able to observe pulsars for nearly a century, if not longer. This corresponds to a frequency of $f_{\text{min}} \sim 3.17 \times 10^{-10} \Hz$, setting the lower limit of our frequency range. The closest pulsars used for PTAs are about $L_{\text{min}} \sim 100$ ly away \cite{Anholm:2008wy}, yielding $fL \sim 1$. Therefore, we do not suppress the exponential factors, unlike in Refs.~\cite{Liang:2021bct,Arjona:2024cex}, because $fL$ is well within the regime where the exponential factors are not negligible.
 We used Monte-Carlo integration to numerically compute the frequency dependence of the effective ORF. The magnitude of $\Gamma_T(|f_{\text{min}}|)$ is significantly greater than $\Gamma_T$ with the factors of $\mathcal{E}(f, \hat{\bf \Omega})$ suppressed. If the ORF is in the regime where the Taylor expansions in the short wavelength ($fL \gg 1$) or long wavelength ($fL \ll 1$) cannot be carried out, then we must not ignore $\mathcal{E}(f, \hat{\bf \Omega})$.
 \begin{figure}[ht]
@@ -558,7 +551,7 @@ We used Monte-Carlo integration to numerically compute the frequency dependence 
     \caption{The ORFs plotted as a function of angular separation $\xi$. The solid lines use the full expression of the ORFs, including the factors of $\mathcal{E}$. The dotted lines are frequency independent and ignore the factors of $\mathcal{E}$. The solid lines are plotted with $fL = 1$}
     \label{fig:orfs}
 \end{figure}
-In Fig. \ref{fig:orfs}, we see how differently the ORFs behave when we take $\mathcal{E}$ into account. We observe that for fixed $fL$, the ratio $|\boldsymbol{k}|/k_0$ corresponds to an increasing disparity between the ORFs with and without $\mathcal{E}$. For sufficiently small values of the ratio $|\boldsymbol{k}|/k_0$, e.g.\ $|\boldsymbol{k}|/k_0 \lesssim 0.1$, the ORFs with $\mathcal{E}$ acquire additional local extrema, namely a minimum and a maximum. This is a peculiarity that only arises when $\mathcal{E}$ is not ignored. We also expect this behavior to emerge when the mass of the graviton is sufficiently high.
+In Fig.~\ref{fig:orfs}, we see how differently the ORFs behave when we take $\mathcal{E}$ into account. We observe that for fixed $fL$, the ratio $|\boldsymbol{k}|/k_0$ corresponds to an increasing disparity between the ORFs with and without $\mathcal{E}$. For sufficiently small values of the ratio $|\boldsymbol{k}|/k_0$, e.g.\ $|\boldsymbol{k}|/k_0 \lesssim 0.1$, the ORFs with $\mathcal{E}$ acquire additional local extrema, namely a minimum and a maximum. This is a peculiarity that only arises when $\mathcal{E}$ is not ignored. We also expect this behavior to emerge when the mass of the graviton is sufficiently high.
 
 The graviton mass is intimately connected to the behavior of the effective ORF. It appears through a relationship between the mass and the angular frequency. 
 If observations of PTAs follow the trajectory for the best-case scenario, then we can only hope to observe a graviton mass given by that lower frequency bound. This corresponds to $m_g \sim 1.31\times 10^{-24} \eV$. To be clear, we are assuming that the lowest theoretical frequency given by the limit of the dispersion relation (\ref{eq:dispersion}) as $k\rightarrow 0$, will coincide with the lowest frequency that PTAs can measure, hence the ``best-case'' scenario. Going forth, this is the mass that we will take $m_g$ to be in our analysis.
@@ -576,18 +569,20 @@ We used NANOGrav15 to obtain angular correlations of 2,211 pairs of pulsars from
 \end{figure}
 We do not use the frequentist optimal statistic that Ref.~\cite{Agazie:2023} employs, which is based on methods described in Ref.~\cite{Allen:2022ksj}, since it is crucial that the estimator is not biased towards the HD curve. We want the statistics to not assume anything about the additional polarizations, so that our comparison is sensible. For Fig.~\ref{fig:ng}, we used 13 bins constructed such that the mean of each bin matches the mean $\xi$'s of CPTA DR1 as closely as possible, since we are not able to alter the number or range of the bins in CPTA DR1 due to its public inaccessibility. As a result, we computed the statistics for each binned average rather than the correlation coefficient for each pair so that the two datasets are on equal footing. 
 
-We find that for NANOGrav15, HD gives a fit of $\chi^2$/d.o.f.\ $\sim 1.71$ whereas $\tilde{\Gamma}_T(f_1)$ with $|\boldsymbol{k}|/k_0 = 0.5$ gives a fit of $\chi^2$/d.o.f.\ $\sim 1.02$. The effective ORF from MG  is therefore a better fit overall, although it still suffers from not matching the data in the first half of the data.
+We find that for NANOGrav15, HD gives a fit of $\chi^2$/d.o.f.\ $\sim 1.71$ whereas $\tilde{\Gamma}_T(f_1)$ with $|\boldsymbol{k}|/k_0 = 0.5$ gives a fit of $\chi^2$/d.o.f.\ $\sim 1.02$. The effective ORF from MG is therefore a better overall fit, although it still suffers from not matching the data in the first half of the data.
 
-We use CPTA DR1 to manually reconstruct the binned average values from 1,596 pairs of pulsars of a 57-pulsar array \cite{Xu:2023wog}. 
+We used CPTA DR1 to manually reconstruct the binned average values from 1,596 pairs of pulsars in a 57-pulsar array \cite{Xu:2023wog}. 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.45\textwidth]{fig3.pdf}
     \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\xi$ between a pair of pulsars, in blue. This is plotted at the lower bound of the frequency, $1/T_{\text{CPTA}}$, and we set $|\boldsymbol{k}|/k_0 = 0.1$. The angular–separation–binned inter-pulsar correlations for the CPTA dataset for $1/T_{\text{CPTA}}$ are plotted with error bars.}
     \label{fig:cpta}
 \end{figure}
-This data set is chosen because of the frequency dependence observed by CPTA \cite{Xu:2023wog}. Even in the absence of $\mathcal{E}$, we expect a frequency dependence in the data for MG. CPTA analyzed the correlation coefficients for $f=$ $1/T_{\text{CPTA}}, 1.5/T_{\text{CPTA}},$ and $2/T_{\text{CPTA}}$, where $T_{\text{CPTA}} \sim 3.40$ yrs. We use the data for $1/T_{\text CPTA}$ since it is closer to $f_0$, which we wish to analyze. 
+This data set is chosen due to the frequency dependence observed by CPTA \cite{Xu:2023wog}. Even in the absence of $\mathcal{E}$, we expect a frequency dependence in the data for MG. CPTA analyzed the correlation coefficients for $f=$ $1/T_{\text{CPTA}}, 1.5/T_{\text{CPTA}},$ and $2/T_{\text{CPTA}}$, where $T_{\text{CPTA}} \sim 3.40$ yrs. We use the data for $1/T_{\text CPTA}$ since it is closer to $f_0$, which we wish to analyze. 
 
-We find that for CPTA DR1, HD gives a fit of $\chi^2$/d.o.f.\ $\sim 3.00$ whereas $\tilde{\Gamma}_T(f_0)$ with $|\boldsymbol{k}|/k_0 = 0.1$ gives a fit of $\chi^2$/d.o.f.\ $\sim 1.51$. The effective ORF from MG  is a significantly better fit than HD. In fact, the effective ORF from MG does remarkably well in matching the data. We summarize our statistics in Table \ref{tbl:chi}.
+We find that for CPTA DR1, HD gives a fit of $\chi^2$/d.o.f.\ $\sim 3.00$ whereas $\tilde{\Gamma}_T(f_0)$ with $|\boldsymbol{k}|/k_0 = 0.1$ gives a fit of $\chi^2$/d.o.f.\ $\sim 1.51$. The effective ORF from MG is a significantly better fit than HD. 
+%TK make more clear sentence above
+In fact, the effective ORF from MG does remarkably well in matching the data. We summarize our statistics in Table \ref{tbl:chi}.
 \begin{table}[ht] 
 \centering
 \renewcommand{\arraystretch}{1.8}
@@ -608,13 +603,12 @@ CPTA DR1 & MG  & 16.58 & 1.51 \\
 \label{tbl:chi}
 \end{table}
 
-\textit{Discussion}---In this paper, we have reviewed the methods for obtaining the modified dispersion relation and effective ORF in the theory of ghost-free MG. We have analyzed the behavior of this effective ORF when $\mathcal{E}$ is not ignored. We were able to demonstrate that using unbiased NANOGrav15 and CPTA DR1, the effective ORF in MG fits the data significantly better than the HD curve with an optimistic graviton mass $m_g \sim$ $1.31\times10^{-24} \eV$.
+\textit{Discussion}---In this paper, we have reviewed the methods to obtain the modified dispersion relation and the effective ORF in the theory of ghost-free MG. We have analyzed the behavior of this effective ORF when $\mathcal{E}$ is not ignored. We were able to demonstrate that using unbiased NANOGrav15 and CPTA DR1, the effective ORF in MG fits the data significantly better than the HD curve with an optimistic graviton mass $m_g \sim$ $1.31\times10^{-24} \eV$.
 %
 
 In this Letter, we have not performed a rigorous fitting of the data due to the limitations of CPTA DR1 and to demonstrate the heuristics of this theory; we simply used characteristic frequencies for comparison. A rigorous fitting to NANOGrav15 without considering $\mathcal{E}$ has been done in Ref.~\cite{Arjona:2024cex}, and the ratio that has been found to best fit the frequentist optimal statistic of NANOGrav15 is $|\boldsymbol{k}|/k_0 \sim 0.73$. We deem this to be plausible on the basis of our statistics and the resulting shape of our ORF. A future study may introduce more free parameters than the ones we considered and perform a holistic fitting procedure to place constraints on the mass of the graviton and its relative energy densities. Additionally, it would be of use to perform the fitting on the individual pulsar-pulsar correlation coefficients rather than the binned averages for publicly available PTA data.
 
-An assumption made in this Letter is the isotropy of the SGWB, allowing us to decompose Eq.~\ref{eqn:two_point_z} as we did, but it is not necessarily an assumption that we can take for granted \cite{Depta:2024ykq, Bravo:2025csu, Cusin:2025xle, Kuwahara:2024jiz, Li:2024lvt}. Anisotropy in the background can be analyzed by decomposing the ORF into the basis of spherical harmonics and analyzing the multipole moments \cite{Allen:2024bnk, Gair:2014rwa}\footnote{It may not be appropriate to do spherical harmonic decomposition for the analysis of PTAs \cite{Ali-Haimoud:2020ozu}. Instead, the Fischer formalism may be more effective, especially in the context of anisotropic backgrounds.}. 
-%TK ask Murman about anisotropic Fisher analysis 
+An assumption made in this Letter is the isotropy of the SGWB, allowing us to decompose Eq.~\ref{eqn:two_point_z} as we did, but it is not necessarily an assumption that we can take for granted \cite{Depta:2024ykq, Bravo:2025csu, Cusin:2025xle, Kuwahara:2024jiz, Li:2024lvt}. Anisotropy in the background can be analyzed by decomposing the ORF on the basis of spherical harmonics and analyzing multipole moments \cite{Allen:2024bnk, Gair:2014rwa}\footnote{It may not be appropriate to do spherical harmonic decomposition for the analysis of PTAs \cite{Ali-Haimoud:2020ozu}. Instead, the Fischer formalism may be more effective, especially in the context of anisotropic backgrounds.}.  
 This can be applied to the effective ORFs we have derived and may be of interest in further work. 
 %
 
