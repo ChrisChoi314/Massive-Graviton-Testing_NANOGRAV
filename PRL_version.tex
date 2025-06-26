@@ -479,10 +479,9 @@ In our study, we used data collected by two GW detection missions, namely NANOGr
 
 
 In this Letter, we derive the overlap reduction function (ORF) and the dispersion relation in the case of ghost-free MG, taking into account the effect of these extra polarization modes. 
-Unlike Refs. ~\cite{Liang:2021bct, Anholm:2008wy, Arjona:2024cex, Lee:2013awh}, we place an emphasis on the non-suppression of the exponential factors in the ORF, made possible by analyzing them within the context of an optimistic PTA observation prospect. In what follows, we use natural units, setting $c = $$\ \hbar = $$\ k_B = $$\ 1$.
+Unlike Refs.~\cite{Liang:2021bct, Anholm:2008wy, Arjona:2024cex, Lee:2013awh}, we place an emphasis on the non-suppression of the exponential factors in the ORF, made possible by analyzing them within the context of an optimistic PTA observation prospect. In what follows, we use natural units, setting $c = $$\ \hbar = $$\ k_B = $$\ 1$.
 
-\textit{Massive Gravity}---
-The following effects of MG on GWs can phenomenologically be used to constrain the graviton mass \cite{deRham:2016nuf}:
+\textit{Massive Gravity}---The following effects of MG on GWs can phenomenologically be used to constrain the graviton mass \cite{deRham:2016nuf}:
 
 (i) \textit{Yukawa-like exponential suppression}---Yukawa suppression is expected when the force carrier possesses a nonzero mass. In the case of MG, suppression of the gravitational potential is of the form $\Phi \propto e^{-m_gR}/R$, dependent on the length scale $R$. There is also a suppression of GWs at wavelengths larger than the Compton length scale of the graviton ($R_g \simeq m_g^{-1}$)\footnote{The length scale determined by the graviton mass through the Yukawa suppression can naively be treated as a ``gravitational causal horizon'', outside of which we expect the correlations of gravitational perturbations to be suppressed \cite{Will:1997bb}.}.
 
@@ -490,13 +489,21 @@ The following effects of MG on GWs can phenomenologically be used to constrain t
 
 (iii) \textit{additional degrees of polarization}---These are characterized by the additional helicity-$0$ and helicity-$\pm 1$ modes. The main consequence of the helicity-$0$ polarization for the graviton is the coupling of the helicity-0 mode to matter (the so-called {\it fifth force}) \cite{deRham:2014naa}. This affects the evolution of density perturbations and the growth of cosmological structures \cite{Sipp:2022kmb}. Some theories of MG, such as the minimal theory of MG \cite{DeFelice:2015hla}, only have two tensor modes, as in GR, but a general theory of MG that assumes Lorentz invariance will have five in total \cite{Comelli:2013tja}.
 
-A resounding confirmation of the graviton's non-zero mass will involve the observation of all three of these effects at the corresponding scales. In this Letter, we shall turn our attention to the latter two effects, (ii) and (iii). GWs are described by perturbations to the
+A resounding confirmation of the graviton's non-zero mass will involve the observation of all three of these effects at the corresponding scales. In this Letter, we shall turn our attention to the latter two effects, (ii) and (iii). In a Friedmann-
+Robertson-Walker (FRW) universe, GWs are described by perturbations to the
 %TK maybe on top or above? 
-metric tensor, $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$.
+metric tensor, $g_{\mu\nu}$, defined by $g_{\mu \nu}=\eta_{\mu \nu}+h_{\mu \nu}$. %\cite{Gumrukcuoglu:2012wt}
+%\begin{equation}\label{eqn:metric}
+%    \begin{aligned}
+%        g_{\mu \nu} d x^\mu d x^\nu &=N(t)^2 d t^2-a(t)^2\left[\Omega_{n j}\left(x^k\right)+h_{n j}\right] d x^i d x^j , \\ 
+%        \Omega_{n j}\left(x^k\right)&=\eta_{n j}+\frac{K \eta_{n l} \eta_{j m} x^l x^m}{1-K \eta_{l m} x^l x^m} \ . 
+%    \end{aligned}
+%\end{equation}
 %TK add that you use \mu\nu for 1-4 and i, j, 1-3 go to the spatial components. I am not sure if we should use transverse-traceless projection - check Emir's paper how he defines
 %CC i reviewed his paper and it seems like he does use the transverse traceless projection. should i use his formalism for the metric and ds^2?, also found this writeup going into the formalism regarding how to express the metric https://wwwusers.ts.infn.it/~milotti/Didattica/GravitationalWaves/handouts/13-TTGauge.pdf but wasnt sure which one to use
 %TK since we use Emir's eq. use his convention
-Here, we use the (+,--,--,--) convention for the Minkowski metric $\eta_{\mu\nu}$, and the Greek indices $\mu,\nu$ indicate a summation over all four spacetime coordinates. Whenever the region of observation is much smaller than the radius of curvature induced by the GW, we may express $h_{\mu\nu}$ as a plane wave \cite{Isi:2018miq}
+%CC avoided using Emir's because it seemed to only apply to tensor-type perturbations in the FRW metric, restricted to only 2 tensor modes propagating. Instead, used the convention that follows our more general analysis in https://arxiv.org/pdf/0809.0701, which is what they used for deriving these ORFs in massive gravity
+Here, we use the (+,--,--,--) convention for the Minkowski metric $\eta_{\mu\nu}$ and Greek indices $\mu,\nu$ to indicate a summation over all four spacetime coordinates. Whenever the region of observation is much smaller than the radius of curvature induced by the GW, we may express $h_{\mu\nu}$ as a plane wave \cite{Isi:2018miq}
 \begin{equation}\label{eqn:planewave}
     h_{\mu\nu}(x) = \frac{1}{(2\pi)^4}\int d\boldsymbol{k} \ h_{\mu\nu}(k) e^{ikx} \ .
 \end{equation}
