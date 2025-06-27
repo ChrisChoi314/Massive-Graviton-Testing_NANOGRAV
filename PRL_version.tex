@@ -488,10 +488,11 @@ Unlike Refs.~\cite{Liang:2021bct, Anholm:2008wy, Arjona:2024cex, Lee:2013awh}, w
 
 (iii) \textit{additional degrees of polarization}---These are characterized by the additional helicity-$0$ and helicity-$\pm 1$ modes. The main consequence of the helicity-$0$ polarization for the graviton is the coupling of the helicity-0 mode to matter (the so-called {\it fifth force}) \cite{deRham:2014naa}. This affects the evolution of density perturbations and the growth of cosmological structures \cite{Sipp:2022kmb}. Some theories of MG, such as the minimal theory of MG \cite{DeFelice:2015hla}, only have two tensor modes, as in GR, but a general theory of MG that assumes Lorentz invariance will have five in total \cite{Comelli:2013tja}.
 
-A resounding confirmation of the graviton's non-zero mass will involve the observation of all three of these effects at the corresponding scales. In this Letter, we shall turn our attention to the latter two effects, (ii) and (iii). In a Friedmann-
-Robertson-Walker (FRW) universe, GWs are described by perturbations to the
+A resounding confirmation of the graviton's non-zero mass will involve the observation of all three of these effects at the corresponding scales. In this Letter, we shall turn our attention to the latter two effects, (ii) and (iii). 
+%In a Friedmann-
+%Robertson-Walker (FRW) universe, GWs are described by perturbations to the
 %TK maybe on top or above? 
-metric tensor, $g_{\mu\nu}$, defined by $g_{\mu \nu}=\eta_{\mu \nu}+h_{\mu \nu}$. %\cite{Gumrukcuoglu:2012wt}
+%metric tensor, $g_{\mu\nu}$, defined by $g_{\mu \nu}=\eta_{\mu \nu}+h_{\mu \nu}$. %\cite{Gumrukcuoglu:2012wt}
 %\begin{equation}\label{eqn:metric}
 %    \begin{aligned}
 %        g_{\mu \nu} d x^\mu d x^\nu &=N(t)^2 d t^2-a(t)^2\left[\Omega_{n j}\left(x^k\right)+h_{n j}\right] d x^i d x^j , \\ 
@@ -502,7 +503,9 @@ metric tensor, $g_{\mu\nu}$, defined by $g_{\mu \nu}=\eta_{\mu \nu}+h_{\mu \nu}$
 %CC i reviewed his paper and it seems like he does use the transverse traceless projection. should i use his formalism for the metric and ds^2?, also found this writeup going into the formalism regarding how to express the metric https://wwwusers.ts.infn.it/~milotti/Didattica/GravitationalWaves/handouts/13-TTGauge.pdf but wasnt sure which one to use
 %TK since we use Emir's eq. use his convention
 %CC avoided using Emir's because it seemed to only apply to tensor-type perturbations in the FRW metric, restricted to only 2 tensor modes propagating. Instead, used the convention that follows our more general analysis in https://arxiv.org/pdf/0809.0701, which is what they used for deriving these ORFs in massive gravity
-Here, we use the (+,--,--,--) convention for the Minkowski metric $\eta_{\mu\nu}$ and Greek indices $\mu,\nu$ to indicate a summation over all four spacetime coordinates. Whenever the region of observation is much smaller than the radius of curvature induced by the GW, we may express $h_{\mu\nu}$ as a plane wave \cite{Isi:2018miq}
+%Here, we use the (+,--,--,--) convention for the Minkowski metric $\eta_{\mu\nu}$
+%and Greek indices $\mu,\nu$ to indicate a summation over all four spacetime coordinates. 
+Whenever the region of observation is much smaller than the radius of curvature induced by the GW, we may express the metric perturbation $h_{\mu\nu}$ as a plane wave \cite{Isi:2018miq}
 \begin{equation}\label{eqn:planewave}
     h_{\mu\nu}(x) = \frac{1}{(2\pi)^4}\int d\boldsymbol{k} \ h_{\mu\nu}(k) e^{ikx} \ .
 \end{equation}
@@ -576,8 +579,7 @@ We used NANOGrav15 to obtain angular correlations of 2,211 pairs of pulsars from
 We do not use the frequentist optimal statistic that Ref.~\cite{Agazie:2023} employs, which is based on methods described in Ref.~\cite{Allen:2022ksj}, since it is crucial that the estimator is not biased towards the HD curve. We want the statistics to not assume anything about the additional polarizations, so that our comparison is sensible. For Fig.~\ref{fig:ng}, we used 13 bins constructed such that the mean of each bin matches the mean $\xi$'s of CPTA DR1 as closely as possible, since we are not able to alter the number or range of the bins in CPTA DR1 due to its public inaccessibility. As a result, we computed the statistics for each binned average rather than the correlation coefficient for each pair so that the two datasets are on equal footing. 
 
 We find that for NANOGrav15, HD gives a fit of $\chi^2$/d.o.f.\ $\sim 1.71$ whereas $\tilde{\Gamma}_T(f_1)$ with $|\boldsymbol{k}|/k_0 = 0.5$ gives a fit of $\chi^2$/d.o.f.\ $\sim 1.02$. The effective ORF from MG is therefore a better overall fit.
-%, although it still suffers from not matching the data in the first half of the data.
-%CC further analysis 
+%CC further analysis below 
 A curious property of the effective ORF in MG is the shift of the minimum angle. The apparent minimum in NANOGrav15 is located further to the right than HD predicts: HD predicts $\xi \sim 82^\circ$ for HD and the data shows that $\xi \sim 97^\circ$, which we obtain using parabolic interpolation. The $\tilde{\Gamma}_T$ that we obtained has a minimum angle at $\xi \sim 100^\circ$.
 
 We used CPTA DR1 to manually reconstruct the binned average values from 1,596 pairs of pulsars in a 57-pulsar array \cite{Xu:2023wog}. 
