@@ -1,5 +1,5 @@
 %\documentclass[prd,twocolumn,aps,psfig,showpacs,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers,times]{revtex4}
-\documentclass[prd,twocolumn,aps,psfig,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers,times]{revtex4-2}
+\documentclass[10pt,prd,twocolumn,aps,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers]{revtex4-2}
 %\documentclass[prd,aps,psfig,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers,times]{revtex4-2}\setlength{\topmargin}{-14mm}
 \usepackage{graphicx,bm,color,amsmath,amssymb, mathtools,subcaption}
 \graphicspath{{./fig/}}
@@ -7,7 +7,6 @@
               singlelinecheck = false}
 
 \usepackage[hidelinks]{hyperref}
-\usepackage[font=small]{caption}
 %\hypersetup{
 %  colorlinks   = true, %Colours links instead of ugly boxes
 %  urlcolor     = blue, %Colour for external hyperlinks
@@ -27,6 +26,8 @@
 \usepackage{braket,orcidlink}
 
 \usepackage{relsize}
+
+\usepackage[font=small]{caption}
 
 %|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 %             Customized Commands
@@ -431,8 +432,6 @@ $\displaystyle##$\hfil\cr>\cr\sim\cr}}}
 
 \newcommand{\inv}{\rm inv}
 
-\usepackage{braket}
-
 \begin{document}
 
 \title{Do Pulsar Timing Datasets Favor Massive Gravity?}
@@ -531,7 +530,7 @@ It is possible to decompose the ORF into different modes because the tensor, vec
 \begin{equation}\label{eq:eff_orf}
     \tilde{\Gamma}_{T} = \beta \left(\Gamma_{T} + \Gamma_{V} \frac{\Omega_V}{\Omega_T} + \Gamma_{S} \frac{\Omega_S}{\Omega_T} \right) \ ,
 \end{equation}
-which behaves like an effective tensor mode, since PTA observations are not capable of distinguishing the different polarization modes from each other \cite{Liang:2021bct}. In general, the energy densities $\Omega_T, \Omega_V,\Omega_S$ are frequency dependent, but we suppress the frequency dependence in our analysis and assume that the energy density is equipartitioned, that is, $\Omega_T = \Omega_V = \frac{1}{2}\Omega_S$. 
+which behaves like an effective tensor mode, since PTA observations are not capable of distinguishing the different polarization modes from each other \cite{Liang:2021bct}. In general, the energy densities $\Omega_T, \Omega_V,\Omega_S$ are frequency dependent, but we suppress the frequency dependence in our analysis and assume that the energy density is equipartitioned, that is, $\Omega_T = \Omega_V = 2\Omega_S$, due to the presence of only one scalar mode.
 
 \textit{Observational constraints}---Pulsar timing arrays are sensitive to frequencies in the range \cite{Moore:2014lga}
 \begin{equation}\label{eq:freqrange}
