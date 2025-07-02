@@ -510,7 +510,7 @@ It is possible to decompose the ORF into different modes because the tensor, vec
 \begin{equation}\label{eq:eff_orf}
     \tilde{\Gamma}_{T} = \beta \left(\Gamma_{T} + \Gamma_{V} \frac{\Omega_V}{\Omega_T} + \Gamma_{S} \frac{\Omega_S}{\Omega_T} \right) \ ,
 \end{equation}
-which behaves like an effective tensor mode, since PTA observations are not capable of distinguishing the different polarization modes from each other \cite{Liang:2021bct}. In general, the energy densities $\Omega_T, \Omega_V,\Omega_S$ are frequency dependent, but we suppress the frequency dependence in our analysis and assume that the energy density is equipartitioned, that is, $\Omega_T = \Omega_V = 2\Omega_S$, due to the presence of only one scalar mode.
+which behaves like an effective tensor mode, since PTA observations are not capable of distinguishing the different polarization modes from each other \cite{Liang:2021bct}. In general, the energy densities $\Omega_T, \Omega_V,\Omega_S$ are frequency dependent, but we suppress the frequency dependence in our analysis and assume that the energy density is equipartitioned, that is, $\Omega_T = \Omega_V = 2\Omega_S$.
 
 \textit{Observational constraints}---Pulsar timing arrays are sensitive to frequencies in the range \cite{Moore:2014lga}
 \begin{equation}\label{eq:freqrange}
@@ -521,7 +521,7 @@ We used Monte-Carlo integration to numerically compute the frequency dependence 
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.5]{fig1.pdf}
-    \caption{The ORFs plotted as a function of angular separation $\xi$. The solid lines use the full expression of the ORFs, including $\mathcal{E}$. The dotted lines assume $\mathcal{E}=1$. The solid lines are plotted with $fL \approx 1$.}
+    \caption{The ORFs plotted as a function of angular separation $\xi$. The solid lines use the full expression of the ORFs, including $\mathcal{E}$. The dotted lines assume $\mathcal{E}_1(-f)\mathcal{E}_2(f)=1$.}
     \label{fig:orfs}
 \end{figure}
 In Fig.~\ref{fig:orfs}, we see how differently the ORFs behave when we take $\mathcal{E}$ into account. We observe that for fixed $fL$, the ratio $|\boldsymbol{k}|/k_0$ corresponds to an increasing disparity between the ORFs with and without $\mathcal{E}$. For sufficiently small values of the ratio $|\boldsymbol{k}|/k_0$, e.g.\ $|\boldsymbol{k}|/k_0 \lesssim 0.1$, the ORFs with $\mathcal{E}$ acquire additional local extrema, namely a minimum and a maximum. This is a peculiarity that only arises when $\mathcal{E}$ is not ignored. We also expect this behavior to emerge when the mass of the graviton is sufficiently high.
@@ -549,7 +549,7 @@ We find that for CPTA DR1, HD gives a fit of $\chi^2$/d.o.f.\ $\sim 3.00$ wherea
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.47\textwidth]{fig4.pdf}
-    \caption{The $\chi^2$/d.o.f.~fitting plotted as a function of the ratio $|\boldsymbol{k}|/k_0$. The values for the horizontal dashed lines, representing the fit for the HD correlation, can be found in Table \ref{tbl:chi}.}
+    \caption{The $\chi^2$/d.o.f.~fitting plotted as a function of the ratio $|\boldsymbol{k}|/k_0$. The values for the horizontal dashed lines, representing the fit for the HD, can be found in Table \ref{tbl:chi}.}
     \label{fig:chi}
 \end{figure}
 \begin{table}[ht]
@@ -577,17 +577,17 @@ A rigorous fitting to NANOGrav15 without considering $\mathcal{E}$ has been done
 An assumption made in this Letter is the isotropy of the SGWB, allowing us to decompose Eq.~\ref{eqn:two_point_z} as we did, but it is not necessarily one we can take for granted \cite{Depta:2024ykq, Bravo:2025csu, Cusin:2025xle, Kuwahara:2024jiz, Li:2024lvt}. Anisotropy in the background can be analyzed by decomposing the ORF on the basis of spherical harmonics and analyzing multipole moments \cite{Allen:2024bnk, Gair:2014rwa}\footnote{It may not be appropriate to do spherical harmonic decomposition for the analysis of PTAs \cite{Ali-Haimoud:2020ozu}. Instead, the Fischer formalism may be more effective, especially in the context of anisotropic backgrounds.}.  
 This can be applied to the effective ORFs we have derived and may be of interest in further work. 
 
-Frequency-dependent analysis of pulsar angular correlation in general is underexplored. NANOGrav and other PTA collaborations do not claim to detect any frequency dependence in the ORF \cite{Agazie:2023,EPTA:2023sfo,EPTA:2023akd,EPTA:2023fyk, Zic:2023gta,Reardon:2023gzh}, while CPTA has \cite{Xu:2023wog}. If the graviton is massive, then there will certainly be a frequency dependence in the data, even without considering $\mathcal{E}$. Doing an analysis of the frequency dependence of the pulsar correlations in the rest of the PTA observations, therefore, will be quite elucidative. 
+Frequency-dependent analysis of the angular correlation of PTAs in general is underexplored. NANOGrav and other PTA collaborations do not claim to detect any frequency dependence in the ORF \cite{Agazie:2023,EPTA:2023sfo,EPTA:2023akd,EPTA:2023fyk, Zic:2023gta,Reardon:2023gzh}, while CPTA has \cite{Xu:2023wog}. If the graviton is massive, then there will certainly be a frequency dependence in the data, even without considering $\mathcal{E}$. Doing an analysis of the frequency dependence of the pulsar correlations in the rest of the PTA observations, therefore, will be quite elucidative. 
 
 These results do not depend on the origins of the SGWB. If gravitons are massive, then they will behave according to the principles presented in this Letter, and we should expect to observe the three effects of MG, regardless of whether the source is astrophysical or cosmological in origin. This is due to the fact that in both scenarios, the propagation of the GWs is not affected; properties such as the spectral shape and range of the amplitude \cite{Caprini:2015tfa} or the isotropy of the background \cite{NANOGrav:2023hvm} are affected instead.
 
-The detection prospects suggested in this Letter are quite optimistic. It may be unlikely that we would see a PTA experiment last that long, but we nonetheless provide a detailed overview of the ORFs in such a case. With regard to data from current PTA collaborations, the prospects seem hopeful of continuing to detect pulsar-pulsar correlation coefficients such that the ORFs generated in MG stay within their standard deviations. With more pulsars being added to PTAs and the planned missions of space-based GW observatories on the horizon \cite{LISA:2017, TianQin:2015yph, Hu:2017mde}, it seems plausible that the mysteries that have evaded our investigations surrounding the cosmos may finally start to be unravelled. Clearly, a new era of GW observations is well underway. 
+The detection prospects suggested in this Letter are quite optimistic. It may be unlikely that a PTA experiment would last that long, but we nonetheless provide a detailed overview of the ORFs in such a case. With regard to data from current PTA collaborations, the prospects seem hopeful of continuing to detect pulsar-pulsar correlation coefficients such that the ORFs generated in MG stay within their standard deviations. With more pulsars being added to PTAs and the planned missions of space-based GW observatories on the horizon \cite{LISA:2017, TianQin:2015yph, Hu:2017mde}, it seems plausible that the mysteries that have evaded our investigations surrounding the cosmos may finally start to be unravelled. Clearly, a new era of GW observations is well underway. 
 
-\vspace{5mm}
+\vspace{3mm}
 \textit{Acknowledgements}---We thank Qiuyue Liang, Neil Cornish, and Murman Gurgenidze for useful discussions related to the paper. We also thank the organizers of the 2025 Phenomenology Symposium (PHENO), during which much of this paper has been developed. C.C.~and T.K.~acknowledge support from the NASA Astrophysics Theory Program (ATP) Award 80NSSC22K0825 and the National Science Foundation (NSF) Astronomy and Astrophysics Research Grants (AAG) Award AST2408411.
 
-\vspace{5mm}
-\textit{Data availability}---Source code and data to reproduce all of our results are openly available \cite{Choi:2025git}.
+\vspace{3mm}
+\textit{Data availability}---Source code and data for reproducing all of our results are openly available \cite{Choi:2025git}.
 
 \bibliographystyle{apsrev4-2_edited}
 \bibliography{refs}
