@@ -542,7 +542,7 @@ We used NANOGrav15 to obtain angular correlations of 2,211 pairs of pulsars from
 \end{figure}
 We do not use the frequentist optimal statistic that Ref.~\cite{Agazie:2023} employs, which is based on methods described in Ref.~\cite{Allen:2022ksj}, since it is crucial that the estimator is not biased towards the HD curve. We want the statistics to not assume anything about the additional polarizations, so that our comparison is sensible. For Fig.~\ref{fig:ng}, we used 13 bins constructed such that the mean of each bin matches the mean $\xi$'s of CPTA DR1 as closely as possible, since we are not able to alter the number or range of the bins in CPTA DR1 due to its public inaccessibility. As a result, we computed the statistics for each binned average rather than the correlation coefficient for each pair so that the two datasets are on equal footing. 
 
-We find that for NANOGrav15, HD gives a fit of $\chi^2$/d.o.f.\ $\sim 1.71$ whereas $\tilde{\Gamma}_T(f_1)$ with $|\boldsymbol{k}|/k_0 = 0.5$ gives a fit of $\chi^2$/d.o.f.\ $\sim 0.93$. The effective ORF from MG is therefore a better overall fit. A curious property of the effective ORF in MG is the shift of the minimum angle. The apparent minimum in NANOGrav15 is located further to the right than HD predicts: HD predicts $\xi \sim 82^\circ$ for HD and the data shows that $\xi \sim 97^\circ$, which we obtain using parabolic interpolation. The $\tilde{\Gamma}_T$ that we obtained has a minimum angle at $\xi \sim 100^\circ$.
+We find that for NANOGrav15, HD gives a fit of $\chi^2$/d.o.f.\ $\sim 1.71$ whereas $\tilde{\Gamma}_T(f_1)$ with $|\boldsymbol{k}|/k_0 = 0.5$ gives a fit of $\chi^2$/d.o.f.\ $\sim 0.55$. The effective ORF from MG is therefore a better overall fit. A curious property of the effective ORF in MG is the shift of the minimum angle. The apparent minimum in NANOGrav15 is located further to the right than HD predicts: HD predicts $\xi \sim 82^\circ$ for HD and the data shows that $\xi \sim 97^\circ$, which we obtain using parabolic interpolation. The $\tilde{\Gamma}_T$ that we obtained has a minimum angle at $\xi \sim 95^\circ$.
 
 We used CPTA DR1 to manually reconstruct the binned average values from 1,596 pairs of pulsars in a 57-pulsar array \cite{Xu:2023wog}. 
 \begin{figure}[ht]
@@ -553,21 +553,27 @@ We used CPTA DR1 to manually reconstruct the binned average values from 1,596 pa
 \end{figure}
 This data set is chosen due to the frequency dependence observed by CPTA \cite{Xu:2023wog}. Even in the absence of $\mathcal{E}$, we expect a frequency dependence in the data for MG. CPTA analyzed the correlation coefficients for $f=$ $1/T_{\text{CPTA}}, 1.5/T_{\text{CPTA}},$ and $2/T_{\text{CPTA}}$, where $T_{\text{CPTA}} \sim 3.40$ yrs. We use the data for $1/T_{\text CPTA}$ since it is closer to $f_0$, which we wish to analyze. 
 
-We find that for CPTA DR1, HD gives a fit of $\chi^2$/d.o.f.\ $\sim 3.00$ whereas $\tilde{\Gamma}_T(f_0)$ with $|\boldsymbol{k}|/k_0 = 0.1$ gives a fit of $\chi^2$/d.o.f.\ $\sim 1.38$, a markedly improved fit. The effective ORF from MG captures the behavior of CPTA DR1 remarkably better than HD; the HD correlation fails to capture both the apparent additional maximum angle, located at $\xi \sim 103^\circ$, and the shifted minimum angle, located at $\xi \sim 65^\circ$. Our obtained $\tilde{\Gamma}_T$ has its maximum angle at $\xi \sim 108^\circ$ and minimum angle at $\xi \sim 71^\circ$. We summarize our statistics in Table \ref{tbl:chi}.
+We find that for CPTA DR1, HD gives a fit of $\chi^2$/d.o.f.\ $\sim 3.00$ whereas $\tilde{\Gamma}_T(f_0)$ with $|\boldsymbol{k}|/k_0 = 0.1$ gives a fit of $\chi^2$/d.o.f.\ $\sim 1.35$, a markedly improved fit. The effective ORF from MG captures the behavior of CPTA DR1 remarkably better than HD; the HD correlation fails to capture both the apparent additional maximum angle, located at $\xi \sim 103^\circ$, and the shifted minimum angle, located at $\xi \sim 65^\circ$. Our obtained $\tilde{\Gamma}_T$ has its maximum angle at $\xi \sim 108^\circ$ and minimum angle at $\xi \sim 70^\circ$. We summarize our statistics in Table \ref{tbl:chi} and the results for our $\chi^2$ fitting in Fig.~\ref{fig:chi}.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{fig4.pdf}
+    \caption{The $\chi^2$/d.o.f.~fitting plotted as a function of the ratio $|\boldsymbol{k}|/k_0$. The fit for CPTA DR1 is not very sensitive to the ratio for values between 0 and $\sim 0.2$. }
+    \label{fig:chi}
+\end{figure}
 \begin{table}[ht] 
 \centering
 \renewcommand{\arraystretch}{1.8}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{Data} & \textbf{Fit} & \textbf{$\chi^2$} & \textbf{$\chi^2$/d.o.f.} \\
+\textbf{Data} & \textbf{Fit type} & \textbf{Best fit} $\frac{\boldsymbol{k}}{k_0}$ & \textbf{$\chi^2$} & \textbf{$\chi^2$/d.o.f.} \\
 \hline
-NANOGrav15 & HD & 22.20 & 1.71 \\
+NANOGrav15 & HD & - & 22.20 & 1.71 \\
 \hline
-NANOGrav15 & MG  & 11.22 & 0.93\\
+NANOGrav15 & MG & 0.61 & 6.59 & 0.55\\
 \hline
-CPTA DR1 & HD & 38.95 & 3.00 \\
+CPTA DR1 & HD & - & 38.95 & 3.00 \\
 \hline
-CPTA DR1 & MG  & 16.58 & 1.38\\
+CPTA DR1 & MG  & 0.01 & 16.58 & 1.35\\
 \hline
 \end{tabular}
 \caption{The $\chi^2$ and $\chi^2$/d.o.f.\ values for different fit functions for the two datasets used in this analysis. We have 13 degrees of freedom for the HD correlation and 12 for the MG model, with one fit parameter: $|\boldsymbol{k}|/k_0$. }
@@ -576,16 +582,16 @@ CPTA DR1 & MG  & 16.58 & 1.38\\
 
 \textit{Discussion}---In this paper, we have reviewed the methods to obtain the modified dispersion relation and the effective ORF in the theory of ghost-free MG. We have analyzed the behavior of this effective ORF when $\mathcal{E}$ is not ignored. We were able to demonstrate that using unbiased NANOGrav15 and CPTA DR1, the effective ORF in MG fits the data significantly better than the HD curve with an optimistic graviton mass $m_g \sim$ $1.31\times10^{-24} \eV$.
 
-In this Letter, we have not performed a rigorous fitting of the data due to the limitations of CPTA DR1 and to demonstrate the heuristics of this theory; we simply used characteristic frequencies for comparison. A rigorous fitting to NANOGrav15 without considering $\mathcal{E}$ has been done in Ref.~\cite{Arjona:2024cex}, and the ratio that has been found to best fit the frequentist optimal statistic of NANOGrav15 is $|\boldsymbol{k}|/k_0 \sim 0.73$. Correspondingly, a future study may introduce more free parameters than the ones we considered and perform a holistic fitting procedure to place constraints on the mass of the graviton and its relative energy densities. Additionally, it would be of use to perform the fitting on the individual pulsar-pulsar correlation coefficients rather than the binned averages for publicly available PTA data.
+A rigorous fitting to NANOGrav15 without considering $\mathcal{E}$ has been done in Ref.~\cite{Arjona:2024cex}, and the ratio that has been found to best fit the frequentist-optimal statistic of NANOGrav15 is $|\boldsymbol{k}|/k_0 \sim 0.73$. Correspondingly, a future study may introduce more free parameters than the ones we considered and perform a holistic fitting procedure to place constraints on the mass of the graviton and its relative energy densities. Additionally, it would be of use to perform the fitting on the individual pulsar-pulsar correlation coefficients rather than the binned averages for publicly available PTA data.
 
 An assumption made in this Letter is the isotropy of the SGWB, allowing us to decompose Eq.~\ref{eqn:two_point_z} as we did, but it is not necessarily one we can take for granted \cite{Depta:2024ykq, Bravo:2025csu, Cusin:2025xle, Kuwahara:2024jiz, Li:2024lvt}. Anisotropy in the background can be analyzed by decomposing the ORF on the basis of spherical harmonics and analyzing multipole moments \cite{Allen:2024bnk, Gair:2014rwa}\footnote{It may not be appropriate to do spherical harmonic decomposition for the analysis of PTAs \cite{Ali-Haimoud:2020ozu}. Instead, the Fischer formalism may be more effective, especially in the context of anisotropic backgrounds.}.  
 This can be applied to the effective ORFs we have derived and may be of interest in further work. 
 
 The frequency dependence analysis of the ORF in general is underexplored. NANOGrav and other PTA collaborations do not claim to detect any frequency dependence in the ORF \cite{Agazie:2023,EPTA:2023sfo,EPTA:2023akd,EPTA:2023fyk, Zic:2023gta,Reardon:2023gzh} , while CPTA has \cite{Xu:2023wog}. If the graviton is massive, then there will certainly be a frequency dependence in the data, even without considering $\mathcal{E}$. Doing an analysis of the frequency dependence of the pulsar correlations in the rest of the PTA observations, therefore, will be quite elucidative. 
 
-The detection prospects suggested in this Letter are quite optimistic. It may be unlikely that we would see a PTA experiment last that long, but we nonetheless provide a detailed overview of the ORFs that we may observe if such a scenario takes place. With regard to data from current PTA collaborations, the prospects seem hopeful of continuing to detect pulsar-pulsar correlation coefficients such that the ORFs generated in a theory of MG stay within their standard deviations. With more pulsars being added to PTAs and the planned missions of space-based GW observatories on the horizon \cite{LISA:2017, TianQin:2015yph, Hu:2017mde}, it seems plausible that the mysteries that have evaded our investigations surrounding the cosmos may finally start to be unravelled. Clearly, a new era of GW observations is well underway. 
+These results do not depend on the origins of the SGWB. If gravitons are massive, then they will behave according to the principles presented in this Letter, and we should expect to observe the three effects of MG, regardless of whether the source is astrophysical or cosmological in origin. This is due to the fact that in both scenarios, the propagation of the GWs is not affected; properties such as the spectral shape and range of the amplitude \cite{Caprini:2015tfa} or the isotropy of the background \cite{NANOGrav:2023hvm} are affected instead.
 
-We conclude with the notion that these results do not depend on the origins of the SGWB. If gravitons are massive, then they will behave according to the principles presented in this Letter. We should expect to see the three effects of MG, regardless of whether the source is astrophysical or cosmological in origin. This is due to the fact that in both scenarios, the propagation of the GWs is not affected; properties such as the spectral shape and range of the amplitude \cite{Caprini:2015tfa} or the isotropy of the background \cite{NANOGrav:2023hvm} would be affected instead, which are independent of the angular correlation due to the graviton mass.
+The detection prospects suggested in this Letter are quite optimistic. It may be unlikely that we would see a PTA experiment last that long, but we nonetheless provide a detailed overview of the ORFs that we may observe if such a scenario takes place. With regard to data from current PTA collaborations, the prospects seem hopeful of continuing to detect pulsar-pulsar correlation coefficients such that the ORFs generated in a theory of MG stay within their standard deviations. With more pulsars being added to PTAs and the planned missions of space-based GW observatories on the horizon \cite{LISA:2017, TianQin:2015yph, Hu:2017mde}, it seems plausible that the mysteries that have evaded our investigations surrounding the cosmos may finally start to be unravelled. Clearly, a new era of GW observations is well underway. 
 
 \vspace{5mm}
 \textit{Acknowledgements}---We thank Qiuyue Liang, Neil Cornish, and Murman Gurgenidze for useful discussions related to the paper. We also thank the organizers of the 2025 Phenomenology Symposium (PHENO), during which much of this paper has been developed. C.C.~and T.K.~acknowledge support from the NASA Astrophysics Theory Program (ATP) Award 80NSSC22K0825 and the National Science Foundation (NSF) Astronomy and Astrophysics Research Grants (AAG) Award AST2408411.
