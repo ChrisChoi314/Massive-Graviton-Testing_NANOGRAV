@@ -4,4 +4,4 @@ LaTeX source for the paper "Do Pulsar Timing Array Datasets Favor Massive Gravit
 
 Authors of the paper: Chris Choi and Tina Kahniashvili.
 
-To see the corresponding source code for the paper, see the repository (https://github.com/ChrisChoi314/graviton_mass_ORF)[https://github.com/ChrisChoi314/graviton_mass_ORF]
+To see the corresponding source code for the paper, see the repository https://github.com/ChrisChoi314/graviton_mass_ORF .
