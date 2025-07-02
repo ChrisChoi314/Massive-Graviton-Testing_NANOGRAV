@@ -1,5 +1,5 @@
 \documentclass[10pt,prd,twocolumn,aps,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers]{revtex4-2}
-\usepackage{graphicx,bm,color,amsmath,amssymb, mathtools,subcaption}
+\usepackage{graphicx,bm,color,amsmath,amssymb, mathtools,subcaption,multirow}
 \graphicspath{{./fig/}}
 \captionsetup{justification   = RaggedRight,
               singlelinecheck = false}
@@ -520,7 +520,7 @@ where $T_{\text{obs}}$ is the total length of time the pulsars are observed and 
 We used Monte-Carlo integration to numerically compute the frequency dependence of the effective ORF. The magnitude of $\Gamma_T(|f_{\text{min}}|)$ is significantly greater than $\Gamma_T$ with the factors of $\mathcal{E}(f, \hat{\bf \Omega})$ suppressed, so the approximation of $\mathcal{E}\sim 1$ is not appropriate. If the ORF is in the regime where the Taylor expansions in the short wavelength ($fL \gg 1$) or long wavelength ($fL \ll 1$) cannot be carried out, then we must not ignore $\mathcal{E}(f, \hat{\bf \Omega})$.
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.48]{fig1.pdf}
+    \includegraphics[scale=0.5]{fig1.pdf}
     \caption{The ORFs plotted as a function of angular separation $\xi$. The solid lines use the full expression of the ORFs, including $\mathcal{E}$. The dotted lines assume $\mathcal{E}=1$. The solid lines are plotted with $fL \approx 1$.}
     \label{fig:orfs}
 \end{figure}
@@ -529,56 +529,48 @@ In Fig.~\ref{fig:orfs}, we see how differently the ORFs behave when we take $\ma
 The graviton mass is intimately connected to the behavior of the effective ORF. It appears through a relationship between the mass and the angular frequency. 
 If observations of PTAs follow the trajectory for the best-case scenario, then we can only hope to observe a graviton mass given by that lower frequency bound. This corresponds to $m_g \sim 1.31\times 10^{-24} \eV$. To be clear, we are assuming that the lowest theoretical frequency given by the limit of the dispersion relation (\ref{eq:dispersion}) as $k\rightarrow 0$, will coincide with the lowest frequency that PTAs can measure, hence the ``best-case'' scenario. Going forth, this is the mass that we will take $m_g$ to be in our analysis.
 
+\begin{figure*}[ht]
+    \includegraphics[width=.95\textwidth]{fig2.pdf}
+    \caption{The effective overlap reduction function plotted as a function of the angular separation $\xi$ between a pair of pulsars, for $|\boldsymbol{k}|/k_0 = 0.61$ in red and $|\boldsymbol{k}|/k_0 = 0.01$ in blue. The angular-separation–binned inter-pulsar correlations for NANOGrav15 are plotted with error bars in the left panel, and for CPTA DR1 in the right panel, for $f = 1/T_{\text{CPTA}}$. For both panels, we depict the HD correlation as a reference.}
+    \label{fig:ng}
+\end{figure*}
+
 The graviton mass affects all the ORFs for each polarization type, including the tensor modes. The graviton mass shows up in exponential terms as the coefficient in front of the dot product $\sqrt{1 - (m_g/k_0)^2}\hat{\bf \Omega}\cdot \hat{\boldsymbol{p}}_j$ and in the massive spin-1 helicity-0 polarization vector $\epsilon_\mu^0(m_g) = \sqrt{1 / (1 - (m_g/k_0)^2)}\times (\sqrt{1 - (m_g/k_0)^2},$ $\sin\theta\cos\varphi, \sin\theta\sin\varphi, \cos\theta)$. The former appears in all of the polarization types, but the latter only appears in the vector and scalar modes in the receiving functions, further complicating their mass dependences. The analytical expressions that we integrate can be found in Ref.~\cite{Liang:2021bct}, except that the expressions we use contain $\mathcal{E}$. Interestingly, because the graviton mass appears only as a ratio $m_g / k_0$, the behavior of the ORF is only sensitive to the mass relative to the frequency. In other words, there is no significance for an ORF purely due to a graviton mass of $m_g$. The question would be with regard to what frequency?
 
 \textit{Results}---We now present the main results of this work. Although our calculations are for observations that extend well into the future, it is instructive to compare them to current data and confirm whether they are within the present standard deviations, or perhaps explain the current data better than HD. We compute the full frequency-dependent ORF using the same technique as earlier, i.e., Monte-Carlo integration. We keep $m_g$ fixed and modify the ratio $|\boldsymbol{k}|/k_0$ by changing the frequency $f$. We take two characteristic frequencies, one in the first half of the PTA frequency interval ($f_0$), and one in the second half ($f_1$), such that $|\boldsymbol{k}|/k_0 =$ 0.1 and 0.5, respectively. We then compare the resulting effective ORFs with the PTA data that most closely resemble the ORF. For the ORF generated from $|\boldsymbol{k}|/k_0 = 0.1$, we compare it with the NANOGrav 15-year dataset (NANOGrav15) \cite{Agazie:2023}, and for the ORF generated from $|\boldsymbol{k}|/k_0 = 0.5$, we compare it with the CPTA Data Release I (DR1) \cite{Xu:2023wog}.
 
 We used NANOGrav15 to obtain angular correlations of 2,211 pairs of pulsars from a 67-pulsar array \cite{Agazie:2023}. 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{fig2.pdf}
-    \caption{The frequency-dependent effective overlap reduction function plotted in red as a function of the angular separation $\xi$ between a pair of pulsars, in red. This is plotted at the upper frequency, $f_1$, and we set $|\boldsymbol{k}|/k_0 = 0.5$. The angular-separation–binned inter-pulsar correlations for NANOGrav15 are plotted with error bars.}
-    \label{fig:ng}
-\end{figure}
 We do not use the frequentist optimal statistic that Ref.~\cite{Agazie:2023} employs, which is based on methods described in Ref.~\cite{Allen:2022ksj}, since it is crucial that the estimator is not biased towards the HD curve. We want the statistics to not assume anything about the additional polarizations, so that our comparison is sensible. For Fig.~\ref{fig:ng}, we used 13 bins constructed such that the mean of each bin matches the mean $\xi$'s of CPTA DR1 as closely as possible, since we are not able to alter the number or range of the bins in CPTA DR1 due to its public inaccessibility. As a result, we computed the statistics for each binned average rather than the correlation coefficient for each pair so that the two datasets are on equal footing. 
 
 We find that for NANOGrav15, HD gives a fit of $\chi^2$/d.o.f.\ $\sim 1.71$ whereas $\tilde{\Gamma}_T(f_1)$ with $|\boldsymbol{k}|/k_0 = 0.5$ gives a fit of $\chi^2$/d.o.f.\ $\sim 0.55$. The effective ORF from MG is therefore a better overall fit. A curious property of the effective ORF in MG is the shift of the minimum angle. The apparent minimum in NANOGrav15 is located further to the right than HD predicts: HD predicts $\xi \sim 82^\circ$ for HD and the data shows that $\xi \sim 97^\circ$, which we obtain using parabolic interpolation. The $\tilde{\Gamma}_T$ that we obtained has a minimum angle at $\xi \sim 95^\circ$.
 
-We used CPTA DR1 to manually reconstruct the binned average values from 1,596 pairs of pulsars in a 57-pulsar array \cite{Xu:2023wog}. 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{fig3.pdf}
-    \caption{The frequency-dependent effective overlap reduction function plotted as a function of the angular separation $\xi$ between a pair of pulsars, in blue. This is plotted at the lower bound of the frequency, $1/T_{\text{CPTA}}$, and we set $|\boldsymbol{k}|/k_0 = 0.1$. The angular–separation–binned inter-pulsar correlations for the CPTA dataset for $1/T_{\text{CPTA}}$ are plotted with error bars.}
-    \label{fig:cpta}
-\end{figure}
-This data set is chosen due to the frequency dependence observed by CPTA \cite{Xu:2023wog}. Even in the absence of $\mathcal{E}$, we expect a frequency dependence in the data for MG. CPTA analyzed the correlation coefficients for $f=$ $1/T_{\text{CPTA}}, 1.5/T_{\text{CPTA}},$ and $2/T_{\text{CPTA}}$, where $T_{\text{CPTA}} \sim 3.40$ yrs. We use the data for $1/T_{\text CPTA}$ since it is closer to $f_0$, which we wish to analyze. 
+We used CPTA DR1 to manually reconstruct the binned average values from 1,596 pairs of pulsars in a 57-pulsar array \cite{Xu:2023wog}. This data set is chosen due to the frequency dependence observed by CPTA \cite{Xu:2023wog}. Even in the absence of $\mathcal{E}$, we expect a frequency dependence in the data for MG. CPTA analyzed the correlation coefficients for $f=$ $1/T_{\text{CPTA}}, 1.5/T_{\text{CPTA}},$ and $2/T_{\text{CPTA}}$, where $T_{\text{CPTA}} \sim 3.40$ yrs. We use the data for $1/T_{\text CPTA}$ since it is closer to $f_0$, which we wish to analyze. 
 
 We find that for CPTA DR1, HD gives a fit of $\chi^2$/d.o.f.\ $\sim 3.00$ whereas $\tilde{\Gamma}_T(f_0)$ with $|\boldsymbol{k}|/k_0 = 0.1$ gives a fit of $\chi^2$/d.o.f.\ $\sim 1.35$, a markedly improved fit. The effective ORF from MG captures the behavior of CPTA DR1 remarkably better than HD; the HD correlation fails to capture both the apparent additional maximum angle, located at $\xi \sim 103^\circ$, and the shifted minimum angle, located at $\xi \sim 65^\circ$. Our obtained $\tilde{\Gamma}_T$ has its maximum angle at $\xi \sim 108^\circ$ and minimum angle at $\xi \sim 70^\circ$. We summarize our statistics in Table \ref{tbl:chi} and the results for our $\chi^2$ fitting in Fig.~\ref{fig:chi}.
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.45\textwidth]{fig4.pdf}
-    \caption{The $\chi^2$/d.o.f.~fitting plotted as a function of the ratio $|\boldsymbol{k}|/k_0$. The fit for CPTA DR1 is not very sensitive to the ratio for values between 0 and $\sim 0.2$. }
+    \includegraphics[width=0.47\textwidth]{fig4.pdf}
+    \caption{The $\chi^2$/d.o.f.~fitting plotted as a function of the ratio $|\boldsymbol{k}|/k_0$.}
     \label{fig:chi}
 \end{figure}
-\begin{table}[ht] 
+\begin{table}[ht]
 \centering
 \renewcommand{\arraystretch}{1.8}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \textbf{Data} & \textbf{Fit type} & \textbf{Best fit} $\frac{\boldsymbol{k}}{k_0}$ & \textbf{$\chi^2$} & \textbf{$\chi^2$/d.o.f.} \\
 \hline
-NANOGrav15 & HD & - & 22.20 & 1.71 \\
+\multirow{2}{*}{NANOGrav15} & HD & --  & 22.20 & 1.71 \\ \cline{2-5}
+                           & MG & 0.61 & 6.59  & 0.55 \\ 
 \hline
-NANOGrav15 & MG & 0.61 & 6.59 & 0.55\\
-\hline
-CPTA DR1 & HD & - & 38.95 & 3.00 \\
-\hline
-CPTA DR1 & MG  & 0.01 & 16.58 & 1.35\\
+\multirow{2}{*}{CPTA DR1}  & HD & --  & 38.95 & 3.00 \\ \cline{2-5}
+                           & MG & 0.01 & 16.58 & 1.35 \\ 
 \hline
 \end{tabular}
-\caption{The $\chi^2$ and $\chi^2$/d.o.f.\ values for different fit functions for the two datasets used in this analysis. We have 13 degrees of freedom for the HD correlation and 12 for the MG model, with one fit parameter: $|\boldsymbol{k}|/k_0$. }
+\caption{The $\chi^2$ and $\chi^2$/d.o.f.\ values for different fit functions for the two datasets used in this analysis. We have 13 degrees of freedom for the HD correlation and 12 for the MG model (one fit parameter, $|\boldsymbol{k}|/k_0$).}
 \label{tbl:chi}
 \end{table}
+
 
 \textit{Discussion}---In this paper, we have reviewed the methods to obtain the modified dispersion relation and the effective ORF in the theory of ghost-free MG. We have analyzed the behavior of this effective ORF when $\mathcal{E}$ is not ignored. We were able to demonstrate that using unbiased NANOGrav15 and CPTA DR1, the effective ORF in MG fits the data significantly better than the HD curve with an optimistic graviton mass $m_g \sim$ $1.31\times10^{-24} \eV$.
 
