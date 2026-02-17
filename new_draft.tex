@@ -1,0 +1,459 @@
+\documentclass[10pt,prd,twocolumn,aps,nofootinbib,nobibnotes,superscriptaddress,preprintnumbers]{revtex4-2}
+\usepackage{graphicx,bm,color,amsmath,amssymb, mathtools,subcaption,multirow}
+\graphicspath{{./fig/}}
+\captionsetup{justification   = RaggedRight,
+              singlelinecheck = false}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = [RGB]{46,48,146}, %Colour for external hyperlinks
+  linkcolor    = [RGB]{46,48,146}, %Colour of internal links
+  citecolor    = [RGB]{46,48,146} %Colour of citations
+}
+
+\usepackage[dvipsnames]{xcolor}
+\def\red{\textcolor{red}}
+\def\blue{\textcolor{blue}}
+
+\usepackage{braket,orcidlink}
+
+\usepackage{relsize}
+
+\usepackage[font=small]{caption}
+
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%             Customized Commands
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%  mathematical abbreviations
+%
+%
+%
+\newcommand{\BoldVec}[1]{\mathchoice%
+  {\mbox{\boldmath $\displaystyle     #1$}}%
+  {\mbox{\boldmath $\textstyle        #1$}}%
+  {\mbox{\boldmath $\scriptstyle      #1$}}%
+  {\mbox{\boldmath $\scriptscriptstyle#1$}}%
+}
+%
+% math debs
+\newcommand{\EQ}{\begin{equation}}
+\newcommand{\EN}{\end{equation}}
+\newcommand{\EQA}{\begin{eqnarray}}
+\newcommand{\ENA}{\end{eqnarray}}
+\newcommand{\eq}[1]{(\ref{#1})}
+\newcommand{\EEq}[1]{Equation~(\ref{#1})}
+\newcommand{\Eq}[1]{Eq.~(\ref{#1})}
+\newcommand{\Eqs}[2]{Eqs~(\ref{#1}) and~(\ref{#2})}
+\newcommand{\EEqs}[2]{Equations~(\ref{#1}) and~(\ref{#2})}
+\newcommand{\eqs}[2]{(\ref{#1}) and~(\ref{#2})}
+\newcommand{\Eqss}[2]{Eqs~(\ref{#1})--(\ref{#2})}
+\newcommand{\Sec}[1]{Sec.~\ref{#1}}
+\newcommand{\Secs}[2]{Secs.~\ref{#1} and~\ref{#2}}
+\newcommand{\App}[1]{Appendix~\ref{#1}}
+\newcommand{\Fig}[1]{Fig.~\ref{#1}}
+\newcommand{\FFig}[1]{Figure~\ref{#1}}
+\newcommand{\Tab}[1]{Table~\ref{#1}}
+\newcommand{\Figs}[2]{Figs.~\ref{#1} and \ref{#2}}
+\newcommand{\Tabs}[2]{Tables~\ref{#1} and \ref{#2}}
+\newcommand{\bbra}[1]{\left\langle #1\right\rangle}
+\newcommand{\mean}[1]{\overline #1}
+\newcommand{\meanB}{\overline{B}}
+\newcommand{\meanC}{\overline{C}}
+\newcommand{\meanU}{\overline{U}}
+\newcommand{\meanW}{\overline{W}}
+\newcommand{\meanPhi}{\overline{\Phi}}
+\newcommand{\meanF}{\overline{\cal F}}
+\newcommand{\meanR}{\overline{\cal R}}
+\newcommand{\meanAA}{\overline{\bm{A}}}
+\newcommand{\meanBB}{\overline{\bm{B}}}
+\newcommand{\meanEE}{\overline{\bm{E}}}
+\newcommand{\meanUU}{\overline{\bm{U}}}
+\newcommand{\meanWW}{\overline{\bm{W}}}
+\newcommand{\meanJJ}{\overline{\mbox{\boldmath $J$}}}
+\newcommand{\meanuu}{\overline{\mbox{\boldmath $u$}}}
+\newcommand{\meanGG}{\overline{\mbox{\boldmath $G$}}}
+\newcommand{\meanAB}{\overline{\mbox{\boldmath $A\cdot B$}}}
+\newcommand{\meanAoBo}{\overline{\mbox{\boldmath $A_0\cdot B_0$}}}
+\newcommand{\meanApoBpo}{\overline{\mbox{\boldmath $A'_0\cdot B'_0$}}}
+\newcommand{\meanApBp}{\overline{\mbox{\boldmath $A'\cdot B'$}}}
+\newcommand{\meanuxB}{\overline{\mbox{\boldmath $\delta u\times \delta B$}}}
+\newcommand{\meanemfs}{\overline{\cal E} {}}
+\newcommand{\meanemf}{\overline{\mbox{\boldmath ${\cal E}$}} {}} %redundant
+\newcommand{\meanAAAA}{\overline{\mbox{\boldmath ${\mathsf A}$}} {}}
+\newcommand{\meanSSSS}{\overline{\mbox{\boldmath ${\mathsf S}$}} {}}
+\newcommand{\meanAAA}{\overline{\mathsf{A}}}
+\newcommand{\meanSSS}{\overline{\mathsf{S}}}
+\newcommand{\meanCC}{\overline{\mbox{\boldmath ${\cal C}$}} {}}
+\newcommand{\meanFF}{\overline{\mbox{\boldmath ${\cal F}$}} {}}
+\newcommand{\meanRR}{\overline{\mbox{\boldmath ${\cal R}$}} {}}
+\newcommand{\calFF}{\overline{\mbox{\boldmath ${\cal F}$}} {}}
+\newcommand{\meanEMF}{\overline{\mbox{\boldmath ${\cal E}$}} {}}
+\newcommand{\tildeFFFF}{\tilde{\mbox{\boldmath ${\cal F}$}}{}}{}
+\newcommand{\hatFFFF}{\hat{\mbox{\boldmath ${\cal F}$}}{}}{}
+\newcommand{\meanFFFF}{\overline{\mbox{\boldmath ${\cal F}$}}{}}{}
+\newcommand{\meanFFF}{\overline{\cal F}}
+\newcommand{\hatOO}{\hat{\bm{\Omega}}}
+\newcommand{\hatAA}{\hat{\bm{A}}}
+\newcommand{\hatBB}{\hat{\bm{B}}}
+\newcommand{\tildeh}{\tilde{h}}
+\newcommand{\tildeT}{\tilde{T}}
+\newcommand{\tildehhh}{\tilde{\sf h}}
+\newcommand{\tildeTTT}{\tilde{\sf T}}
+%
+% tilde
+%
+\newcommand{\eee}{{\sf e}}
+\newcommand{\hhh}{{\sf h}}
+\newcommand{\TTT}{{\sf T}}
+\newcommand{\tildexx}{\tilde{\bm{x}}}
+\newcommand{\tildeBB}{\tilde{\bm{B}}}
+\newcommand{\tildeJJ}{\tilde{\bm{J}}}
+\newcommand{\tildeA}{\tilde{A}}
+\newcommand{\tildeB}{\tilde{B}}
+\newcommand{\tildeJ}{\tilde{J}}
+\newcommand{\tildeemf}{\tilde{\cal E}}
+\newcommand{\teps}{\tilde{\epsilon} {}}
+\newcommand{\tkapz}{\tilde{\kappa_0}}
+\newcommand{\Oh}{\hat{\Omega}}
+\newcommand{\zh}{\hat{z}}
+\newcommand{\PC}{{\sc Pencil Code}~}
+\newcommand{\PCS}{{\sc Pencil Code}}
+%
+%  unit vectors
+%
+\newcommand{\nullvector}{{\bf0}}
+\newcommand{\nnn}{\hat{\mbox{\boldmath $n$}} {}}
+\newcommand{\vvv}{\hat{\mbox{\boldmath $v$}} {}}
+\newcommand{\rr}{\hat{\mbox{\boldmath $r$}} {}}
+\newcommand{\xxx}{\hat{\mbox{\boldmath $x$}} {}}
+\newcommand{\yyy}{\hat{\mbox{\boldmath $y$}} {}}
+\newcommand{\zz}{\hat{\mbox{\boldmath $z$}} {}}
+\newcommand{\pp}{\hat{\mbox{\boldmath $\phi$}} {}}
+\newcommand{\ttt}{\hat{\mbox{\boldmath $\theta$}} {}}
+\newcommand{\OOO}{\hat{\mbox{\boldmath $\Omega$}} {}}
+\newcommand{\ooo}{\hat{\mbox{\boldmath $\omega$}} {}}
+\newcommand{\BBBB}{\hat{\mbox{\boldmath $B$}} {}}
+\newcommand{\kunit}{\hat{\mbox{$k$}} {}}
+\newcommand{\nunit}{\hat{\mbox{$n$}} {}}
+%
+%  hatted quantities
+%
+\newcommand{\hatU}{\hat{U}}
+\newcommand{\hatUU}{\hat{\bm{U}}}
+%
+%  vectors
+%
+\newcommand{\gggg}{\BoldVec{g} {}}
+\newcommand{\ddd}{\BoldVec{d} {}}
+\newcommand{\rrr}{\BoldVec{r} {}}
+\newcommand{\xx}{\BoldVec{x}{}}
+\newcommand{\yy}{\BoldVec{y} {}}
+\newcommand{\zzz}{\BoldVec{z} {}}
+\newcommand{\uu}{\BoldVec{u} {}}
+\newcommand{\vv}{\BoldVec{v} {}}
+\newcommand{\ww}{\BoldVec{w} {}}
+\newcommand{\mm}{\BoldVec{m} {}}
+\newcommand{\PP}{\BoldVec{P} {}}
+\newcommand{\QQ}{\BoldVec{Q} {}}
+\newcommand{\RR}{\BoldVec{R} {}}
+\newcommand{\UU}{\BoldVec{U} {}}
+\newcommand{\bb}{\BoldVec{b} {}}
+\newcommand{\qq}{\BoldVec{q} {}}
+\newcommand{\BB}{\BoldVec{B} {}}
+\newcommand{\HH}{\BoldVec{H} {}}
+\newcommand{\II}{\BoldVec{I} {}}
+\newcommand{\AAA}{\BoldVec{A} {}}
+\newcommand{\aaa}{\BoldVec{a} {}}
+\newcommand{\aaaa}{\BoldVec{a} {}} %(convert aaa -> aaaa, compatibility problem)
+\newcommand{\jj}{\BoldVec{j} {}}
+\newcommand{\JJ}{\BoldVec{J} {}}
+\newcommand{\nn}{\BoldVec{n} {}}
+\newcommand{\ee}{\BoldVec{e} {}}
+\newcommand{\ff}{\BoldVec{f} {}}
+\newcommand{\hh}{\BoldVec{h} {}}
+\newcommand{\EE}{\BoldVec{E} {}}
+\newcommand{\FF}{\BoldVec{F} {}}
+\newcommand{\TT}{\BoldVec{T} {}}
+\newcommand{\CC}{\BoldVec{C} {}}
+\newcommand{\KK}{\BoldVec{K} {}}
+\newcommand{\MM}{\BoldVec{M} {}}
+\newcommand{\GG}{\BoldVec{G} {}}
+\newcommand{\kk}{\BoldVec{k} {}}
+\newcommand{\SSS}{\BoldVec{S} {}}
+\newcommand{\grav}{\BoldVec{g} {}}
+\newcommand{\nab}{\BoldVec{\nabla} {}}
+\newcommand{\OO}{\BoldVec{\Omega} {}}
+\newcommand{\oo}{\BoldVec{\omega} {}}
+\newcommand{\LL}{\BoldVec{\Lambda} {}}
+\newcommand{\llambda}{\BoldVec{\lambda} {}}
+\newcommand{\pomega}{\BoldVec{\varpi} {}}
+%
+%  correlation tensors
+%
+\newcommand{\RRRR}{\bm{\mathsf{R}}}
+\newcommand{\SSSS}{\bm{\mathsf{S}}}
+\newcommand{\LLLL}{\mbox{\boldmath ${\sf L}$} {}}
+\newcommand{\MMMM}{\bm{\mathsf{M}}}
+\newcommand{\BBB}{\mbox{\boldmath ${\cal B}$} {}}
+\newcommand{\emf}{\mbox{\boldmath ${\cal E}$} {}}
+\newcommand{\FFF}{\mbox{\boldmath ${\cal F}$} {}}
+\newcommand{\GGG}{\mbox{\boldmath ${\cal G}$} {}}
+\newcommand{\HHH}{\mbox{\boldmath ${\cal H}$} {}}
+\newcommand{\QQQ}{\mbox{\boldmath ${\cal Q}$} {}}
+%
+%  operators  (roman)
+%
+\newcommand{\ii}{{\rm i}}
+\newcommand{\grad}{{\rm grad} \, {}}
+\newcommand{\curl}{{\rm curl} \, {}}
+\newcommand{\dive}{{\rm div}  \, {}}
+\newcommand{\Dive}{{\rm Div}  \, {}}
+\newcommand{\diag}{{\rm diag}  \, {}}
+\newcommand{\DD}{{\rm D} {}}
+\newcommand{\dd}{{\rm d} {}}
+\newcommand{\const}{{\rm const}  {}}
+\newcommand{\crit}{{\rm crit}  {}}
+\def\degr{\hbox{$^\circ$}}
+\def\la{\mathrel{\mathchoice {\vcenter{\offinterlineskip\halign{\hfil
+$\displaystyle##$\hfil\cr<\cr\sim\cr}}}
+{\vcenter{\offinterlineskip\halign{\hfil$\textstyle##$\hfil\cr<\cr\sim\cr}}}
+{\vcenter{\offinterlineskip\halign{\hfil$\scriptstyle##$\hfil\cr<\cr\sim\cr}}}
+{\vcenter{\offinterlineskip\halign{\hfil$\scriptscriptstyle##$\hfil\cr<\cr\sim\cr}}}}}
+\def\ga{\mathrel{\mathchoice {\vcenter{\offinterlineskip\halign{\hfil
+$\displaystyle##$\hfil\cr>\cr\sim\cr}}}
+{\vcenter{\offinterlineskip\halign{\hfil$\textstyle##$\hfil\cr>\cr\sim\cr}}}
+{\vcenter{\offinterlineskip\halign{\hfil$\scriptstyle##$\hfil\cr>\cr\sim\cr}}}
+{\vcenter{\offinterlineskip\halign{\hfil$\scriptscriptstyle##$\hfil\cr>\cr\sim\cr}}}}}
+%
+%  numbers
+%
+\def\Ta{\mbox{\rm Ta}}
+\def\Ra{\mbox{\rm Ra}}
+\def\Ma{\mbox{\rm Ma}}
+\def\Sh{\mbox{\rm Sh}}
+\def\Roo{\mbox{\rm Ro}^{-1}}
+\def\Pra{\mbox{\rm Pr}}
+\def\Pran{\mbox{\rm Pr}}
+\def\Pm{\mbox{\rm Pr}_{\rm M}}
+\def\Rm{\mbox{\rm Re}_{\rm M}}
+\def\Rey{\mbox{\rm Re}}
+\def\Imag{\mbox{\rm Im}}
+\def\Pe{\mbox{\rm Pe}}
+\def\epsK{\epsilon_{\rm K}}
+\def\epsM{\epsilon_{\rm M}}
+\def\EEi{{\cal E}_i}
+\def\EEK{{\cal E}_{\rm K}}
+\def\EEM{{\cal E}_{\rm M}}
+\def\EEKM{{\cal E}_{\rm K/M}}
+\def\EEGW{{\cal E}_{\rm GW}}
+\def\OmK{{\Omega}_{\rm K}}
+\def\OmM{{\Omega}_{\rm M}}
+\def\OMG  W{{\Omega}_{\rm GW}}
+\def\hrms{{h}_{\rm rms}}
+\def\EEtot{{\cal E}_{\rm tot}}
+\def\EErad{{\cal E}_{\rm rad}}
+\def\EElam{{\cal E}_\lambda}
+\def\EEcrit{{\cal E}_{\rm crit}}
+\def\HHGW{{\cal H}_{\rm GW}}
+\def\HHK{{\cal H}_{\rm K}}
+\def\HHM{{\cal H}_{\rm M}}
+\def\EGW{E_{\rm GW}}
+\def\HGW{H_{\rm GW}}
+\def\EK{E_{\rm K}}
+\def\EM{E_{\rm M}}
+\def\HM{H_{\rm M}}
+\def\hc{h_{\rm c}}
+\def\cs{c_{\rm s}}
+\def\xiM{\xi_{\rm M}}
+\def\xiK{\xi_{\rm K}}
+\def\kf{k_{\rm f}}
+%\def\kf{k_\ast}
+\def\vA{v_{\rm A}}
+\def\urms{u_{\rm rms}}
+\def\Urms{U_{\rm rms}}
+\def\Brms{B_{\rm rms}}
+\def\kappaOO{\kappa_{\Omega\Omega}}
+\def\kappaO{\kappa_{\Omega}}
+\def\kappat{\kappa_{\rm t}}
+\def\kappatz{\kappa_{\rm t0}}
+\def\nut{\nu_{\rm t}}
+\def\etatz{\eta_{\rm t0}}
+\def\etat{\eta_{\rm t}}
+\def\etaT{\eta_{\rm T}}
+\def\Beq{B_{\rm eq}}
+\def\tmax{t_{\max}}
+%
+\newcommand{\ea}{{\em et al. }}
+\newcommand{\eaa}{{\em et al. }}
+\def\half{{\textstyle{1\over2}}}
+\def\threehalf{{\textstyle{3\over2}}}
+\def\onethird{{\textstyle{1\over3}}}
+\def\twothird{{\textstyle{2\over3}}}
+\def\fourthird{{\textstyle{4\over3}}}
+\def\quarter{{\textstyle{1\over4}}}
+%
+\newcommand{\W}{\,{\rm W}}
+\newcommand{\V}{\,{\rm V}}
+\newcommand{\kV}{\,{\rm kV}}
+\newcommand{\eV}{\,{\rm eV}}
+\newcommand{\MeV}{\,{\rm MeV}}
+\newcommand{\GeV}{\,{\rm GeV}}
+\newcommand{\T}{\,{\rm T}}
+\newcommand{\uG}{\,\mu{\rm G}}
+\newcommand{\G}{\,{\rm G}}
+\newcommand{\Hz}{\,{\rm Hz}}
+\newcommand{\mHz}{\,{\rm mHz}}
+\newcommand{\nHz}{\,{\rm nHz}}
+\newcommand{\uHz}{\,\mu{\rm Hz}}
+\newcommand{\kHz}{\,{\rm kHz}}
+\newcommand{\kG}{\,{\rm kG}}
+\newcommand{\K}{\,{\rm K}}
+\newcommand{\g}{\,{\rm g}}
+\newcommand{\s}{\,{\rm s}}
+\newcommand{\ms}{\,{\rm ms}}
+\newcommand{\cm}{\,{\rm cm}}
+\newcommand{\m}{\,{\rm m}}
+\newcommand{\km}{\,{\rm km}}
+\newcommand{\kms}{\,{\rm km/s}}
+\newcommand{\kg}{\,{\rm kg}}
+\newcommand{\Mm}{\,{\rm Mm}}
+\newcommand{\pc}{\,{\rm pc}}
+\newcommand{\kpc}{\,{\rm kpc}}
+\newcommand{\Mpc}{\,{\rm Mpc}}
+\newcommand{\yr}{\,{\rm yr}}
+\newcommand{\Myr}{\,{\rm Myr}}
+\newcommand{\Gyr}{\,{\rm Gyr}}
+\newcommand{\erg}{\,{\rm erg}}
+\newcommand{\mol}{\,{\rm mol}}
+\newcommand{\dyn}{\,{\rm dyn}}
+\newcommand{\J}{\,{\rm J}}
+\newcommand{\RM}{\,{\rm RM}}
+\newcommand{\AU}{\,{\rm AU}}
+\newcommand{\A}{\,{\rm A}}
+%
+\def\hX{h_\times}
+\def\hT{h_+}
+\def\thT{\tilde{h}_+}
+\def\thX{\tilde{h}_\times}
+\def\dhT{\dot{h}_+}
+\def\dhX{\dot{h}_\times}
+\def\dhhT{\dot{\hat{h}}_+}
+\def\dhhX{\dot{\hat{h}}_\times}
+\def\dhhTX{\dot{\hat{h}}_{+/\times}}
+\def\dthT{\dot{\tilde{h}}_+}
+\def\dthX{\dot{\tilde{h}}_\times}
+\def\dthTX{\dot{\tilde{h}}_{+/\times}}
+%
+%  journals
+%
+\newcommand{\arXiv}[3]{, ``#3,'' arXiv:#2 (#1).}
+\newcommand{\yjcap}[3]{, J.\ Cosmol.\ Astropart.\ Phys. {\bf #2} (#1) #3.}
+\newcommand{\yjas}[3]{, J. Atmosph. Sci. {\bf #2}, #3 (#1).}
+\newcommand{\yan}[3]{, Astron. Nachr. {\bf #2}, #3 (#1).}
+\newcommand{\yact}[3]{, Acta Astron. {\bf #2}, #3 (#1).}
+\newcommand{\yana}[3]{, Astron. Astrophys. {\bf #2}, #3 (#1).}
+\newcommand{\yanas}[3]{, Astron. Astrophys. Suppl. {\bf #2}, #3 (#1).}
+\newcommand{\yanal}[3]{, Astron. Astrophys. Lett. {\bf #2}, #3 (#1).}
+\newcommand{\yass}[3]{, Astrophys. Spa. Sci. {\bf #2}, #3 (#1).}
+\newcommand{\ysci}[3]{, Science {\bf #2}, #3 (#1).}
+\newcommand{\ysph}[3]{, Solar Phys. {\bf #2}, #3 (#1).}
+\newcommand{\yjetp}[3]{, Sov. Phys. JETP {\bf #2}, #3 (#1).}
+\newcommand{\yspd}[3]{, Sov. Phys. Dokl. {\bf #2}, #3 (#1).}
+\newcommand{\ysov}[3]{, Sov. Astron. {\bf #2}, #3 (#1).}
+\newcommand{\ysovl}[3]{, Sov. Astron. Lett. {\bf #2}, #3 (#1).}
+\newcommand{\ymn}[3]{, Mon.\ Not.\ R.\ Astron.\ Soc.\ {\bf #2}, #3 (#1).}
+\newcommand{\ymhd}[3]{, Magnetohydrohydrodyn. {\bf #2}, #3 (#1).}
+\newcommand{\yqjras}[3]{, Quart. J. Roy. Astron. Soc. {\bf #2}, #3 (#1).}
+\newcommand{\ynat}[3]{, Nature {\bf #2}, #3 (#1).}
+\newcommand{\yjfm}[4]{, ``#4,'' J. Fluid Mech. {\bf #2}, #3 (#1).}
+\newcommand{\pjfm}[1]{, J. Fluid Mech., in press (#1).}
+\newcommand{\sjfm}[1]{, J. Fluid Mech., submitted (#1).}
+\newcommand{\ypr}[3]{, Phys.\ Rev.\ {\bf #2}, #3 (#1).}
+\newcommand{\yprd}[4]{, ``#4,'' Phys.\ Rev.\ D {\bf #2}, #3 (#1).}
+\newcommand{\ypre}[3]{, Phys.\ Rev.\ E {\bf #2}, #3 (#1).}
+\newcommand{\yprf}[4]{, ``#4,'' Phys.\ Rev.\ Fluids {\bf #2}, #3 (#1).}
+\newcommand{\yprl}[4]{, ``#4,'' Phys.\ Rev.\ Lett.\ {\bf #2}, #3 (#1).}
+\newcommand{\yphl}[3]{, Phys.\ Lett.\ {\bf #2}, #3 (#1).}
+\newcommand{\pprl}[1]{, Phys. Rev. Lett., in press (#1).}
+\newcommand{\yepl}[3]{, Europhys. Lett. {\bf #2}, #3 (#1).}
+\newcommand{\pcsf}[2]{, Chaos, Solitons \& Fractals, in press (#1).}
+\newcommand{\ycsf}[3]{, Chaos, Solitons \& Fractals{\bf #2}, #3 (#1).}
+\newcommand{\yprs}[3]{, Proc. Roy. Soc. Lond. {\bf #2}, #3 (#1).}
+\newcommand{\yptrs}[3]{, Phil. Trans. Roy. Soc. {\bf #2}, #3 (#1).}
+\newcommand{\yptrsa}[4]{, ``#4,'' Phil. Trans. Roy. Soc. Lond. A, {\bf #2}, #3 (#1).}
+\newcommand{\yjcp}[3]{, J. Comp. Phys. {\bf #2}, #3 (#1).}
+\newcommand{\yjgr}[3]{, J. Geophys. Res. {\bf #2}, #3 (#1).}
+\newcommand{\ygrl}[3]{, Geophys. Res. Lett. {\bf #2}, #3 (#1).}
+\newcommand{\yobs}[3]{, Observatory {\bf #2}, #3 (#1).}
+\newcommand{\yaj}[3]{, Astronom. J. {\bf #2}, #3 (#1).}
+\newcommand{\sapj}[3]{, ``#3,'' Astrophys. J., submitted, arXiv:#2  (#1).}
+\newcommand{\papj}[3]{, ``#3,'' Astrophys. J., in press, arXiv:#2  (#1).}
+\newcommand{\yapj}[4]{, ``#4,'' Astrophys. J. {\bf #2}, #3 (#1).}
+\newcommand{\yapjs}[3]{, Astrophys. J. Suppl. {\bf #2}, #3 (#1).}
+\newcommand{\yapjl}[3]{, Astrophys. J. {\bf #2}, #3 (#1).}
+\newcommand{\ycqg}[3]{, Class. Quant. Grav. {\bf #2}, #3 (#1).}
+\newcommand{\ypp}[3]{, Phys. Plasmas {\bf #2}, #3 (#1).}
+\newcommand{\yppcf}[3]{, Plasmas Phys. Contr. Fusion {\bf #2}, #3 (#1).}
+\newcommand{\ppp}[1]{, Phys. Plasmas, in press (#1).}
+\newcommand{\ypasj}[3]{, Publ. Astron. Soc. Japan {\bf #2}, #3 (#1).}
+\newcommand{\ypac}[3]{, Publ. Astron. Soc. Pacific {\bf #2}, #3 (#1).}
+\newcommand{\yaraa}[3]{, Ann. Rev. Astron. Astrophys. {\bf #2}, #3 (#1).}
+\newcommand{\yanar}[3]{, Astron. Astrophys. Rev. {\bf #2}, #3 (#1).}
+\newcommand{\yanp}[3]{, Ann. Phys. {\bf #2}, #3 (#1).}
+\newcommand{\yanf}[3]{, Ann. Rev. Fluid Dyn. {\bf #2}, #3 (#1).}
+\newcommand{\ypf}[4]{, ``#4,'' Phys. Fluids {\bf #2}, #3 (#1).}
+\newcommand{\yphy}[3]{, Physica {\bf #2}, #3 (#1).}
+\newcommand{\ygafd}[4]{, ``#4,'' Geophys. Astrophys. Fluid Dyn. {\bf #2}, #3 (#1).}
+\newcommand{\yrpp}[3]{, Rep. Prog. Phys. {\bf #2}, #3 (#1).}
+\newcommand{\yptp}[3]{, Progr. Theor. Phys. {\bf #2}, #3 (#1).}
+\newcommand{\yjour}[5]{, ``#5,'' #2 {\bf #3}, #4 (#1).}
+\newcommand{\pjour}[3]{, #2, in press (#1).}
+\newcommand{\sjour}[3]{, #2, submitted (#1).}
+\newcommand{\yprep}[2]{, #2, preprint (#1).}
+\newcommand{\pproc}[3]{, (ed. #3), #2 (#1) (to appear).}
+\newcommand{\yproc}[4]{, (ed. #4), pp. #2. #3 (#1).}
+\newcommand{\ybook}[3]{, {\em #2}. #3 (#1).}
+\newcommand{\neff}{N_{\rm eff}}
+\newcommand{\dneff}{\Delta N_{\rm eff}}
+\newcommand{\neffv}{N_{\rm eff}^{(\nu)}}
+
+\newcommand{\inv}{\rm inv}
+
+\begin{document}
+
+\title{The suppression of vector and scalar modes of the overlap reduction function in massive gravity}
+
+\date{\today}
+\author{Chris~Choi\,\orcidlink{0009-0005-2328-3044}}
+\email{Contact author: minyeonc@andrew.cmu.edu}
+\affiliation{McWilliams Center for Cosmology and Astrophysics and Department of Physics, \href{https://ror.org/05x2bcf33}{Carnegie Mellon University}, Pittsburgh, Pennsylvania 15213, USA}
+
+\author{Tina~Kahniashvili\,\orcidlink{0000-0003-0217-9852}}
+\email{Contact author: tinatin@andrew.cmu.edu}
+\affiliation{McWilliams Center for Cosmology and Astrophysics and Department of Physics, \href{https://ror.org/05x2bcf33}{Carnegie Mellon University}, Pittsburgh, Pennsylvania 15213, USA}
+\affiliation{School of Natural Sciences and Medicine, \href{https://ror.org/051qn8h41}{Ilia State University}, 0194 Tbilisi, Georgia}
+\affiliation{Department of Theoretical Astrophysics and Cosmology, \href{https://ror.org/02gkgrd84}{Georgian National Astrophysical Observatory}, Tbilisi, 47/57 M. Kostava St., GE-0179, Georgia}
+
+\begin{abstract}
+
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+
+
+\vspace{3mm}
+\textit{Acknowledgements}---
+
+\vspace{3mm}
+\textit{Data availability}---
+
+\bibliographystyle{apsrev4-2_edited}
+\bibliography{refs}
+
+
+\clearpage
+\end{document}
